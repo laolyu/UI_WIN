@@ -11,37 +11,47 @@ sys.path.append(r'C:\liangdamou\script\gjl')  # 先加入绝对路径，否则�
 from ver_360 import version
 
 
+def install():
+    t = time.strftime("%H:%M:%S")
+    print(t, '*******allow install*********', end=',')
+    # type(Key.F11)
+    wait(0.1)
+    click(Pattern("install.png").targetOffset(422, 126))
+    wait(0.1)
+    click(Pattern("install.png").targetOffset(422, 150))
+    wait(0.1)
+
+
+def procp():
+    t = time.strftime("%H:%M:%S")
+    print(t, '***************process protection************', end=',')
+    type(Key.F11)
+    wait(0.1)
+    click(Pattern("procp.png").targetOffset(422, 150))
+    wait(0.1)
+    click(Pattern("zuzhi.png"))
+    wait(0.1)
+
+
 def bingdu():
     t = time.strftime("%H:%M:%S")
     print(t, '***************Virus removal************', end=',')
     type(Key.F11)
-    wait(0.2)
+    wait(0.1)
     click(Pattern("bingdu.png").targetOffset(159, -21))
-    wait(0.2)
-
-
-def install():
-    t = time.strftime("%H:%M:%S")
-    print(t, '*******allow install*********', end=',')
-    type(Key.F11)
-    wait(0.2)
-    click(Pattern("install.png").targetOffset(422, 126))
-    wait(0.2)
-    click(Pattern("install.png").targetOffset(422, 150))
-    wait(0.2)
-
-
-
+    wait(0.1)
 
 
 def UI():
-    t = threading.Timer(60, UI)
+    t = threading.Timer(5, UI)
     t.setDaemon(True)
     t.start()
     try:
         if exists("install.png", 1):
             install()
-        elif exists("bingdu.png", 1):
+        elif exists("procp.png", 1):
+            procp()
+        if exists("bingdu.png", 1):
             bingdu()
         else:
             pass

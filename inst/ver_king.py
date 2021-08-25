@@ -134,7 +134,7 @@ def version(project):
 if __name__ == '__main__':
     version(project='no_vc_project')
 
-    # project_list = ['mxiaoyu', 'mkuai', 'mxiaohei', 'mabc', 'mllq', 'mguangsu', 'lszip', 'gjl', 'qjpdf']
+    # project_list = ['mguangsu', 'lszip', 'mkuai', 'mxiaohei', 'mabc', 'mllq',  'gjl', 'qjpdf','mxiaoyu']
     # for i in range(len(project_list)):
     #     project = project_list[i]
     #     vc = version(project)

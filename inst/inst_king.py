@@ -17,9 +17,9 @@ def install():
     print(t, '********find install action**********', end=',')
     type(Key.F11)
     wait(0.2)
-    click(Pattern("install.png").targetOffset(115, -55))
+    click(Pattern("install.png").targetOffset(147, -55))
     wait(0.2)
-    click(Pattern("install.png").targetOffset(130, -25))
+    click(Pattern("install.png").targetOffset(162, -25))
     wait(0.2)
 
 
@@ -147,7 +147,7 @@ def cmd_send(project, path, vc_list):
 if __name__ == '__main__':
     print('thread %s is running...' % threading.current_thread().name)
     path_0 = r'C:\liangdamou\package\\'
-    projects = ['mxiaoyu', 'mkuai', 'mabc', 'mxiaohei', 'mguangsu', 'mllq', 'lszip', 'gjl', 'qjpdf']
+    projects = ['mguangsu', 'lszip', 'mkuai', 'mxiaohei', 'mabc', 'mllq',  'gjl', 'qjpdf','mxiaoyu']
     UI()
     for i in range(len(projects)):
         project = projects[i]
