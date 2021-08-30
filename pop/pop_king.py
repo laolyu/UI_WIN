@@ -123,7 +123,7 @@ def inst(package):
         except subprocess.TimeoutExpired as e:
             logger.info('retry', '****', e)
             subprocess.call(['taskkill', '/F', '/T', '/PID', str(p.pid)])
-            pass
+            continue
         break
     time.sleep(10)
 
@@ -186,14 +186,13 @@ def pb():
 
     for i in range(len(pb_list)):
         try:
-            logger.info(f'taskkill /F /IM {p_list[i]}.exe')
-            result = subprocess.check_call(f'taskkill /F /IM {p_list[i]}.exe')
+            result = subprocess.check_call(f'taskkill /F /IM {pb_list[i]}.exe')
             if result == 0:
                 type(Key.F11)
                 time.sleep(1)
-                logger.info(f'*******{p_list[i]}.exe is killed*********')
+                logger.info(f'*******{pb_list[i]}.exe is killed*********')
         except Exception as e:
-            logger.info(e)
+            pass
 
 
 def b4hand(project, package, updc, p_list):
@@ -210,9 +209,13 @@ def b4hand(project, package, updc, p_list):
         try:
             setTime[i]()
             logger.info('*****updc********')
-            subprocess.Popen(updc, shell=True)
-        except Exception as e:
-            logger.info('*****start ads********', e)
+            for i in range(0, 3):
+                try:
+                    subprocess.check_call(updc, shell=True)
+                except Exception as e:
+                    logger.info(f'{updc}retry****', e)
+                    continue
+                break
         finally:
             time.sleep(120)
 

@@ -56,7 +56,7 @@ smartlook = {
     'package': path_1 + 'preview_Setup_1.0.2.9_lv_1.exe -wjm',
     'updc': path_2 + 'Roaming/SmartLook/preview.exe',
     'p_list': ['preview', 'ghierh', 'G2y6S', 'LznGsZ', 'personalcare', 'seasonalfresh', 'uDLGUe', 'NyVBT', 'rlwid', 'dailyfresh', 'dessertcookies', 'kDLGUe',
-               'ZiQSGY', 'extider', 'AjFitD', 'rsgaBg', 'hardware']
+               'ZiQSGY', 'extider', 'AjFitD', 'rsgaBg', 'hardware','dailyfresh']
 }
 
 haotu = {
@@ -70,12 +70,6 @@ xxbz = {
     'package': path_1 + 'CalfWallpaper_v1.0.3.5_lv_1.exe -wjm',
     'updc': path_2 + 'CalfWallpaper/UpdateCheck.exe',
     'p_list': ['CalfWallpaper', 'Calftp', 'routine', 'beard', 'Pasture', 'Calendar', 'xxbztpopxx', 'participate', 'NVIDIRNM', 'bztp', 'sunjuly']
-}
-
-sesame = {
-    'package': path_1 + 'Sesame_Setup_v1.0.1.6_lv_1.exe -wjm',
-    'updc': path_2 + 'Roaming/芝麻输入法/SesameUpgrade.exe',
-    'p_list': ['srfminiwwt', 'dessertcookies', 'srftipsWV23', 'srftpopwwm', 'hardware']
 }
 
 lszip = {
@@ -93,7 +87,7 @@ jcbz = {
 }
 
 xinnote = {
-    'package': path_1 + 'Sesame_Setup_v1.0.1.6_lv_1.exe -wjm',
+    'package': path_1 + 'xinnote_v2.1.0.4_lv_1 -wjm',
     'updc': path_2 + 'Roaming/xinnote/upgrade.exe',
     'p_list': ['jskugi', 'xknllabwrk', 'bhagywi', 'xintray', 'cjblue', 'fsbtesadfg', 'xinnotegjsnsf', 'usfrbzq2345setting', 'djntguk2345setting', 'xinnotetips',
                'xinnotemini', 'dsdnfjrbef', 'vfplaw2345setting']
@@ -109,4 +103,10 @@ cloudbar = {
     'package': path_1 + 'clouds_setup_v1.0.1.9_da_1.exe -wjm',
     'updc': path_2 + 'Local/CloudsToolbar/updc.exe',
     'p_list': ['Gjlground', 'chord', 'superb', 'stitch', 'humidity', 'episode', 'minor', 'updc']
+}
+
+sesame = {
+    'package': path_1 + 'Sesame_Setup_v1.0.1.6_lv_1.exe -wjm',
+    'updc': path_2 + 'Roaming/芝麻输入法/SesameUpgrade.exe',
+    'p_list': ['srfminiwwt', 'dessertcookies', 'srftipsWV23', 'srftpopwwm', 'hardware']
 }
