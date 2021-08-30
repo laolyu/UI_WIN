@@ -111,9 +111,9 @@ def version(project):
                        'clouds_setup_v1.1.0.2_guanwang_1.exe -wjm', 'clouds_setup_v1.1.0.2_guanwang_2.exe -wjm', 'clouds_setup_v1.1.0.2_guanwang_3.exe -wjm',
                        'clouds_setup_v1.1.0.2_guanwang_4.exe -wjm', 'clouds_setup_v1.1.0.2_guanwang_5.exe -wjm',
 
-                       # 'clouds_setup_v1.1.0.5_guanwang_1.exe -wjm', 'clouds_setup_v1.1.0.5_guanwang_2.exe -wjm',
-                       # 'clouds_setup_v1.1.0.5_guanwang_3.exe -wjm', 'clouds_setup_v1.1.0.5_guanwang_4.exe -wjm', 'clouds_setup_v1.1.0.5_guanwang_5.exe -wjm',
-                       # gjl,1105只测金山环境
+                       'clouds_setup_v1.1.0.6_guanwang_1.exe -wjm', 'clouds_setup_v1.1.0.6_guanwang_2.exe -wjm',
+                       'clouds_setup_v1.1.0.6_guanwang_3.exe -wjm', 'clouds_setup_v1.1.0.6_guanwang_4.exe -wjm', 'clouds_setup_v1.1.0.6_guanwang_5.exe -wjm',
+                       #gjl,1105只测金山环境
 
                        'Sesame_Setup_v1.0.1.6_guangwang_1.exe -wjm', 'Sesame_Setup_v1.0.1.6_guangwang_2.exe -wjm', 'Sesame_Setup_v1.0.1.6_guangwang_3.exe -wjm',
                        'Sesame_Setup_v1.0.1.6_guangwang_4.exe -wjm', 'Sesame_Setup_v1.0.1.6_guangwang_5.exe -wjm'  # 金山已知报毒

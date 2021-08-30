@@ -109,6 +109,8 @@ def version(project):
 
                        'clouds_setup_v1.1.0.6_guanwang_1.exe -wjm', 'clouds_setup_v1.1.0.6_guanwang_2.exe -wjm',
                        'clouds_setup_v1.1.0.6_guanwang_3.exe -wjm', 'clouds_setup_v1.1.0.6_guanwang_4.exe -wjm', 'clouds_setup_v1.1.0.6_guanwang_5.exe -wjm',
+                       'clouds_setup_v1.1.0.7_guanwang_1.exe -wjm', 'clouds_setup_v1.1.0.7_guanwang_2.exe -wjm',
+                       'clouds_setup_v1.1.0.7_guanwang_3.exe -wjm', 'clouds_setup_v1.1.0.7_guanwang_4.exe -wjm', 'clouds_setup_v1.1.0.7_guanwang_5.exe -wjm',
                        # gjl,1105只测金山环境
 
                        # 'Sesame_Setup_v1.0.1.6_guangwang_1.exe -wjm', 'Sesame_Setup_v1.0.1.6_guangwang_2.exe -wjm', 'Sesame_Setup_v1.0.1.6_guangwang_3.exe -wjm',
