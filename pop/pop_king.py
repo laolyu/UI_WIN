@@ -161,6 +161,7 @@ def kill_p(p_list, updc):
         logger.info(e)
 
     for i in range(len(p_list)):
+        time.sleep(0.1)
         try:
             # logger.info(f'taskkill /F /IM {p_list[i]}.exe')
             result = subprocess.check_call(f'taskkill /F /IM {p_list[i]}.exe')
@@ -185,6 +186,7 @@ def pb():
         time.sleep(1)
 
     for i in range(len(pb_list)):
+        time.sleep(0.1)
         try:
             result = subprocess.check_call(f'taskkill /F /IM {pb_list[i]}.exe')
             if result == 0:
@@ -206,18 +208,22 @@ def b4hand(project, package, updc, p_list):
         except Exception as e:
             pass
 
-        try:
-            setTime[i]()
-            logger.info('*****updc********')
-            for i in range(0, 3):
-                try:
-                    subprocess.check_call(updc, shell=True)
-                except Exception as e:
-                    logger.info(f'{updc}retry****', e)
-                    continue
-                break
-        finally:
-            time.sleep(120)
+        setTime[i]()
+        logger.info('*****updc********')
+        for i in range(0, 3):
+            p = subprocess.Popen(updc, shell=True)
+            try:
+                p.communicate(timeout=10)
+            except subprocess.TimeoutExpired as e:
+                logger.info('retry', '****', e)
+                subprocess.call(['taskkill', '/F', '/T', '/PID', str(p.pid)])
+                continue
+            except Exception as e:
+                logger.info(f'{updc}retry****', e)
+                subprocess.call(['taskkill', '/F', '/T', '/PID', str(p.pid)])
+                continue
+            break
+        time.sleep(120)
 
         if project in [xiaoyu, kuaizip, kantu, heinote, finder, browser]:
             pb()
@@ -246,7 +252,8 @@ def b4hand(project, package, updc, p_list):
 
 
 if __name__ == '__main__':
-    projects = [xiaoyu, kuaizip, kantu, heinote, finder, browser, lszip, jcbz, xinnote, qjpdf, cloudbar, xfpdf, haotu, xxbz, smartlook, sesame]
+    logger.add("gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip", retention="10 days")
+    projects = [xiaoyu, kuaizip, kantu, heinote, finder, browser, lszip, jcbz, xinnote, qjpdf, cloudbar, haotu, xxbz, smartlook, xfpdf, sesame]
     for i in range(len(projects)):
         project = projects[i]
         package = project['package']
