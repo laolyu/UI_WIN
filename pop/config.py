@@ -68,13 +68,13 @@ xinnote = {
 
 }
 qjpdf = {
-    'package': path_1 + 'Sesame_Setup_v1.0.1.6_lv_1.exe -wjm',
+    'package': path_1 + 'QingJiePdf_Setup_v1.1.0.3_lv_1.exe -wjm',
     'updc': path_roaming + 'qingjiepdf/qjUpdateChecker.exe',
     'p_list': ['crevice', 'update', 'llpokj', 'mBErTV', 'sxcde', 'mxqjPO', 'dqsPl', 'sWXluJ', 'ZFCEa', 'peimg', 'mxLK']
 }
 
 cloudbar = {
-    'package': path_1 + 'clouds_setup_v1.0.1.9_da_1.exe -wjm',
+    'package': path_1 + 'clouds_setup_v1.1.0.2_lv_1.exe -wjm',
     'updc': path_local + 'CloudsToolbar/updc.exe',
     'p_list': ['Gjlground', 'chord', 'superb', 'stitch', 'humidity', 'episode', 'minor', 'updc']
 }
