@@ -118,7 +118,7 @@ def kill_p(p_list, updc):
 
 
 def pb():
-    pb_list = ['bqpb', 'Kuaipb', 'Jxohft', 'hdagf', 'gshuhg', 'vbvcxf', 'aghghf', 'pbxhone', 'GSscreensaver', '7654pb']
+    pb_list = ['bqpb', 'Kuaipb', 'Jxohft', 'hdagf', 'gshuhg', 'vbvcxf', 'aghghf', 'ktpb', 'pbxhone', 'GSscreensaver', '7654pb']
 
     try:
         subprocess.check_call('@reg add "HKEY_CURRENT_USER\Software\ScreenSaver" /v "ScreenSaveTimeOut" /t REG_DWORD /d "5" /f>nul', shell=True)
@@ -153,20 +153,13 @@ def b4hand(project, package, updc, p_list):
 
         setTime[i]()
         logger.info('*****updc********')
-        for i in range(0, 3):
-            p = subprocess.Popen(updc, shell=True)
-            try:
-                p.communicate(timeout=30)
-            except subprocess.TimeoutExpired as e:
-                logger.info('retry', '****', e)
-                subprocess.call(['taskkill', '/F', '/T', '/PID', str(p.pid)])
-                continue
-            except Exception as e:
-                logger.info(f'{updc}retry****', e)
-                subprocess.call(['taskkill', '/F', '/T', '/PID', str(p.pid)])
-                continue
-            break
-        time.sleep(120)
+        p = subprocess.Popen(updc, shell=True)
+        try:
+            p.communicate(timeout=20)
+        except subprocess.TimeoutExpired as e:
+            logger.info('timeout>kill process****', e)
+            subprocess.call(['taskkill', '/F', '/T', '/PID', str(p.pid)])
+        time.sleep(100)
 
         if project in [xiaoyu, kuaizip, kantu, heinote, finder, browser]:
             pb()
@@ -195,7 +188,7 @@ def b4hand(project, package, updc, p_list):
 
 if __name__ == '__main__':
     logger.add("gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip", retention="10 days")
-    projects = [xiaoyu, kuaizip, kantu, heinote, finder, browser, lszip, jcbz, xinnote, qjpdf, cloudbar, haotu, xxbz, smartlook, xfpdf, sesame]
+    projects = [xiaoyu, kuaizip, kantu, heinote, finder, browser, lszip, xinnote, qjpdf, cloudbar, haotu, xxbz, sesame, smartlook, xfpdf, jcbz]
     for i in range(len(projects)):
         project = projects[i]
         package = project['package']
