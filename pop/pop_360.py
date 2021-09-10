@@ -164,13 +164,18 @@ def b4hand(project, package, updc, p_list):
 
         setTime[i]()
         logger.info('*****updc********')
-        p = subprocess.Popen(updc, shell=True)
         try:
-            p.communicate(timeout=20)
-        except subprocess.TimeoutExpired as e:
-            logger.info('timeout>kill process****', e)
-            subprocess.call(['taskkill', '/F', '/T', '/PID', str(p.pid)])
-        time.sleep(100)
+            subprocess.Popen(updc, shell=True)
+        except Exception as e:
+            logger.info(f'***kill {updc}****', e)
+        finally:
+            time.sleep(160)
+            try:
+                result = subprocess.check_call(f'taskkill /F /IM {updc}.exe')
+                if result == 0:
+                    logger.info(f'***{updc}.exe is killed*****')
+            except Exception as e:
+                pass
 
         if project in [xiaoyu, kuaizip, kantu, heinote, finder, browser]:
             pb()

@@ -12,8 +12,7 @@ from config import *
 
 
 def install():
-    t = time.strftime("%H:%M:%S")
-    print(t, '********find install action**********', end=',')
+    logger.info(t, '********find install action**********', end=',')
     type(Key.F11)
     wait(0.2)
     click(Pattern("install.png").targetOffset(147, -55))
@@ -23,8 +22,7 @@ def install():
 
 
 def sysp():
-    t = time.strftime("%H:%M:%S")
-    print(t, '*******System protection*******', end=',')
+    logger.info(t, '*******System protection*******', end=',')
     type(Key.F11)
     wait(0.2)
     click(Pattern("sysp.png").targetOffset(180, 90))
@@ -32,8 +30,7 @@ def sysp():
 
 
 def quanxian():
-    t = time.strftime("%H:%M:%S")
-    print(t, ':*******find quanxian action..*******', end=',')
+    logger.info(t, ':*******find quanxian action..*******', end=',')
     type(Key.F11)
     wait(0.2)
     click(Pattern("quanxian.png").targetOffset(104, 0))
@@ -43,8 +40,7 @@ def quanxian():
 
 
 def guanlian():
-    t = time.strftime("%H:%M:%S")
-    print(t, ':****find guanlian action..*********', end=',')
+    logger.info(t, ':****find guanlian action..*********', end=',')
     type(Key.F11)
     wait(0.2)
     click(Pattern("install.png").targetOffset(70, -55))
@@ -52,8 +48,7 @@ def guanlian():
 
 
 def allow():
-    t = time.strftime("%H:%M:%S")
-    print(t, ':*******allow>>*************', end=',')
+    logger.info(t, ':*******allow>>*************', end=',')
     type(Key.F11)
     wait(0.2)
     click("allow.png")
@@ -61,8 +56,7 @@ def allow():
 
 
 def qinngc():
-    t = time.strftime("%H:%M:%S")
-    print(t, ':*************Virus removal at once***************', end=',')
+    logger.info(t, ':*************Virus removal at once***************', end=',')
     type(Key.F11)
     wait(0.2)
     click("qingchu.png")
@@ -70,8 +64,7 @@ def qinngc():
 
 
 def bkq():
-    t = time.strftime("%H:%M:%S")
-    print(t, ':donnot turn on', end=',')
+    logger.info(t, ':donnot turn on', end=',')
     type(Key.F11)
     wait(0.2)
     click("bukaiqi.png")
@@ -100,9 +93,24 @@ def UI():
             bkq()
         else:
             pass
-            # print 'no safe messages'
+            # logger.info 'no safe messages'
     except Exception as e:
-        print('UI-error:', e)
+        logger.info('UI-error:', e)
+
+
+def upgrade():
+    subprocess.Popen(r'C:\Program Files (x86)\kingsoft\kingsoft antivirus\kislive.exe', shell=True)
+    time.sleep(5)
+    if exists("upgrade.png", 1):
+        logger.info('*******find quanxian action..*******')
+        type(Key.F11)
+        wait(0.2)
+        click(Pattern("quanxian.png").targetOffset(0, 20))
+        wait(0.2)
+        if exists("i-know.png", 1):
+            click(Pattern("quanxian.png").targetOffset(0, 20))
+            wait(0.2)
+
 
 
 def inst(package):
@@ -210,13 +218,18 @@ def b4hand(project, package, updc, p_list):
 
         setTime[i]()
         logger.info('*****updc********')
-        p = subprocess.Popen(updc, shell=True)
         try:
-            p.communicate(timeout=20)
-        except subprocess.TimeoutExpired as e:
-            logger.info('timeout>kill process****', e)
-            subprocess.call(['taskkill', '/F', '/T', '/PID', str(p.pid)])
-        time.sleep(100)
+            subprocess.Popen(updc, shell=True)
+        except Exception as e:
+            logger.info(f'***kill {updc}****', e)
+        finally:
+            time.sleep(160)
+            try:
+                result = subprocess.check_call(f'taskkill /F /IM {updc}.exe')
+                if result == 0:
+                    logger.info(f'***{updc}.exe is killed*****')
+            except Exception as e:
+                pass
 
         if project in [xiaoyu, kuaizip, kantu, heinote, finder, browser]:
             pb()

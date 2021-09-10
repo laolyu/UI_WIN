@@ -158,7 +158,7 @@ def b4hand(project, package, updc, p_list):
         except Exception as e:
             logger.info(f'***kill {updc}****', e)
         finally:
-            time.sleep(120)
+            time.sleep(160)
             try:
                 result = subprocess.check_call(f'taskkill /F /IM {updc}.exe')
                 if result == 0:
