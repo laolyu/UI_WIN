@@ -12,8 +12,7 @@ from config import *
 
 
 def install():
-    t = time.strftime("%H:%M:%S")
-    print('****allow install*****', end=',')
+    logger.info('****allow install*****', end=',')
     # type(Key.F11)
     wait(0.1)
     click(Pattern("install.png").targetOffset(422, 126))
@@ -23,8 +22,7 @@ def install():
 
 
 def procp():
-    t = time.strftime("%H:%M:%S")
-    print('****process protection*****', end=',')
+    logger.info('****process protection*****', end=',')
     type(Key.F11)
     wait(0.1)
     click(Pattern("procp.png").targetOffset(422, 150))
@@ -34,8 +32,7 @@ def procp():
 
 
 def bingdu():
-    t = time.strftime("%H:%M:%S")
-    print('****Virus removal*****', end=',')
+    logger.info('****Virus removal*****', end=',')
     type(Key.F11)
     wait(0.1)
     click(Pattern("bingdu.png").targetOffset(159, -21))
@@ -57,7 +54,7 @@ def UI():
             pass
             # print('no safe messages'
     except Exception as e:
-        print('UI-error:', e, end=',')
+        logger.info('UI-error:', e, end=',')
 
 
 def inst(package):

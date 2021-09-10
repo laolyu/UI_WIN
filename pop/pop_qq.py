@@ -12,7 +12,6 @@ from config import *
 
 
 def haode():
-    t = time.strftime("%H:%M:%S")
     logger.info(':**************Virus removal***************', end=',')
     type(Key.F11)
     wait(0.2)
@@ -21,7 +20,6 @@ def haode():
 
 
 def yunxu():
-    t = time.strftime("%H:%M:%S")
     logger.info('-->>allow*************', end=',')
     type(Key.F11)
     wait(0.2)
