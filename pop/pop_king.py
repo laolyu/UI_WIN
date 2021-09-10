@@ -12,7 +12,7 @@ from config import *
 
 
 def install():
-    logger.info(t, '********find install action**********', end=',')
+    logger.info('********find install action**********', end=',')
     type(Key.F11)
     wait(0.2)
     click(Pattern("install.png").targetOffset(147, -55))
@@ -22,7 +22,7 @@ def install():
 
 
 def sysp():
-    logger.info(t, '*******System protection*******', end=',')
+    logger.info('*******System protection*******', end=',')
     type(Key.F11)
     wait(0.2)
     click(Pattern("sysp.png").targetOffset(180, 90))
@@ -30,7 +30,7 @@ def sysp():
 
 
 def quanxian():
-    logger.info(t, ':*******find quanxian action..*******', end=',')
+    logger.info(':*******find quanxian action..*******', end=',')
     type(Key.F11)
     wait(0.2)
     click(Pattern("quanxian.png").targetOffset(104, 0))
@@ -40,7 +40,7 @@ def quanxian():
 
 
 def guanlian():
-    logger.info(t, ':****find guanlian action..*********', end=',')
+    logger.info(':****find guanlian action..*********', end=',')
     type(Key.F11)
     wait(0.2)
     click(Pattern("install.png").targetOffset(70, -55))
@@ -48,7 +48,7 @@ def guanlian():
 
 
 def allow():
-    logger.info(t, ':*******allow>>*************', end=',')
+    logger.info(':*******allow>>*************', end=',')
     type(Key.F11)
     wait(0.2)
     click("allow.png")
@@ -56,7 +56,7 @@ def allow():
 
 
 def qinngc():
-    logger.info(t, ':*************Virus removal at once***************', end=',')
+    logger.info(':*************Virus removal at once***************', end=',')
     type(Key.F11)
     wait(0.2)
     click("qingchu.png")
@@ -64,7 +64,7 @@ def qinngc():
 
 
 def bkq():
-    logger.info(t, ':donnot turn on', end=',')
+    logger.info(':donnot turn on', end=',')
     type(Key.F11)
     wait(0.2)
     click("bukaiqi.png")

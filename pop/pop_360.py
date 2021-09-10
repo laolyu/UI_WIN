@@ -13,7 +13,7 @@ from config import *
 
 def install():
     t = time.strftime("%H:%M:%S")
-    print(t, '*******allow install*********', end=',')
+    print('****allow install*****', end=',')
     # type(Key.F11)
     wait(0.1)
     click(Pattern("install.png").targetOffset(422, 126))
@@ -24,7 +24,7 @@ def install():
 
 def procp():
     t = time.strftime("%H:%M:%S")
-    print(t, '***************process protection************', end=',')
+    print('****process protection*****', end=',')
     type(Key.F11)
     wait(0.1)
     click(Pattern("procp.png").targetOffset(422, 150))
@@ -35,7 +35,7 @@ def procp():
 
 def bingdu():
     t = time.strftime("%H:%M:%S")
-    print(t, '***************Virus removal************', end=',')
+    print('****Virus removal*****', end=',')
     type(Key.F11)
     wait(0.1)
     click(Pattern("bingdu.png").targetOffset(159, -21))

@@ -13,7 +13,7 @@ from config import *
 
 def haode():
     t = time.strftime("%H:%M:%S")
-    logger.info(t, ':**************Virus removal***************', end=',')
+    logger.info(':**************Virus removal***************', end=',')
     type(Key.F11)
     wait(0.2)
     click("haode.png")
@@ -22,7 +22,7 @@ def haode():
 
 def yunxu():
     t = time.strftime("%H:%M:%S")
-    logger.info(t, '-->>allow*************', end=',')
+    logger.info('-->>allow*************', end=',')
     type(Key.F11)
     wait(0.2)
     click("yunxu.png")
