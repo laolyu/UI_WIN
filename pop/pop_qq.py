@@ -97,8 +97,8 @@ def setTime2T():
 def kill_p(p_list, updc):
     updc_proc = updc.split('/')[-1]
     try:
-        logger.info(f'taskkill /F /IM {updc_proc}')
-        subprocess.check_call(f'taskkill /F /IM {updc_proc}')
+        logger.info(f'taskkill /F /IM {updc_proc}.exe')
+        subprocess.check_call(f'taskkill /F /IM {updc_proc}.exe')
     except Exception as e:
         logger.info(e)
 
@@ -152,9 +152,9 @@ def b4hand(project, package, updc, p_list):
         setTime[i]()
         logger.info('*****updc********')
         try:
-            subprocess.Popen(updc, shell=True)
+            subprocess.Popen({updc}.exe, shell=True)
         except Exception as e:
-            logger.info(f'***kill {updc}****', e)
+            logger.info(f'***kill {updc}.exe****', e)
         finally:
             time.sleep(160)
             try:
