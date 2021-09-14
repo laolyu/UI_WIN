@@ -73,7 +73,7 @@ def bkq():
 
 
 def UI():
-    t = threading.Timer(60, UI)
+    t = threading.Timer(30, UI)
     t.setDaemon(True)
     t.start()
     try:
