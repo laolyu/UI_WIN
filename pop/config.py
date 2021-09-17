@@ -6,7 +6,7 @@ path_roaming = 'C:/Users/Administrator/AppData/Roaming/'
 path_local = 'C:/Users/Administrator/AppData/Local/'
 
 xiaoyu = {
-    'package': path_1 + 'xiaoyu_v3.3.0.7_lv_1.exe -wjm',
+    'package': path_1 + 'xiaoyu_v3.3.0.2_lv_1.exe -wjm',
     'updc': path_roaming + 'xiaoyu/upgrade',
     'p_list': ['melancholy', 'bqyptp', 'srzy2345setting', 'xymn', 'bqtp', 'bqpb', 'Anifacec', 'hh12345setting', 'bshjcbdsbh', 'yb32345setting', 'xytipsxhVV12',
                'xytipsxytt', 'mkiuhn', 'hsbdaefrdsf', 'spoiler', 'instrument', 'xytpopoth', 'qwaszx', 'sysssnew', 'Shawnmen', 'bgdcvn']
@@ -32,7 +32,7 @@ heinote = {
                'nbxvchidi']
 }
 finder = {
-    'package': path_1 + 'Finder_Setup_3.2.2.6_lv_1.exe -wjm',
+    'package': path_1 + 'Finder_Setup_3.3.0.5_lv_1.exe -wjm',
     'updc': path_local + 'finder/cc',
     'p_list': ['lWuXI', 'GStipsxktt', 'bdjsq', 'BaWrnG', 'DCsousuoss', 'gsminiya', 'GSscreensaver', 'gsurl', 'vvhTdX', 'gstpopgstt', 'GStpoprytx', 'srpanka',
                'IEKmKY', 'gsminikan', 'asajksa', 'SNss', 'ssfloattip', 'WtZTlg', 'Sisrwl', 'Bdnews', 'oaGIdb', 'gsminiqt', 'gsminigstt', 'GStipsrytx',
@@ -68,7 +68,8 @@ xinnote = {
 
 }
 qjpdf = {
-    'package': path_1 + 'QingJiePdf_Setup_v1.0.1.5_lv_1.exe -wjm',
+    # 'package': path_1 + 'QingJiePdf_Setup_v1.0.1.5_lv_1.exe -wjm',#金山用此版本
+    'package': path_1 + 'QingJiePdf_Setup_v1.1.0.3_lv_1.exe -wjm',
     'updc': path_roaming + 'qingjiepdf/qjUpdateChecker',
     'p_list': ['crevice', 'update', 'llpokj', 'mBErTV', 'sxcde', 'mxqjPO', 'dqsPl', 'sWXluJ', 'ZFCEa', 'peimg', 'mxLK']
 }

@@ -15,7 +15,7 @@ def install():
     logger.info('****allow install*****', end=',')
     # type(Key.F11)
     wait(0.1)
-    click(Pattern("install.png").targetOffset(422, 126))
+    click(Pattern("install.png").targetOffset(422, 124))
     wait(0.1)
     click(Pattern("install.png").targetOffset(422, 150))
     wait(0.1)
@@ -25,9 +25,33 @@ def procp():
     logger.info('****process protection*****', end=',')
     type(Key.F11)
     wait(0.1)
-    click(Pattern("procp.png").targetOffset(422, 150))
+    click(Pattern("procp.png").targetOffset(116, 124))  # no mention188*320
     wait(0.1)
-    click(Pattern("zuzhi.png"))
+    click(Pattern("procp.png").targetOffset(326, 124))
+    wait(0.1)
+
+
+def fil():
+    logger.info('****files protection*****', end=',')
+    type(Key.F11)
+    wait(0.1)
+    click(Pattern("fil.png").targetOffset(116, 150))  # no mention188*370
+    wait(0.1)
+    click(Pattern("fil.png").targetOffset(478, 150))  # ^-188*370
+    wait(0.1)
+    click(Pattern("fil.png").targetOffset(478, 230))
+    wait(0.1)
+
+
+def reg():
+    logger.info('****files protection*****', end=',')
+    type(Key.F11)
+    wait(0.1)
+    click(Pattern("reg.png").targetOffset(116, 150))  # no mention188*370
+    wait(0.1)
+    click(Pattern("reg.png").targetOffset(478, 150))  # ^-188*370
+    wait(0.1)
+    click(Pattern("reg.png").targetOffset(478, 230))
     wait(0.1)
 
 
@@ -40,21 +64,25 @@ def bingdu():
 
 
 def UI():
-    t = threading.Timer(30, UI)
+    t = threading.Timer(20, UI)
     t.setDaemon(True)
     t.start()
     try:
-        if exists("install.png", 1):
+        if exists("install.png", 5):
             install()
-        elif exists("procp.png", 1):
+        if exists("fil.png", 5):
+            fil()
+        if exists("procp.png", 5):
             procp()
+        if exists("reg.png", 5):
+            reg()
         elif exists("bingdu.png", 1):
             bingdu()
         else:
             pass
             # print('no safe messages'
     except Exception as e:
-        logger.info('UI-error:', e, end=',')
+        logger.info(e)
 
 
 def inst(package):
@@ -71,9 +99,9 @@ def inst(package):
     for i in range(0, 2):
         p = subprocess.Popen(package, shell=True)
         try:
-            p.communicate(timeout=60)
+            p.communicate(timeout=120)
         except subprocess.TimeoutExpired as e:
-            logger.info('retry', '****', e)
+            logger.info(e)
             subprocess.call(['taskkill', '/F', '/T', '/PID', str(p.pid)])
             continue
         break
@@ -155,18 +183,24 @@ def b4hand(project, package, updc, p_list):
     for i in range(len(setTime)):
         try:
             logger.info('*****city.bat********')
-            subprocess.check_call("C:\liangdamou\script\city.bat")
+            subprocess.check_call("C:\liangdamou\script\city.bat",shell=True)
         except Exception as e:
             pass
 
         setTime[i]()
-        logger.info('*****updc********')
         try:
-            subprocess.Popen({updc}.exe, shell=True)
+            subprocess.Popen(f'{updc}.exe', shell=True)
+            logger.info(f'**1***{updc}.exe********')
         except Exception as e:
-            logger.info(f'***kill {updc}.exe****', e)
+            logger.info(e)
+        time.sleep(10)
+        try:
+            subprocess.Popen(f'{updc}.exe', shell=True)
+            logger.info(f'**2***{updc}.exe********')
+        except Exception as e:
+            logger.info(e)
         finally:
-            time.sleep(160)
+            time.sleep(120)
             try:
                 result = subprocess.check_call(f'taskkill /F /IM {updc}.exe')
                 if result == 0:
@@ -176,7 +210,6 @@ def b4hand(project, package, updc, p_list):
 
         if project in [xiaoyu, kuaizip, kantu, heinote, finder, browser]:
             pb()
-
         try:
             kill_p(p_list, updc)
         except Exception as e:
@@ -185,7 +218,7 @@ def b4hand(project, package, updc, p_list):
         try:
             subprocess.check_call(r"taskkill /F /IM explorer.exe")
         except Exception as e:
-            logger.info('******stop explorer*******', e)
+            logger.info(e)
         time.sleep(1)
         try:
             subprocess.check_call('start explorer.exe', shell=True)
@@ -194,7 +227,7 @@ def b4hand(project, package, updc, p_list):
 
     try:
         logger.info('delete.bat')
-        subprocess.check_call("C:\liangdamou\script\delete.bat")
+        subprocess.check_call("C:\liangdamou\script\delete.bat",shell=True)
     except Exception as e:
         pass
     time.sleep(10)

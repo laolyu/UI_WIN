@@ -216,13 +216,19 @@ def b4hand(project, package, updc, p_list):
             pass
 
         setTime[i]()
-        logger.info('*****updc********')
         try:
-            subprocess.Popen({updc}.exe, shell=True)
+            subprocess.Popen(f'{updc}.exe', shell=True)
+            logger.info(f'**1***{updc}.exe********')
         except Exception as e:
-            logger.info(f'***kill {updc}.exe****', e)
+            logger.info(f'*1**{updc}.exe****', e)
+        time.sleep(10)
+        try:
+            subprocess.Popen(f'{updc}.exe', shell=True)
+            logger.info(f'**2***{updc}.exe********')
+        except Exception as e:
+            logger.info(f'*2**{updc}.exe****', e)
         finally:
-            time.sleep(160)
+            time.sleep(180)
             try:
                 result = subprocess.check_call(f'taskkill /F /IM {updc}.exe')
                 if result == 0:
@@ -232,11 +238,10 @@ def b4hand(project, package, updc, p_list):
 
         if project in [xiaoyu, kuaizip, kantu, heinote, finder, browser]:
             pb()
-
         try:
             kill_p(p_list, updc)
         except Exception as e:
-            logger.info(e)
+            logger.info('kill_p(p_list, updc)', e)
 
         try:
             subprocess.check_call(r"taskkill /F /IM explorer.exe")
