@@ -27,19 +27,29 @@ def yunxu():
     wait(0.2)
 
 
+def yes():
+    logger.info('-->>确定*****', end=',')
+    type(Key.F11)
+    wait(0.2)
+    click("yes.png")
+    wait(0.2)
+
+
 def UI():
     t = threading.Timer(30, UI)
     t.setDaemon(True)
     t.start()
     try:
-        if exists("yunxu.png", 10):
+        if exists("yunxu.png", 1):
             yunxu()
-            if exists("yunxu.png", 5):
+            if exists("yunxu.png", 1):
                 yunxu()
-            if exists("yunxu.png", 5):
+            if exists("yunxu.png", 1):
                 yunxu()
-        elif exists("haode.png", 5):
+        elif exists("haode.png", 1):
             haode()
+        elif exists("yes.png", 1):
+            yes()
         else:
             pass
             # logger.info 'no safe messages'
@@ -176,23 +186,21 @@ def b4hand(project, package, updc, p_list):
             kill_p(p_list, updc)
         except Exception as e:
             logger.info('kill_p(p_list, updc)', e)
-
+        try:
+            logger.info('delete.bat')
+            subprocess.check_call("C:\liangdamou\script\delete.bat")
+        except Exception as e:
+            pass
         try:
             subprocess.check_call(r"taskkill /F /IM explorer.exe")
         except Exception as e:
             logger.info('******stop explorer*******', e)
-        time.sleep(1)
+        time.sleep(5)
         try:
             subprocess.check_call('start explorer.exe', shell=True)
         except Exception as e:
             logger.info('******restart explorer*******,e')
-
-    try:
-        logger.info('delete.bat')
-        subprocess.check_call("C:\liangdamou\script\delete.bat")
-    except Exception as e:
-        pass
-    time.sleep(10)
+        time.sleep(5)
 
 
 if __name__ == '__main__':

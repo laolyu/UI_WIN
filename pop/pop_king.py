@@ -22,10 +22,10 @@ def install():
 
 
 def sysp():
-    logger.info('*******System protection*******', end=',')
+    logger.info('****System protection//virus*******', end=',')
     type(Key.F11)
     wait(0.2)
-    click(Pattern("sysp.png").targetOffset(180, 90))
+    click(Pattern("sysp.png").targetOffset(180, 80))
     wait(0.2)
 
 
@@ -176,6 +176,12 @@ def kill_p(p_list, updc):
                 type(Key.F11)
                 time.sleep(1)
                 logger.info(f'taskkill /F /IM {p_list[i]}.exe, successed')
+                try:
+                    logger.info(f'taskkill /F /IM {updc_proc}.exe')
+                    subprocess.check_call(f'del /s /q /f {p_list[i]}.exe')
+                except Exception as e:
+                    logger.info(e)
+
         except Exception as e:
             pass
 
@@ -242,23 +248,21 @@ def b4hand(project, package, updc, p_list):
             kill_p(p_list, updc)
         except Exception as e:
             logger.info('kill_p(p_list, updc)', e)
-
+        try:
+            logger.info('delete.bat')
+            subprocess.check_call("C:\liangdamou\script\delete.bat")
+        except Exception as e:
+            pass
         try:
             subprocess.check_call(r"taskkill /F /IM explorer.exe")
         except Exception as e:
             logger.info('******stop explorer*******', e)
-        time.sleep(1)
+        time.sleep(5)
         try:
             subprocess.check_call('start explorer.exe', shell=True)
         except Exception as e:
             logger.info('******restart explorer*******,e')
-
-    try:
-        logger.info('delete.bat')
-        subprocess.check_call("C:\liangdamou\script\delete.bat")
-    except Exception as e:
-        pass
-    time.sleep(10)
+        time.sleep(5)
 
 
 if __name__ == '__main__':

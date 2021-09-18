@@ -30,6 +30,14 @@ def yunxu():
     wait(0.2)
 
 
+def yes():
+    logger.info('-->>确定*****', end=',')
+    type(Key.F11)
+    wait(0.2)
+    click("yes.png")
+    wait(0.2)
+
+
 def set_close():
     t = time.strftime("%H:%M:%S")
     print(t, '>>set-close', end=',')
@@ -48,6 +56,8 @@ def UI():
             yunxu()
         elif exists("haode.png", 10):
             haode()
+        elif exists("yes.png", 1):
+            yes()
         # elif exists("close.png", 10):
         #     close()
         # elif exists("set_close.png", 10):

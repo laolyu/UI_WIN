@@ -68,13 +68,13 @@ def UI():
     t.setDaemon(True)
     t.start()
     try:
-        if exists("install.png", 5):
+        if exists("install.png", 1):
             install()
-        if exists("fil.png", 5):
+        if exists("fil.png", 1):
             fil()
-        if exists("procp.png", 5):
+        if exists("procp.png", 1):
             procp()
-        if exists("reg.png", 5):
+        if exists("reg.png", 1):
             reg()
         elif exists("bingdu.png", 1):
             bingdu()
@@ -99,7 +99,7 @@ def inst(package):
     for i in range(0, 2):
         p = subprocess.Popen(package, shell=True)
         try:
-            p.communicate(timeout=120)
+            p.communicate(timeout=180)
         except subprocess.TimeoutExpired as e:
             logger.info(e)
             subprocess.call(['taskkill', '/F', '/T', '/PID', str(p.pid)])
@@ -213,24 +213,22 @@ def b4hand(project, package, updc, p_list):
         try:
             kill_p(p_list, updc)
         except Exception as e:
-            logger.info(e)
-
+            logger.info('kill_p(p_list, updc)', e)
+        try:
+            logger.info('delete.bat')
+            subprocess.check_call("C:\liangdamou\script\delete.bat")
+        except Exception as e:
+            pass
         try:
             subprocess.check_call(r"taskkill /F /IM explorer.exe")
         except Exception as e:
-            logger.info(e)
-        time.sleep(1)
+            logger.info('******stop explorer*******', e)
+        time.sleep(5)
         try:
             subprocess.check_call('start explorer.exe', shell=True)
         except Exception as e:
             logger.info('******restart explorer*******,e')
-
-    try:
-        logger.info('delete.bat')
-        subprocess.check_call("C:\liangdamou\script\delete.bat",shell=True)
-    except Exception as e:
-        pass
-    time.sleep(10)
+        time.sleep(5)
 
 
 if __name__ == '__main__':
