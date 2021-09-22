@@ -15,8 +15,8 @@ def version(project):
                            'xiaoyu_v3.3.0.4_guanwang_4.exe -wjm', 'xiaoyu_v3.3.0.4_guanwang_5.exe -wjm',
                            'xiaoyu_v3.3.0.6_guanwang_1.exe -wjm', 'xiaoyu_v3.3.0.6_guanwang_2.exe -wjm', 'xiaoyu_v3.3.0.6_guanwang_3.exe -wjm',
                            'xiaoyu_v3.3.0.6_guanwang_4.exe -wjm', 'xiaoyu_v3.3.0.6_guanwang_5.exe -wjm',
-                           'xiaoyu_v3.3.0.7_guanwang_1.exe -wjm', 'xiaoyu_v3.3.0.7_guanwang_2.exe -wjm', 'xiaoyu_v3.3.0.7_guanwang_3.exe -wjm',
-                           'xiaoyu_v3.3.0.7_guanwang_4.exe -wjm', 'xiaoyu_v3.3.0.7_guanwang_5.exe -wjm'
+                           # 'xiaoyu_v3.3.0.7_guanwang_1.exe -wjm', 'xiaoyu_v3.3.0.7_guanwang_2.exe -wjm', 'xiaoyu_v3.3.0.7_guanwang_3.exe -wjm',
+                           # 'xiaoyu_v3.3.0.7_guanwang_4.exe -wjm', 'xiaoyu_v3.3.0.7_guanwang_5.exe -wjm'
                            ],  # 3306,3307金山不测
                'mkuai': [
                    'KuaiZip_Setup_v3.2.3.8_guanwang_1.exe -wjm', 'KuaiZip_Setup_v3.2.3.8_guanwang_2.exe -wjm', 'KuaiZip_Setup_v3.2.3.8_guanwang_3.exe -wjm',
@@ -31,27 +31,28 @@ def version(project):
                    'KuaiZip_Setup_v3.3.0.7_guanwang_4.exe -wjm', 'KuaiZip_Setup_v3.3.0.7_guanwang_5.exe -wjm',
                ],
 
-               'mabc': ['PhotoViewer_Setup_v3.2.2.8_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.2.2.8_guanwang_2.exe -wjm',
-                        'PhotoViewer_Setup_v3.2.2.8_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.2.2.8_guanwang_4.exe -wjm',
-                        'PhotoViewer_Setup_v3.2.2.8_guanwang_5.exe -wjm',
-                        'PhotoViewer_Setup_v3.3.0.2_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.0.2_guanwang_2.exe -wjm',
-                        'PhotoViewer_Setup_v3.3.0.2_guanwang_3.exe -wjm',
-                        'PhotoViewer_Setup_v3.3.0.2_guanwang_4.exe -wjm', 'PhotoViewer_Setup_v3.3.0.2_guanwang_5.exe -wjm',
-                        'PhotoViewer_Setup_v3.3.0.3_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.0.3_guanwang_2.exe -wjm',
-                        'PhotoViewer_Setup_v3.3.0.3_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.3.0.3_guanwang_4.exe -wjm',
-                        'PhotoViewer_Setup_v3.3.0.3_guanwang_5.exe -wjm',
-                        'PhotoViewer_Setup_v3.3.0.4_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.0.4_guanwang_2.exe -wjm',
-                        'PhotoViewer_Setup_v3.3.0.4_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.3.0.4_guanwang_4.exe -wjm',
-                        'PhotoViewer_Setup_v3.3.0.4_guanwang_5.exe -wjm',
-                        'PhotoViewer_Setup_v3.3.0.6_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.0.6_guanwang_2.exe -wjm',
-                        'PhotoViewer_Setup_v3.3.0.6_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.3.0.6_guanwang_4.exe -wjm',
-                        'PhotoViewer_Setup_v3.3.0.6_guanwang_5.exe -wjm'
-                        ],
+               'mabc': [
+                   # 'PhotoViewer_Setup_v3.2.2.8_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.2.2.8_guanwang_2.exe -wjm',
+                   # 'PhotoViewer_Setup_v3.2.2.8_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.2.2.8_guanwang_4.exe -wjm',
+                   # 'PhotoViewer_Setup_v3.2.2.8_guanwang_5.exe -wjm',
+                   'PhotoViewer_Setup_v3.3.0.2_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.0.2_guanwang_2.exe -wjm',
+                   'PhotoViewer_Setup_v3.3.0.2_guanwang_3.exe -wjm',
+                   'PhotoViewer_Setup_v3.3.0.2_guanwang_4.exe -wjm', 'PhotoViewer_Setup_v3.3.0.2_guanwang_5.exe -wjm',
+                   'PhotoViewer_Setup_v3.3.0.3_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.0.3_guanwang_2.exe -wjm',
+                   'PhotoViewer_Setup_v3.3.0.3_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.3.0.3_guanwang_4.exe -wjm',
+                   'PhotoViewer_Setup_v3.3.0.3_guanwang_5.exe -wjm',
+                   'PhotoViewer_Setup_v3.3.0.4_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.0.4_guanwang_2.exe -wjm',
+                   'PhotoViewer_Setup_v3.3.0.4_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.3.0.4_guanwang_4.exe -wjm',
+                   'PhotoViewer_Setup_v3.3.0.4_guanwang_5.exe -wjm',
+                   'PhotoViewer_Setup_v3.3.0.6_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.0.6_guanwang_2.exe -wjm',
+                   'PhotoViewer_Setup_v3.3.0.6_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.3.0.6_guanwang_4.exe -wjm',
+                   'PhotoViewer_Setup_v3.3.0.6_guanwang_5.exe -wjm'
+               ],
                'mxiaohei': ['Heinote_v3.2.2.5_guanwang_1.exe -wjm', 'Heinote_v3.2.2.5_guanwang_2.exe -wjm', 'Heinote_v3.2.2.5_guanwang_3.exe -wjm',
                             'Heinote_v3.2.2.5_guanwang_4.exe -wjm', 'Heinote_v3.2.2.5_guanwang_5.exe -wjm',
-                            'Heinote_v3.3.0.1_guanwang_1.exe -wjm',
-                            'Heinote_v3.3.0.1_guanwang_2.exe -wjm', 'Heinote_v3.3.0.1_guanwang_3.exe -wjm', 'Heinote_v3.3.0.1_guanwang_4.exe -wjm',
-                            'Heinote_v3.3.0.1_guanwang_5.exe -wjm',
+                            # 'Heinote_v3.3.0.1_guanwang_1.exe -wjm',
+                            # 'Heinote_v3.3.0.1_guanwang_2.exe -wjm', 'Heinote_v3.3.0.1_guanwang_3.exe -wjm', 'Heinote_v3.3.0.1_guanwang_4.exe -wjm',
+                            # 'Heinote_v3.3.0.1_guanwang_5.exe -wjm',
                             'Heinote_v3.3.0.2_guanwang_1.exe -wjm', 'Heinote_v3.3.0.2_guanwang_2.exe -wjm', 'Heinote_v3.3.0.2_guanwang_3.exe -wjm',
                             'Heinote_v3.3.0.2_guanwang_4.exe -wjm', 'Heinote_v3.3.0.2_guanwang_5.exe -wjm',
                             'xinnote_v2.1.0.1_guanwang_1.exe -wjm', 'xinnote_v2.1.0.1_guanwang_2.exe -wjm', 'xinnote_v2.1.0.1_guanwang_3.exe -wjm',
@@ -113,7 +114,7 @@ def version(project):
 
                        'clouds_setup_v1.1.0.6_guanwang_1.exe -wjm', 'clouds_setup_v1.1.0.6_guanwang_2.exe -wjm',
                        'clouds_setup_v1.1.0.6_guanwang_3.exe -wjm', 'clouds_setup_v1.1.0.6_guanwang_4.exe -wjm', 'clouds_setup_v1.1.0.6_guanwang_5.exe -wjm',
-                       #gjl,1105只测金山环境
+                       # gjl,1105只测金山环境
 
                        'Sesame_Setup_v1.0.1.6_guangwang_1.exe -wjm', 'Sesame_Setup_v1.0.1.6_guangwang_2.exe -wjm', 'Sesame_Setup_v1.0.1.6_guangwang_3.exe -wjm',
                        'Sesame_Setup_v1.0.1.6_guangwang_4.exe -wjm', 'Sesame_Setup_v1.0.1.6_guangwang_5.exe -wjm'  # 金山已知报毒
