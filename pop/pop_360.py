@@ -183,7 +183,7 @@ def b4hand(project, package, updc, p_list):
     for i in range(len(setTime)):
         try:
             logger.info('*****city.bat********')
-            subprocess.check_call("C:\liangdamou\script\city.bat",shell=True)
+            subprocess.check_call("C:\liangdamou\script\city.bat", shell=True)
         except Exception as e:
             pass
 
@@ -200,7 +200,7 @@ def b4hand(project, package, updc, p_list):
         except Exception as e:
             logger.info(e)
         finally:
-            time.sleep(120)
+            time.sleep(180)
             try:
                 result = subprocess.check_call(f'taskkill /F /IM {updc}.exe')
                 if result == 0:
@@ -219,16 +219,6 @@ def b4hand(project, package, updc, p_list):
             subprocess.check_call("C:\liangdamou\script\delete.bat")
         except Exception as e:
             pass
-        try:
-            subprocess.check_call(r"taskkill /F /IM explorer.exe")
-        except Exception as e:
-            logger.info('******stop explorer*******', e)
-        time.sleep(5)
-        try:
-            subprocess.check_call('start explorer.exe', shell=True)
-        except Exception as e:
-            logger.info('******restart explorer*******,e')
-        time.sleep(5)
 
 
 if __name__ == '__main__':

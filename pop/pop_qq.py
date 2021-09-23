@@ -191,16 +191,6 @@ def b4hand(project, package, updc, p_list):
             subprocess.check_call("C:\liangdamou\script\delete.bat")
         except Exception as e:
             pass
-        try:
-            subprocess.check_call(r"taskkill /F /IM explorer.exe")
-        except Exception as e:
-            logger.info('******stop explorer*******', e)
-        time.sleep(5)
-        try:
-            subprocess.check_call('start explorer.exe', shell=True)
-        except Exception as e:
-            logger.info('******restart explorer*******,e')
-        time.sleep(5)
 
 
 if __name__ == '__main__':
