@@ -101,7 +101,7 @@ def cmd_send(project, path, vc_list):
 if __name__ == '__main__':
     print('thread %s is running...' % threading.current_thread().name)
     path_0 = r'C:\liangdamou\package\\'
-    projects = ['mxiaoyu', 'mguangsu', 'mkuai', 'mabc', 'mxiaohei', 'mllq', 'qjpdf', 'lszip', 'gjl']
+    projects = ['mxiaoyu', 'mguangsu', 'mkuai', 'mxiaohei', 'mllq', 'qjpdf', 'lszip', 'gjl', 'mabc']
     UI()
     for i in range(len(projects)):
         project = projects[i]
