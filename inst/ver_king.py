@@ -25,6 +25,8 @@ def version(project):
                    'KuaiZip_Setup_v3.3.0.5_guanwang_4.exe -wjm', 'KuaiZip_Setup_v3.3.0.5_guanwang_5.exe -wjm',
                    'KuaiZip_Setup_v3.3.0.7_guanwang_1.exe -wjm', 'KuaiZip_Setup_v3.3.0.7_guanwang_2.exe -wjm', 'KuaiZip_Setup_v3.3.0.7_guanwang_3.exe -wjm',
                    'KuaiZip_Setup_v3.3.0.7_guanwang_4.exe -wjm', 'KuaiZip_Setup_v3.3.0.7_guanwang_5.exe -wjm',
+                   'KuaiZip_Setup_v3.3.1.2_guanwang_1.exe -wjm', 'KuaiZip_Setup_v3.3.1.2_guanwang_2.exe -wjm', 'KuaiZip_Setup_v3.3.1.2_guanwang_3.exe -wjm',
+                   'KuaiZip_Setup_v3.3.1.2_guanwang_4.exe -wjm', 'KuaiZip_Setup_v3.3.1.2_guanwang_5.exe -wjm',
                ],
 
                'mabc': [
