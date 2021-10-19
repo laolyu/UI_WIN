@@ -1,8 +1,23 @@
 # coding:utf-8
+import os
+import re
 
-path_1 = 'C:/liangdamou/package/'
-path_roaming = 'C:/Users/Administrator/AppData/Roaming/'
-path_local = 'C:/Users/Administrator/AppData/Local/'
+lua_xiaoyu = r'F:\svn\Lua\xiaoyu\uc.lua'
+lua_kuaizip = r'F:\svn\Lua\kuaizip\uc.lua'
+lua_kantu = r'F:\svn\Lua\ABCkantu\uc.lua'
+lua_heinote = r'F:\svn\Lua\heinote\uc.lua'
+lua_finder = r'F:\svn\Lua\finder\uc.lua'
+lua_browser = r'F:\svn\Lua\7654browser\v1.0.0.2\uc.lua'
+lua_lszip = r'F:\svn\Lua\lszip\uc.lua'
+lua_xinnote = r'F:\svn\Lua\xinnote\uc.lua'
+lua_qjpdf = r'F:\svn\Lua\qingjiepdf\uc.lua'
+lua_smartlook = r'F:\svn\Lua\smartlook\uc.lua'
+lua_cloudbar = r'F:\svn\Lua\CloudsToolbar\uc.lua'
+lua_haotu = r'F:\svn\Lua\haotukankan\uc.lua'
+lua_xxbz = r'F:\svn\Lua\xxbz\new.lua'
+lua_xfpdf = r'F:\svn\Lua\xuanfengpdf\bundle_updatechecker.lua'
+lua_jcbz = r'F:\svn\Lua\jcwallpaper\new.lua'
+lua_sesame = r'F:\svn\Lua\srf\uc.lua'
 
 p_xiaoyu = ['bgdcvn', 'bqpb', 'bqtp', 'bqyptp', 'fjvuhhwuvr', 'fregnhfwew', 'instrument', 'jafreqfrq', 'melancholy', 'mkiuhn', 'qwaszx', 'sfrhhgt2345Uninst',
             'spoiler', 'srzy2345setting', 'sysssnew', 'wfreqhfure', 'xymn', 'xytipsxhVV12', 'xytipsxytt', 'xytpopoth', 'yb32345setting']
@@ -35,95 +50,38 @@ p_jcbz = ['yearn', 'expat', 'Jcbztips', 'celery', '32345Uninst', 'anthem', 'resp
           'chord', '52345Uninst']
 p_sesame = ['dessertcookies', 'srfminiwwt', 'hardware', 'srftipsWV23', 'srftpopwwm']
 
-xiaoyu = {
-    'package': path_1 + 'xiaoyu_v3.3.0.2_lv_1.exe -wjm',
-    'updc': path_roaming + 'xiaoyu/upgrade',
-    'p_list': p_xiaoyu
-}
-kuaizip = {
-    'package': path_1 + 'KuaiZip_Setup_v3.3.0.7_lv_1.exe -wjm',
-    'updc': path_roaming + '快压/X86/KuaiZip',
-    'p_list': p_kuaizip
-}
-kantu = {
-    'package': path_1 + 'PhotoViewer_Setup_v3.3.0.6_lv_1 -wjm',
-    'updc': path_roaming + 'PhotoViewer/Update',
-    'p_list': p_kantu
-}
-heinote = {
-    'package': path_1 + 'Heinote_v3.3.0.2_lv_1.exe -wjm',
-    'updc': path_roaming + 'Heinote/upgrade',
-    'p_list': p_heinote
-}
-finder = {
-    'package': path_1 + 'Finder_Setup_3.3.0.5_lv_1.exe -wjm',
-    'updc': path_local + 'finder/cc',
-    'p_list': p_finder
-}
 
-browser = {
-    'package': path_1 + '7654Browser_v3.1.1.2_lv_1.exe -wjm',
-    'updc': path_roaming + '7654Browser/UpdateChecker',
-    'p_list': p_xiaoyu
-}
+def get_p(project=None):
+    p_list = []
+    lua_project = globals()['lua_' + project]
+    if os.path.isfile(lua_project):
+        with open(lua_project, encoding="utf-8") as file:
+            for line in file:
+                # urls = re.compile(r'localname = "(.*?)"',line)
+                pattern = re.compile(r'localname = "(.*?)"')
+                result = pattern.findall(line)
+                if result:
+                    p = result[-1]
+                    p_list.append(p)
+            p_list_new = sorted(list(set(p_list)))
+    else:
+        print('文件不存在')
+    # print(p_list_new)
+    return p_list_new
 
-lszip = {
-    'package': path_1 + 'LsZip_Setup_v1.1.0.4_lv_1.exe -wjm',
-    'updc': path_roaming + '雷神压缩/ThorUpdateChecker',
-    'p_list': p_xiaoyu
-}
 
-jcbz = {
-    'package': path_1 + 'JCWallpaper_v1.1.0.3_lv_1.exe -wjm',
-    'updc': path_roaming + '鲸彩壁纸/UpdateCheck',
-    'p_list': p_xiaoyu
-}
+def change():
+    projects = ['xiaoyu', 'kuaizip', 'kantu', 'heinote', 'finder', 'browser', 'lszip', 'xinnote', 'qjpdf', 'cloudbar', 'haotu', 'xxbz', 'smartlook', 'xfpdf',
+                'jcbz', 'sesame']
+    for i in range(len(projects)):
+        project = projects[i]
+        p_list_new = get_p(project)
+        p_list_old = sorted(globals()['p_' + project])
+        if p_list_new != p_list_old:
+            print(f'{project} 进程有更新', p_list_new)
+        else:
+            print(f'{project} no change')
 
-xinnote = {
-    'package': path_1 + 'xinnote_v2.1.0.4_lv_1 -wjm',
-    'updc': path_roaming + 'xinnote/upgrade',
-    'p_list': p_xiaoyu
 
-}
-qjpdf = {
-    # 'package': path_1 + 'QingJiePdf_Setup_v1.0.1.5_lv_1.exe -wjm',#金山用此版本
-    'package': path_1 + 'QingJiePdf_Setup_v1.1.0.3_lv_1.exe -wjm',
-    'updc': path_roaming + 'qingjiepdf/qjUpdateChecker',
-    'p_list': p_xiaoyu
-}
-
-cloudbar = {
-    'package': path_1 + 'clouds_setup_v1.1.0.2_lv_1.exe -wjm',
-    'updc': path_local + 'CloudsToolbar/updc',
-    'p_list': p_xiaoyu
-}
-
-xfpdf = {
-    'package': path_1 + 'xfpdf_setup_v1.0.4.0_lv_1.exe -wjm',
-    'updc': path_roaming + 'WhirlwindPdf/Uc',
-    'p_list': p_xiaoyu
-}
-
-smartlook = {
-    'package': path_1 + 'preview_Setup_1.0.2.9_lv_1.exe -wjm',
-    'updc': path_roaming + 'SmartLook/preview',
-    'p_list': p_xiaoyu
-}
-
-haotu = {
-    'package': path_1 + 'haotu_v2.1.0.6_lv_1.exe -wjm',
-    'updc': path_roaming + 'haotukankan/Viewuc',
-    'p_list': p_xiaoyu
-}
-
-xxbz = {
-    'package': path_1 + 'CalfWallpaper_v1.0.3.5_lv_1.exe -wjm',
-    'updc': path_roaming + 'CalfWallpaper/UpdateCheck',
-    'p_list': p_xiaoyu
-}
-
-sesame = {
-    'package': path_1 + 'Sesame_Setup_v1.0.1.6_lv_1.exe -wjm',
-    'updc': path_roaming + '芝麻输入法/SesameUpgrade',
-    'p_list': p_xiaoyu
-}
+if __name__ == '__main__':
+    change()
