@@ -5,6 +5,7 @@ import datetime
 import time
 import subprocess
 import threading
+import psutil
 from loguru import logger
 
 sys.path.append(r'C:\liangdamou\script\gjl')
@@ -85,6 +86,14 @@ def UI():
         logger.info(e)
 
 
+def result():
+    try:
+        subprocess.check_call(r'"C:\Program Files\360\360safe\safemon\360LogCenter.exe" /id=2000')
+        type(Key.F11)
+    except Exception as e:
+        logger.info(e)
+
+
 def inst(package):
     try:
         subprocess.check_call(r'net use \\172.18.15.3 "2020"  /user:"administrator"')
@@ -132,6 +141,17 @@ def setTime2T():
         logger.info(e)
 
 
+def proc_exist(process_name):
+    pl = psutil.pids()
+    for pid in pl:
+        if psutil.Process(pid).name() == f'{process_name}.exe':
+            try:
+                subprocess.check_call(f'taskkill /F /IM {process_name}.exe')
+                logger.info(f'taskkill /F /IM {process_name}.exe, successed')
+            except Exception as e:
+                pass
+
+
 def kill_p(p_list, updc):
     updc_proc = updc.split('/')[-1]
     try:
@@ -141,21 +161,12 @@ def kill_p(p_list, updc):
         logger.info(e)
 
     for i in range(len(p_list)):
-        time.sleep(0.1)
-        try:
-            # logger.info(f'taskkill /F /IM {p_list[i]}.exe')
-            result = subprocess.check_call(f'taskkill /F /IM {p_list[i]}.exe')
-            if result == 0:
-                type(Key.F11)
-                time.sleep(1)
-                logger.info(f'taskkill /F /IM {p_list[i]}.exe, successed')
-        except Exception as e:
-            pass
+        process_name = p_list[i]
+        proc_exist(process_name)
 
 
 def pb():
     pb_list = ['bqpb', 'Kuaipb', 'Jxohft', 'hdagf', 'gshuhg', 'vbvcxf', 'aghghf', 'ktpb', 'pbxhone', 'GSscreensaver', '7654pb']
-
     try:
         subprocess.check_call('@reg add "HKEY_CURRENT_USER\Software\ScreenSaver" /v "ScreenSaveTimeOut" /t REG_DWORD /d "5" /f>nul', shell=True)
     except Exception as e:
@@ -166,14 +177,8 @@ def pb():
         time.sleep(1)
 
     for i in range(len(pb_list)):
-        try:
-            result = subprocess.check_call(f'taskkill /F /IM {pb_list[i]}.exe')
-            if result == 0:
-                type(Key.F11)
-                time.sleep(1)
-                logger.info(f'*******{pb_list[i]}.exe is killed*********')
-        except Exception as e:
-            pass
+        process_name = pb_list[i]
+        proc_exist(process_name)
 
 
 def b4hand(project, package, updc, p_list):
