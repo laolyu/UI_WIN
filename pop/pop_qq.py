@@ -1,6 +1,8 @@
 # -*- coding: UTF-8 -*-
 
 from lackey import *
+
+Settings.InfoLogs = False
 import datetime
 import time
 import subprocess
@@ -104,48 +106,41 @@ def setTime2T():
         logger.info(e)
 
 
-def kill_p(p_list, updc):
-    updc_proc = updc.split('/')[-1]
-    try:
-        logger.info(f'taskkill /F /IM {updc_proc}.exe')
-        subprocess.check_call(f'taskkill /F /IM {updc_proc}.exe')
-    except Exception as e:
-        logger.info(e)
-
-    for i in range(len(p_list)):
-        time.sleep(0.1)
+def proc_exist(process_name):
+    pl = psutil.pids()
+    for pid in pl:
         try:
-            # logger.info(f'taskkill /F /IM {p_list[i]}.exe')
-            result = subprocess.check_call(f'taskkill /F /IM {p_list[i]}.exe')
-            if result == 0:
+            if psutil.Process(pid).name() == f'{process_name}.exe':
                 type(Key.F11)
-                time.sleep(1)
-                logger.info(f'taskkill /F /IM {p_list[i]}.exe, successed')
+                time.sleep(2)
+                subprocess.check_call(f'taskkill /F /IM {process_name}.exe')
+                logger.info(f'taskkill /F /IM {process_name}.exe, successed')
         except Exception as e:
             pass
 
 
+def kill_p(p_list, updc):
+    updc_proc = updc.split('/')[-1]
+    proc_exist(updc_proc)
+
+    for i in range(len(p_list)):
+        process_name = p_list[i]
+        proc_exist(process_name)
+        time.sleep(0.4)
+
+
 def pb():
     pb_list = ['bqpb', 'Kuaipb', 'Jxohft', 'hdagf', 'gshuhg', 'vbvcxf', 'aghghf', 'ktpb', 'pbxhone', 'GSscreensaver', '7654pb']
-
     try:
         subprocess.check_call('@reg add "HKEY_CURRENT_USER\Software\ScreenSaver" /v "ScreenSaveTimeOut" /t REG_DWORD /d "5" /f>nul', shell=True)
     except Exception as e:
         logger.info(e)
     finally:
         time.sleep(20)
-        type(Key.F11)
-        time.sleep(1)
 
     for i in range(len(pb_list)):
-        try:
-            result = subprocess.check_call(f'taskkill /F /IM {pb_list[i]}.exe')
-            if result == 0:
-                type(Key.F11)
-                time.sleep(1)
-                logger.info(f'*******{pb_list[i]}.exe is killed*********')
-        except Exception as e:
-            pass
+        process_name = pb_list[i]
+        proc_exist(process_name)
 
 
 def b4hand(project, package, updc, p_list):
@@ -173,13 +168,6 @@ def b4hand(project, package, updc, p_list):
             logger.info(f'*2**{updc}.exe****', e)
         finally:
             time.sleep(180)
-            try:
-                result = subprocess.check_call(f'taskkill /F /IM {updc}.exe')
-                if result == 0:
-                    logger.info(f'***{updc}.exe is killed*****')
-            except Exception as e:
-                pass
-
         if project in [xiaoyu, kuaizip, kantu, heinote, finder, browser]:
             pb()
         try:
