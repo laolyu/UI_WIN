@@ -7,9 +7,11 @@ import subprocess
 import threading
 import psutil
 from loguru import logger
+Settings.InfoLogs = False
 
 sys.path.append(r'C:\liangdamou\script\gjl')
 from config import *
+
 
 
 def install():
@@ -144,25 +146,24 @@ def setTime2T():
 def proc_exist(process_name):
     pl = psutil.pids()
     for pid in pl:
-        if psutil.Process(pid).name() == f'{process_name}.exe':
-            try:
+        try:
+            if psutil.Process(pid).name() == f'{process_name}.exe':
+                type(Key.F11)
+                time.sleep(2)
                 subprocess.check_call(f'taskkill /F /IM {process_name}.exe')
                 logger.info(f'taskkill /F /IM {process_name}.exe, successed')
-            except Exception as e:
-                pass
+        except Exception as e:
+            pass
 
 
 def kill_p(p_list, updc):
     updc_proc = updc.split('/')[-1]
-    try:
-        logger.info(f'taskkill /F /IM {updc_proc}.exe')
-        subprocess.check_call(f'taskkill /F /IM {updc_proc}.exe')
-    except Exception as e:
-        logger.info(e)
+    proc_exist(updc_proc)
 
     for i in range(len(p_list)):
         process_name = p_list[i]
         proc_exist(process_name)
+        time.sleep(0.4)
 
 
 def pb():
@@ -173,8 +174,6 @@ def pb():
         logger.info(e)
     finally:
         time.sleep(20)
-        type(Key.F11)
-        time.sleep(1)
 
     for i in range(len(pb_list)):
         process_name = pb_list[i]
@@ -206,12 +205,6 @@ def b4hand(project, package, updc, p_list):
             logger.info(e)
         finally:
             time.sleep(180)
-            try:
-                result = subprocess.check_call(f'taskkill /F /IM {updc}.exe')
-                if result == 0:
-                    logger.info(f'***{updc}.exe is killed*****')
-            except Exception as e:
-                pass
 
         if project in [xiaoyu, kuaizip, kantu, heinote, finder, browser]:
             pb()
