@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-
+import psutil
 from lackey import *
 
 Settings.InfoLogs = False
