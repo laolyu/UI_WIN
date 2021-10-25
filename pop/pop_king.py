@@ -1,6 +1,8 @@
 # -*- coding: UTF-8 -*-
 
 from lackey import *
+
+Settings.InfoLogs = False
 import datetime
 import time
 import subprocess
