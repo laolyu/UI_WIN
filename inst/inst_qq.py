@@ -9,6 +9,7 @@ import time
 import sys
 from loguru import logger
 
+Settings.InfoLogs = False
 sys.path.append(r'C:\liangdamou\script\gjl')  # 先加入绝对路径，否则会报错，注意__file__表示的是当前执行文件的路径
 from ver_qq import version
 
@@ -35,6 +36,7 @@ def shishifh():
     wait(0.2)
     click(Pattern("shishifh.png").targetOffset(400, 275))
     wait(0.2)
+
 
 def gaowei():
     logger.info(':***高危状态****Virus removal*******')

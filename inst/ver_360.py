@@ -106,8 +106,8 @@ def version(project):
                'gjl': ['preview_Setup_1.0.2.9_guanwang_1.exe -wjm', 'preview_Setup_1.0.2.9_guanwang_2.exe -wjm', 'preview_Setup_1.0.2.9_guanwang_3.exe -wjm',
                        'preview_Setup_1.0.2.9_guanwang_4.exe -wjm', 'preview_Setup_1.0.2.9_guanwang_5.exe -wjm',
 
-                       'clouds_setup_v1.1.0.2_guanwang_1.exe -wjm', 'clouds_setup_v1.1.0.2_guanwang_2.exe -wjm', 'clouds_setup_v1.1.0.2_guanwang_3.exe -wjm',
-                       'clouds_setup_v1.1.0.2_guanwang_4.exe -wjm', 'clouds_setup_v1.1.0.2_guanwang_5.exe -wjm',  # 不测金山
+                       'clouds_setup_v1.1.0.8_guanwang_1.exe -wjm', 'clouds_setup_v1.1.0.8_guanwang_2.exe -wjm', 'clouds_setup_v1.1.0.8_guanwang_3.exe -wjm',
+                       'clouds_setup_v1.1.0.8_guanwang_4.exe -wjm', 'clouds_setup_v1.1.0.8_guanwang_5.exe -wjm',  # 不测金山
                        # 'clouds_setup_v1.1.0.7_guanwang_1.exe -wjm', 'clouds_setup_v1.1.0.5_guanwang_2.exe -wjm', 'clouds_setup_v1.1.0.5_guanwang_3.exe -wjm',
                        # 'clouds_setup_v1.1.0.7_guanwang_4.exe -wjm', 'clouds_setup_v1.1.0.5_guanwang_5.exe -wjm',  # gjl,1105只测金山环境
 

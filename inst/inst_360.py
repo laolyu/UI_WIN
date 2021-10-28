@@ -7,6 +7,7 @@ from lackey import *
 import time
 import sys
 
+Settings.InfoLogs = False
 sys.path.append(r'C:\liangdamou\script\gjl')  # 先加入绝对路径，否则会报错，注意__file__表示的是当前执行文件的路径
 from ver_360 import version
 
