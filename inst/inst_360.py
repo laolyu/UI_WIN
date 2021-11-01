@@ -6,6 +6,7 @@ import threading
 from lackey import *
 import time
 import sys
+from loguru import logger
 
 Settings.InfoLogs = False
 sys.path.append(r'C:\liangdamou\script\gjl')  # 先加入绝对路径，否则会报错，注意__file__表示的是当前执行文件的路径
@@ -100,7 +101,8 @@ def cmd_send(project, path, vc_list):
 
 
 if __name__ == '__main__':
-    print('thread %s is running...' % threading.current_thread().name)
+    logger.add("gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip", retention="10 days")
+    logger.info('thread %s is running...' % threading.current_thread().name)
     path_0 = r'C:\liangdamou\package\\'
     projects = ['mxiaoyu', 'mguangsu', 'mkuai', 'mxiaohei', 'mllq', 'qjpdf', 'lszip', 'gjl', 'mabc']
     UI()
@@ -111,4 +113,4 @@ if __name__ == '__main__':
         t = threading.Thread(target=cmd_send, args=(project, path, vc_list), name='LoopThread')
         t.start()
         time.sleep(i * 10)
-    print('thread %s is ended...' % threading.current_thread().name)
+    logger.info('thread %s is ended...' % threading.current_thread().name)
