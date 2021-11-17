@@ -44,7 +44,16 @@ def version(project):
                    # 'PhotoViewer_Setup_v3.3.0.4_guanwang_5.exe -wjm',
                    'PhotoViewer_Setup_v3.3.0.6_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.0.6_guanwang_2.exe -wjm',
                    'PhotoViewer_Setup_v3.3.0.6_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.3.0.6_guanwang_4.exe -wjm',
-                   'PhotoViewer_Setup_v3.3.0.6_guanwang_5.exe -wjm'
+                   'PhotoViewer_Setup_v3.3.0.6_guanwang_5.exe -wjm',
+                   'JCWallpaper_v1.0.1.0_guanwang_1.exe  -wjm', 'JCWallpaper_v1.0.1.0_guanwang_2.exe  -wjm', 'JCWallpaper_v1.0.1.0_guanwang_3.exe  -wjm',
+                   'JCWallpaper_v1.0.1.0_guanwang_4.exe  -wjm', 'JCWallpaper_v1.0.1.0_guanwang_5.exe  -wjm',
+                   'JCWallpaper_v1.1.0.3_guanwang_1.exe  -wjm', 'JCWallpaper_v1.1.0.3_guanwang_2.exe  -wjm', 'JCWallpaper_v1.1.0.3_guanwang_3.exe  -wjm',
+                   'JCWallpaper_v1.1.0.3_guanwang_4.exe  -wjm', 'JCWallpaper_v1.1.0.3_guanwang_5.exe  -wjm',
+                   # 'JCWallpaper_v1.1.0.7_guanwang_1.exe  -wjm', 'JCWallpaper_v1.1.0.7_guanwang_2.exe  -wjm', 'JCWallpaper_v1.1.0.7_guanwang_3.exe  -wjm',
+                   # 'JCWallpaper_v1.1.0.7_guanwang_4.exe  -wjm','JCWallpaper_v1.1.0.7_guanwang_5.exe  -wjm'# 1107只测金山
+                   'JCWallpaper_Setup_v1.1.1.0_guanwang_1.exe -wjm', 'JCWallpaper_Setup_v1.1.1.0_guanwang_2.exe -wjm',
+                   'JCWallpaper_Setup_v1.1.1.0_guanwang_3.exe -wjm', 'JCWallpaper_Setup_v1.1.1.0_guanwang_4.exe -wjm',
+                   'JCWallpaper_Setup_v1.1.1.0_guanwang_5.exe -wjm',
                ],
                'mxiaohei': ['Heinote_v3.2.2.5_guanwang_1.exe -wjm', 'Heinote_v3.2.2.5_guanwang_2.exe -wjm', 'Heinote_v3.2.2.5_guanwang_3.exe -wjm',
                             'Heinote_v3.2.2.5_guanwang_4.exe -wjm', 'Heinote_v3.2.2.5_guanwang_5.exe -wjm',
@@ -68,15 +77,7 @@ def version(project):
                    'CalfWallpaper_v1.0.3.5_guangwang_1.exe -wjm', 'CalfWallpaper_v1.0.3.5_guangwang_2.exe -wjm',
                    'CalfWallpaper_v1.0.3.5_guangwang_3.exe -wjm', 'CalfWallpaper_v1.0.3.5_guangwang_4.exe -wjm',
                    'CalfWallpaper_v1.0.3.5_guangwang_5.exe -wjm',
-                   'JCWallpaper_v1.0.1.0_guanwang_1.exe  -wjm', 'JCWallpaper_v1.0.1.0_guanwang_2.exe  -wjm', 'JCWallpaper_v1.0.1.0_guanwang_3.exe  -wjm',
-                   'JCWallpaper_v1.0.1.0_guanwang_4.exe  -wjm', 'JCWallpaper_v1.0.1.0_guanwang_5.exe  -wjm',
-                   'JCWallpaper_v1.1.0.3_guanwang_1.exe  -wjm', 'JCWallpaper_v1.1.0.3_guanwang_2.exe  -wjm', 'JCWallpaper_v1.1.0.3_guanwang_3.exe  -wjm',
-                   'JCWallpaper_v1.1.0.3_guanwang_4.exe  -wjm', 'JCWallpaper_v1.1.0.3_guanwang_5.exe  -wjm',
-                   # 'JCWallpaper_v1.1.0.7_guanwang_1.exe  -wjm', 'JCWallpaper_v1.1.0.7_guanwang_2.exe  -wjm', 'JCWallpaper_v1.1.0.7_guanwang_3.exe  -wjm',
-                   # 'JCWallpaper_v1.1.0.7_guanwang_4.exe  -wjm','JCWallpaper_v1.1.0.7_guanwang_5.exe  -wjm'# 1107只测金山
-                   'JCWallpaper_Setup_v1.1.1.0_guanwang_1.exe -wjm', 'JCWallpaper_Setup_v1.1.1.0_guanwang_2.exe -wjm',
-                   'JCWallpaper_Setup_v1.1.1.0_guanwang_3.exe -wjm', 'JCWallpaper_Setup_v1.1.1.0_guanwang_4.exe -wjm',
-                   'JCWallpaper_Setup_v1.1.1.0_guanwang_5.exe -wjm',
+
                ],
                'mllq': [
                    '7654Browser_v3.1.1.2_guanwang_1.exe -wjm', '7654Browser_v3.1.1.2_guanwang_2.exe -wjm', '7654Browser_v3.1.1.2_guanwang_3.exe -wjm',
@@ -137,8 +138,8 @@ def version(project):
 if __name__ == '__main__':
     version(project='no_vc_project')
 
-    # project_list = ['mxiaoyu', 'mkuai', 'mabc', 'mxiaohei', 'mguangsu', 'mllq', 'lszip', 'gjl', 'qjpdf']
+    # project_list = ['mkuai', 'mxiaoyu', 'mabc', 'mllq', 'mguangsu', 'mxiaohei', 'qjpdf', 'lszip', 'gjl']
     # for i in range(len(project_list)):
     #     project = project_list[i]
     #     vc = version(project)
-    #     print (project, len(vc))
+    #     print(project, len(vc))

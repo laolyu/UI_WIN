@@ -4,35 +4,35 @@ path_1 = 'C:/liangdamou/package/'
 path_roaming = 'C:/Users/Administrator/AppData/Roaming/'
 path_local = 'C:/Users/Administrator/AppData/Local/'
 
-p_xiaoyu = ['bgdcvn', 'bqpb', 'bqtp', 'bqyptp', 'fjvuhhwuvr', 'fregnhfwew', 'instrument', 'jafreqfrq', 'melancholy', 'mkiuhn', 'qwaszx', 'sfrhhgt2345Uninst',
-            'spoiler', 'srzy2345setting', 'sysssnew', 'wfreqhfure', 'xymn', 'xytipsxhVV12', 'xytipsxytt', 'xytpopoth', 'yb32345setting']
-p_kuaizip = ['aghghf', 'kzyptp', 'Jxohft', 'enthusiastic', 'YVyVcPZzs', 'hdagf', 'kuaiyatuop', 'alkanePanda', 'gshuhg', 'kwGOkLeLvH', 'Alcohol', 'basin',
-             'polarbear', 'restless', 'tghfsdg', 'wbdyl', 'lakesi', 'Selenarctos', 'Kuaipb', 'vbvcxf', 'Eg_NNIfiu', 'VLscDaseKX', 'kuaiyatipsrytx', 'qbylwl',
-             'kuaiyatpopxxrl', 'kuaiyatpopxktt', 'ghsauk', 'pineapple', 'torque', 'hfhsbv', 'kuaiyaminixktt']
-p_kantu = ['gtwfrgt2345Uninst.exe', 'ABCminixktt', 'tbadjswsr', 'sceuhfure', 'okquery', 'topether', 'lavenderhi', 'gnwgd2345Uninst', 'Shawnmend',
-           'sfrhwg12345setting', 'ktpb', 'ABCtpopxktt', 'ABCtpoprytx', 'viewmnqtqd', 'armois', 'Xiralimy', 'Danuvius', 'Cuttings']
-p_heinote = ['fddgfuwgfywjd', 'dvwertbtf', 'qywtgj', 'Jsbyptp', 'siuywteinbg', 'stone', 'xiaoheitipsrytx', 'xiaoheiminixhtt', 'xiaoheitipsxhtt', 'bhajiy',
-             'heipan', 'pbxhone', 'ejtspfs2345setting', 'fhreywfysa', 'mkiayhb', 'hfbrwfrg2345Uninst', '62345setting', 'xiaoheitpopxhtt', 'jrwpvfn2345setting',
-             'njaiah', 'nbxvchidi']
-p_finder = ['GStipsrytx', 'BaWrnG', 'WtZTlg', 'bdjsq', 'Sisrwl', 'GStpoprytx', 'ssyptp', 'TEnMhP', '22345setting', 'IEKmKY', 'ssfloattip', '12345setting',
-            'GSscreensaver', 'asajksa', 'GStipsxktt', 'gsurl', 'diploma', 'SNss', 'vvhTdX', 'srpanka', 'gstpopgstt']
+p_xiaoyu = ['avjnjmiuninst', 'bgdcvn', 'bqpb', 'bqtp', 'bqyptp', 'fregnhfwew', 'instrument', 'jafreqfrq', 'melancholy', 'mkiuhn', 'qwaszx', 'sfrhhgt2345Uninst',
+            'spoiler', 'srzy2345setting', 'sysssnew', 'wfreqhfure', 'xymn', 'xypbuninst', 'xytipsxhVV12', 'xytipsxytt', 'xytpopoth', 'yb32345setting']
+p_kuaizip = ['Eg_NNIfiu', 'Kuaipb', 'Selenarctos', 'VLscDaseKX', 'YVyVcPZzs', 'alkanePanda', 'kuaiyaminixktt', 'kuaiyatipsrytx', 'kuaiyatpopxktt',
+             'kuaiyatpopxxrl', 'kuaiyatuop', 'kwGOkLeLvH', 'kzyptp', 'lakesi', 'leaps', 'parmiuninst', 'parpbuninst', 'partnuninst', 'polarbear', 'qbylwl',
+             'restless', 'wbdyl']
+p_kantu = ['ABCminixktt', 'ABCtpoprytx', 'ABCtpopxktt', 'Cuttings', 'Danuvius', 'Shawnmend', 'Xiralimy', 'armois', 'gnwgd2345Uninst', 'gtwfrgt2345Uninst.exe',
+           'ktpb', 'ktpbuninst', 'ktsdmiuninst', 'lavenderhi', 'okquery', 'sceuhfure', 'sfrhwg12345setting', 'tbadjswsr', 'topether']
+p_heinote = ['62345setting', 'Jsbyptp', 'bhajiy', 'djeafrhumiuninst', 'dvwertbtf', 'ejtspfs2345setting', 'fhreywfysa', 'heipan', 'hfbrwfrg2345Uninst',
+             'mkiayhb', 'nbxvchidi', 'njaiah', 'pbxhone', 'qywtgj', 'siuywteinbg', 'stone', 'xhpbuninst', 'xiaoheiminixhtt', 'xiaoheitipsrytx',
+             'xiaoheitipsxhtt', 'xiaoheitpopxhtt']
+p_finder = ['12345setting', '22345setting', 'BaWrnG', 'GSscreensaver', 'GStipsrytx', 'GStipsxktt', 'GStpoprytx', 'IEKmKY', 'SNss', 'Sisrwl', 'Ssmiuninst',
+            'TEnMhP', 'WtZTlg', 'asajksa', 'bdjsq', 'diploma', 'gstpopgstt', 'gsurl', 'srpanka', 'ssfloattip', 'sspbuninst', 'ssyptp', 'vvhTdX']
 p_browser = ['7654llqtips', 'thrill', 'fracturesl', 'reunion', '7654weather', '7654renwulan', 'kk', 'changes', '7654llqtuopan', 'llqfloattip', 'aiouniya',
              'llqyptips', '7654llqurl', 'borealis', '7654pb']
-p_lszip = ['Lstpopzip', 'lshighzip', 'vYZjaDIRY', 'Zzhwqfdfg', 'yxJLQvVM', 'Lshenzip', '12345ShellPro', 'IhdbzaAq', 'cbxOKVlhA', 'Lstrayzip', 'yGdcOyvz',
-           'Dyaqxzp', 'HYbnhjkxs', 'cSskSwZ', 'a2345NetFlow', 'XxndaD']
-p_xinnote = ['vfplaw2345setting', 'dsdnfjrbef', 'jskugi', 'bhagywi', 'cjblue', 'nhefbredf2345Uninst', 'xinnotegjsnsf', 'usfrbzq2345setting', 'xknllabwrk',
-             'xinnotemini', 'xintray', 'xinnotetips', 'fsbtesadfg']
-p_qjpdf = ['sWXluJ', 'dqsPl', 'crevice', '22345LSPFix', 'mxqjPO', 'a2345NetFlow', 'Jskjdi', 'sxcde', 'mxLK', 'llpokj', 'mBErTV', 'peimg', 'update', 'ZFCEa']
+p_lszip = ['12345ShellPro', 'IhdbzaAq', 'JzLtnuninst', 'KEtiuninst', 'Lshenzip', 'Lstpopzip', 'Lstrayzip', 'XxndaD', 'a2345NetFlow', 'cSskSwZ', 'cbxOKVlhA',
+           'dhxmiuninst', 'lshighzip', 'vYZjaDIRY', 'yGdcOyvz', 'yxJLQvVM']
+p_xinnote = ['bhagywi', 'cjblue', 'fdaggrmiuninst', 'jskugi', 'lngydemiuninst', 'nhefbredf2345Uninst', 'sfjegtmiuninst', 'sfjhafurg', 'usfrbzq2345setting',
+             'vfplaw2345setting', 'xinnotemini', 'xinnotetips', 'xintray']
+p_qjpdf = ['22345LeakFixer', 'Jskjdi', 'Qjqtiuninst', 'Qjqtnuninst', 'ZFCEa', 'dqsPl', 'mBErTV', 'mxLK', 'mxqjPO', 'peimg', 'qjqmiuninst', 'sWXluJ', 'update']
 p_smartlook = ['uDLGUe', 'rsgaBg', 'dailyfresh', 'hardware', 'rsvaBg', 'kDLGUe', 'dessertcookies', 'G2y6S', 'personalcare', 'NyVBT', 'LznGsZ', 'rlwid',
                'AjFitD', 'extider', 'ZiQSGY', 'seasonalfresh', 'ghierh']
-p_cloudbar = ['episode', 'superb', 'Gjlground', 'humidity', 'stitch', 'minor', 'chord']
+p_cloudbar = ['bartiuninst', 'bartnuninst', 'bartouninst', 'clomiuninst', 'episode', 'minor', 'superb']
 p_haotu = ['baizhe', 'htkktpoprytx', 'mqtyrp', 'xwView', 'zztpopkk', 'Lolzzcxx', 'Hyzus', 'Weather', 'amkfiopg', 'E240.TMP', 'gajfgk', 'Update', 'htkktp',
            'xiaomitao', 'jgklfdgu']
 p_xxbz = ['Calftp', 'Pasture', 'Calendar', 'NVIDIRNM', 'routine', 'xxbztpopxx', 'bztp', 'beard', 'participate', 'sunjuly']
 p_xfpdf = ['xftpopxftt', 'LUxNQvY', 'nbhgbd', 'xfminixftt', 'Gijmkxuf', 'xftipspdf', 'tvPPlZ', 'FGxWFah', 'xftrayflash', 'WzsklOG', 'xfwJmu7Y', 'ghDSQgF',
            'mMNOcV', 'oJiyZjS', 'XFtnewsxftt']
-p_jcbz = ['yearn', 'expat', 'Jcbztips', 'celery', '32345Uninst', 'anthem', 'respond', 'Jcbztray', 'flexible', 'Weaver', 'Jcbzmini', '42345Unist', 'cjblue',
-          'chord', '52345Uninst']
+p_jcbz = ['32345Uninst', '42345Uninst', '52345Uninst', 'Jcbzmini', 'Jcbztips', 'Jcbztray', 'anthem', 'celery', 'cjblue', 'flexible', 'natmiuninst',
+          'nattiuninst', 'nattnuninst', 'nattouninst', 'respond']
 p_sesame = ['dessertcookies', 'srfminiwwt', 'hardware', 'srftipsWV23', 'srftpopwwm']
 
 xiaoyu = {

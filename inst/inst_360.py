@@ -104,7 +104,7 @@ if __name__ == '__main__':
     logger.add("gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip", retention="10 days")
     logger.info('thread %s is running...' % threading.current_thread().name)
     path_0 = r'C:\liangdamou\package\\'
-    projects = ['mxiaoyu', 'mguangsu', 'mkuai', 'mxiaohei', 'mllq', 'qjpdf', 'lszip', 'gjl', 'mabc']
+    projects = ['mkuai', 'mxiaoyu', 'mabc', 'mllq', 'mguangsu', 'mxiaohei', 'qjpdf', 'lszip', 'gjl']
     UI()
     for i in range(len(projects)):
         project = projects[i]
