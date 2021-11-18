@@ -15,7 +15,7 @@ from ver_360 import version
 
 def install():
     t = time.strftime("%H:%M:%S")
-    print(t, '*******allow install*********', end=',')
+    logger.info(t, '*******allow install*********', end=',')
     # type(Key.F11)
     wait(0.1)
     click(Pattern("install.png").targetOffset(422, 126))
@@ -26,7 +26,7 @@ def install():
 
 def procp():
     t = time.strftime("%H:%M:%S")
-    print(t, '***************process protection************', end=',')
+    logger.info(t, '***************process protection************', end=',')
     type(Key.F11)
     wait(0.1)
     click(Pattern("procp.png").targetOffset(422, 150))
@@ -37,7 +37,7 @@ def procp():
 
 def bingdu():
     t = time.strftime("%H:%M:%S")
-    print(t, '***************Virus removal************', end=',')
+    logger.info(t, '***************Virus removal************', end=',')
     type(Key.F11)
     wait(0.1)
     click(Pattern("bingdu.png").targetOffset(159, -21))
@@ -57,13 +57,13 @@ def UI():
             bingdu()
         else:
             pass
-            # print('no safe messages'
+            # logger.info('no safe messages'
     except Exception as e:
-        print('UI-error:', e, end=',')
+        logger.info('UI-error:', e, end=',')
 
 
 def cmd_send(project, path, vc_list):
-    print('thread %s >>%s is running...' % (threading.current_thread().name, project))
+    logger.info('thread %s >>%s is running...' % (threading.current_thread().name, project))
     now = datetime.datetime.now()
     s1 = now.strftime('%Y-%m-%d %H:%M:%S')
 
@@ -76,28 +76,28 @@ def cmd_send(project, path, vc_list):
             try:
                 p.communicate(timeout=90)
             except subprocess.TimeoutExpired as e:
-                print(e, 'retry', '***********')
+                logger.info(e, 'retry', '***********')
                 subprocess.call(['taskkill', '/F', '/T', '/PID', str(p.pid)])
                 continue
             break
         t = time.strftime("%H:%M:%S")
-        print(f'{t}, {project}, {x + 1}, {vc_list[x]}')
+        logger.info(f'{t}, {project}, {x + 1}, {vc_list[x]}')
 
-    print('thread %s >>%s is ended...' % (threading.current_thread().name, project))
+    logger.info('thread %s >>%s is ended...' % (threading.current_thread().name, project))
     now = datetime.datetime.now()
     e1 = now.strftime('%Y-%m-%d %H:%M:%S')
-    print(f"%s,start time: %s" % (project, s1), end=',')
-    print("%s,end time: %s：" % (project, e1), end=',')
+    logger.info(f"%s,start time: %s" % (project, s1), end=',')
+    logger.info("%s,end time: %s：" % (project, e1), end=',')
 
     start = datetime.datetime.strptime(s1, '%Y-%m-%d %H:%M:%S')
     end = datetime.datetime.strptime(e1, '%Y-%m-%d %H:%M:%S')
     total = end - start
     if (total.seconds) > 60:
         m = float(total.seconds) / 60
-        print("%s,total(min)：%s" % (project, m))
+        logger.info("%s,total(min)：%s" % (project, m))
     else:
         m = total.seconds
-        print("%s total(s)：%s" % (project, m))
+        logger.info("%s total(s)：%s" % (project, m))
 
 
 if __name__ == '__main__':

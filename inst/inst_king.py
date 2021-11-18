@@ -16,7 +16,7 @@ from ver_king import version
 
 def install():
     t = time.strftime("%H:%M:%S")
-    print(t, '********find install action**********', end=',')
+    logger.info(t, '********find install action**********', end=',')
     type(Key.F11)
     wait(0.2)
     click(Pattern("install.png").targetOffset(147, -55))
@@ -27,7 +27,7 @@ def install():
 
 def sysp():
     t = time.strftime("%H:%M:%S")
-    print(t, '*******System protection*******', end=',')
+    logger.info(t, '*******System protection*******', end=',')
     type(Key.F11)
     wait(0.2)
     click(Pattern("sysp.png").targetOffset(180, 90))
@@ -36,7 +36,7 @@ def sysp():
 
 def quanxian():
     t = time.strftime("%H:%M:%S")
-    print(t, ':*******find quanxian action..*******', end=',')
+    logger.info(t, ':*******find quanxian action..*******', end=',')
     type(Key.F11)
     wait(0.2)
     click(Pattern("quanxian.png").targetOffset(104, 0))
@@ -47,7 +47,7 @@ def quanxian():
 
 def guanlian():
     t = time.strftime("%H:%M:%S")
-    print(t, ':****find guanlian action..*********', end=',')
+    logger.info(t, ':****find guanlian action..*********', end=',')
     type(Key.F11)
     wait(0.2)
     click(Pattern("install.png").targetOffset(70, -55))
@@ -56,7 +56,7 @@ def guanlian():
 
 def allow():
     t = time.strftime("%H:%M:%S")
-    print(t, ':*******allow>>*************', end=',')
+    logger.info(t, ':*******allow>>*************', end=',')
     type(Key.F11)
     wait(0.2)
     click("allow.png")
@@ -65,7 +65,7 @@ def allow():
 
 def qinngc():
     t = time.strftime("%H:%M:%S")
-    print(t, ':*************Virus removal at once***************', end=',')
+    logger.info(t, ':*************Virus removal at once***************', end=',')
     type(Key.F11)
     wait(0.2)
     click("qingchu.png")
@@ -74,7 +74,7 @@ def qinngc():
 
 def bkq():
     t = time.strftime("%H:%M:%S")
-    print(t, ':donnot turn on', end=',')
+    logger.info(t, ':donnot turn on', end=',')
     type(Key.F11)
     wait(0.2)
     click("bukaiqi.png")
@@ -103,13 +103,13 @@ def UI():
             bkq()
         else:
             pass
-            # print 'no safe messages'
+            # logger.info 'no safe messages'
     except Exception as e:
-        print('UI-error:', e)
+        logger.info('UI-error:', e)
 
 
 def cmd_send(project, path, vc_list):
-    print('thread %s >>%s is running...' % (threading.current_thread().name, project))
+    logger.info('thread %s >>%s is running...' % (threading.current_thread().name, project))
     now = datetime.datetime.now()
     s1 = now.strftime('%Y-%m-%d %H:%M:%S')
 
@@ -122,28 +122,28 @@ def cmd_send(project, path, vc_list):
             try:
                 p.communicate(timeout=90)
             except subprocess.TimeoutExpired as e:
-                print(e, 'retry', '***********')
+                logger.info(e, 'retry', '***********')
                 subprocess.call(['taskkill', '/F', '/T', '/PID', str(p.pid)])
                 continue
             break
         t = time.strftime("%H:%M:%S")
-        print(f'{t}, {project}, {x + 1}, {vc_list[x]}')
+        logger.info(f'{t}, {project}, {x + 1}, {vc_list[x]}')
 
-    print('thread %s >>%s is ended...' % (threading.current_thread().name, project))
+    logger.info('thread %s >>%s is ended...' % (threading.current_thread().name, project))
     now = datetime.datetime.now()
     e1 = now.strftime('%Y-%m-%d %H:%M:%S')
-    print(f"%s,start time: %s" % (project, s1), end=',')
-    print("%s,end time: %s：" % (project, e1), end=',')
+    logger.info(f"%s,start time: %s" % (project, s1), end=',')
+    logger.info("%s,end time: %s：" % (project, e1), end=',')
 
     start = datetime.datetime.strptime(s1, '%Y-%m-%d %H:%M:%S')
     end = datetime.datetime.strptime(e1, '%Y-%m-%d %H:%M:%S')
     total = end - start
     if (total.seconds) > 60:
         m = float(total.seconds) / 60
-        print("%s,total(min)：%s" % (project, m))
+        logger.info("%s,total(min)：%s" % (project, m))
     else:
         m = total.seconds
-        print("%s total(s)：%s" % (project, m))
+        logger.info("%s total(s)：%s" % (project, m))
 
 
 if __name__ == '__main__':
