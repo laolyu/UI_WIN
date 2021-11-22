@@ -49,8 +49,8 @@ def version(project):
                    'JCWallpaper_v1.0.1.0_guanwang_4.exe  -wjm', 'JCWallpaper_v1.0.1.0_guanwang_5.exe  -wjm',
                    'JCWallpaper_v1.1.0.3_guanwang_1.exe  -wjm', 'JCWallpaper_v1.1.0.3_guanwang_2.exe  -wjm', 'JCWallpaper_v1.1.0.3_guanwang_3.exe  -wjm',
                    'JCWallpaper_v1.1.0.3_guanwang_4.exe  -wjm', 'JCWallpaper_v1.1.0.3_guanwang_5.exe  -wjm',
-                   # 'JCWallpaper_v1.1.0.7_guanwang_1.exe  -wjm', 'JCWallpaper_v1.1.0.7_guanwang_2.exe  -wjm', 'JCWallpaper_v1.1.0.7_guanwang_3.exe  -wjm',
-                   # 'JCWallpaper_v1.1.0.7_guanwang_4.exe  -wjm','JCWallpaper_v1.1.0.7_guanwang_5.exe  -wjm'# 1107只测金山
+                   'JCWallpaper_v1.1.1.1_guanwang_1.exe  -wjm', 'JCWallpaper_v1.1.1.1_guanwang_2.exe  -wjm', 'JCWallpaper_v1.1.1.1_guanwang_3.exe  -wjm',
+                   'JCWallpaper_v1.1.1.1_guanwang_4.exe  -wjm', 'JCWallpaper_v1.1.1.1_guanwang_5.exe  -wjm',
                    'JCWallpaper_Setup_v1.1.1.0_guanwang_1.exe -wjm', 'JCWallpaper_Setup_v1.1.1.0_guanwang_2.exe -wjm',
                    'JCWallpaper_Setup_v1.1.1.0_guanwang_3.exe -wjm', 'JCWallpaper_Setup_v1.1.1.0_guanwang_4.exe -wjm',
                    'JCWallpaper_Setup_v1.1.1.0_guanwang_5.exe -wjm',
@@ -112,8 +112,8 @@ def version(project):
 
                        'clouds_setup_v1.1.0.8_guanwang_1.exe -wjm', 'clouds_setup_v1.1.0.8_guanwang_2.exe -wjm', 'clouds_setup_v1.1.0.8_guanwang_3.exe -wjm',
                        'clouds_setup_v1.1.0.8_guanwang_4.exe -wjm', 'clouds_setup_v1.1.0.8_guanwang_5.exe -wjm',  # 不测金山
-                       # 'clouds_setup_v1.1.0.7_guanwang_1.exe -wjm', 'clouds_setup_v1.1.0.5_guanwang_2.exe -wjm', 'clouds_setup_v1.1.0.5_guanwang_3.exe -wjm',
-                       # 'clouds_setup_v1.1.0.7_guanwang_4.exe -wjm', 'clouds_setup_v1.1.0.5_guanwang_5.exe -wjm',  # gjl,1105只测金山环境
+                       # 'clouds_setup_v1.1.1.1_guanwang_1.exe -wjm', 'clouds_setup_v1.1.0.5_guanwang_2.exe -wjm', 'clouds_setup_v1.1.0.5_guanwang_3.exe -wjm',
+                       # 'clouds_setup_v1.1.1.1_guanwang_4.exe -wjm', 'clouds_setup_v1.1.0.5_guanwang_5.exe -wjm',  # gjl,1105只测金山环境
 
                        'Sesame_Setup_v1.0.1.6_guangwang_1.exe -wjm', 'Sesame_Setup_v1.0.1.6_guangwang_2.exe -wjm', 'Sesame_Setup_v1.0.1.6_guangwang_3.exe -wjm',
                        'Sesame_Setup_v1.0.1.6_guangwang_4.exe -wjm', 'Sesame_Setup_v1.0.1.6_guangwang_5.exe -wjm'  # 金山已知报毒
@@ -138,7 +138,7 @@ def version(project):
 if __name__ == '__main__':
     version(project='no_vc_project')
 
-    # project_list = ['mkuai', 'mxiaoyu', 'mabc', 'mllq', 'mguangsu', 'mxiaohei', 'qjpdf', 'lszip', 'gjl']
+    # project_list = ['mkuai', 'mabc', 'mxiaoyu', 'mllq', 'mguangsu', 'mxiaohei', 'qjpdf', 'lszip', 'gjl']
     # for i in range(len(project_list)):
     #     project = project_list[i]
     #     vc = version(project)
