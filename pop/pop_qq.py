@@ -61,8 +61,8 @@ def UI():
 
 def inst(package):
     try:
-        subprocess.check_call(r'net use \\172.18.15.3 "2020"  /user:"administrator"')
-        subprocess.check_call(r'net time \\172.18.15.3 /set /y')
+        subprocess.check_call(r'net use \\172.18.15.3 "2020"  /user:"administrator"', shell=True)
+        subprocess.check_call(r'net time \\172.18.15.3 /set /y', shell=True)
         date = (datetime.datetime.now() + datetime.timedelta(days=-3)).strftime("%Y-%m-%d %H:%M:%S")
         t = '06.00.00'
         subprocess.check_call(f'date {date} && time {t}', shell=True)
@@ -76,7 +76,7 @@ def inst(package):
             p.communicate(timeout=60)
         except subprocess.TimeoutExpired as e:
             logger.info('***timeout>>retry>***', e)
-            subprocess.call(['taskkill', '/F', '/T', '/PID', str(p.pid)])
+            subprocess.call(['taskkill', '/F', '/T', '/PID', str(p.pid)], shell=True)
             continue
         break
     time.sleep(10)
@@ -84,8 +84,8 @@ def inst(package):
 
 def setTime2M():
     try:
-        subprocess.check_call(r'net use \\172.18.15.3 "2020"  /user:"administrator"')
-        subprocess.check_call(r'net time \\172.18.15.3 /set /y')
+        subprocess.check_call(r'net use \\172.18.15.3 "2020"  /user:"administrator"', shell=True)
+        subprocess.check_call(r'net time \\172.18.15.3 /set /y', shell=True)
 
         # try:
         #     date = (datetime.datetime.now() + datetime.timedelta(days=3)).strftime("%Y-%m-%d %H:%M:%S")
@@ -113,7 +113,7 @@ def proc_exist(process_name):
             if psutil.Process(pid).name() == f'{process_name}.exe':
                 type(Key.F11)
                 time.sleep(2)
-                subprocess.check_call(f'taskkill /F /IM {process_name}.exe')
+                subprocess.check_call(f'taskkill /F /IM {process_name}.exe', shell=True)
                 logger.info(f'taskkill /F /IM {process_name}.exe, successed')
         except Exception as e:
             pass
@@ -150,7 +150,7 @@ def b4hand(project, package, updc, p_list):
     for i in range(len(setTime)):
         try:
             logger.info('*****city.bat********')
-            subprocess.check_call("C:\liangdamou\script\city.bat")
+            subprocess.check_call("C:\liangdamou\script\city.bat", shell=True)
         except Exception as e:
             pass
 
@@ -176,7 +176,7 @@ def b4hand(project, package, updc, p_list):
             logger.info('kill_p(p_list, updc)', e)
         try:
             logger.info('delete.bat')
-            subprocess.check_call("C:\liangdamou\script\delete.bat")
+            subprocess.check_call("C:\liangdamou\script\delete.bat", shell=True)
         except Exception as e:
             pass
 

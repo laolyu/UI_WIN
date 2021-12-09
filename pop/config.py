@@ -20,9 +20,8 @@ p_browser = ['7654llqtips', 'thrill', 'fracturesl', 'reunion', '7654weather', '7
              'llqyptips', '7654llqurl', 'borealis', '7654pb']
 p_lszip = ['12345ShellPro', 'IhdbzaAq', 'JzLtnuninst', 'KEtiuninst', 'Lshenzip', 'Lstpopzip', 'Lstrayzip', 'XxndaD', 'a2345NetFlow', 'cSskSwZ', 'cbxOKVlhA',
            'dhxmiuninst', 'lshighzip', 'vYZjaDIRY', 'yGdcOyvz', 'yxJLQvVM']
-p_xinnote = ['bhagywi', 'cjblue', 'fdaggrmiuninst', 'jskugi', 'lngydemiuninst', 'nhefbredf2345Uninst', 'sfjegtmiuninst', 'sfjhafurg', 'usfrbzq2345setting',
-             'vfplaw2345setting', 'xinnotemini', 'xinnotetips', 'xintray']
-p_qjpdf = ['22345LeakFixer', 'Jskjdi', 'Qjqtiuninst', 'Qjqtnuninst', 'ZFCEa', 'dqsPl', 'mBErTV', 'mxLK', 'mxqjPO', 'peimg', 'qjqmiuninst', 'sWXluJ', 'update']
+p_xinnote = ['ajnbtipsUninst', 'bhagywi', 'cjblue', 'fdaggrmiuninst', 'jskugi', 'lngydemiuninst', 'nhefbredf2345Uninst', 'sfjegtmiuninst', 'sfjhafurg', 'usfrbzq2345setting', 'xinnotemini', 'xinnotetips', 'xintray']
+p_qjpdf = ['23455SafeLock', 'Jskjdi', 'Qjqtiuninst', 'Qjqtnuninst', 'ZFCEa', 'dqsPl', 'mBErTV', 'mxLK', 'mxqjPO', 'peimg', 'sWXluJ', 'sdwfv', 'update']
 p_smartlook = ['uDLGUe', 'rsgaBg', 'dailyfresh', 'hardware', 'rsvaBg', 'kDLGUe', 'dessertcookies', 'G2y6S', 'personalcare', 'NyVBT', 'LznGsZ', 'rlwid',
                'AjFitD', 'extider', 'ZiQSGY', 'seasonalfresh', 'ghierh']
 p_cloudbar = ['bartiuninst', 'bartnuninst', 'bartouninst', 'clomiuninst', 'episode', 'minor', 'superb']
@@ -33,7 +32,7 @@ p_xfpdf = ['xftpopxftt', 'LUxNQvY', 'nbhgbd', 'xfminixftt', 'Gijmkxuf', 'xftipsp
            'mMNOcV', 'oJiyZjS', 'XFtnewsxftt']
 p_jcbz = ['32345Uninst', '42345Uninst', '52345Uninst', 'Jcbzmini', 'Jcbztips', 'Jcbztray', 'anthem', 'celery', 'cjblue', 'flexible', 'natmiuninst',
           'nattiuninst', 'nattnuninst', 'nattouninst', 'respond']
-p_sesame = ['dessertcookies', 'srfminiwwt', 'hardware', 'srftipsWV23', 'srftpopwwm']
+p_sesame = ['dessertcookies', 'hardware', 'makeover', 'srfminiwwt', 'srftipsWV23', 'srftpopwwm']
 
 xiaoyu = {
     'package': path_1 + 'xiaoyu_v3.3.0.2_lv_1.exe -wjm',

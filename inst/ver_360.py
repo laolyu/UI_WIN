@@ -4,15 +4,7 @@ def version(project):
     version = {'mxiaoyu': ['xiaoyu_v3.2.1.7_guanwang_1.exe -wjm', 'xiaoyu_v3.2.1.7_guanwang_2.exe -wjm', 'xiaoyu_v3.2.1.7_guanwang_3.exe -wjm',
                            'xiaoyu_v3.2.1.7_guanwang_4.exe -wjm', 'xiaoyu_v3.2.1.7_guanwang_5.exe -wjm',
                            'xiaoyu_v3.3.0.2_guanwang_1.exe -wjm', 'xiaoyu_v3.3.0.2_guanwang_2.exe -wjm', 'xiaoyu_v3.3.0.2_guanwang_3.exe -wjm',
-                           'xiaoyu_v3.3.0.2_guanwang_4.exe -wjm', 'xiaoyu_v3.3.0.2_guanwang_5.exe -wjm',
-                           'xiaoyu_v3.3.0.3_guanwang_1.exe -wjm', 'xiaoyu_v3.3.0.3_guanwang_2.exe -wjm', 'xiaoyu_v3.3.0.3_guanwang_3.exe -wjm',
-                           'xiaoyu_v3.3.0.3_guanwang_4.exe -wjm', 'xiaoyu_v3.3.0.3_guanwang_5.exe -wjm',
-                           'xiaoyu_v3.3.0.4_guanwang_1.exe -wjm', 'xiaoyu_v3.3.0.4_guanwang_2.exe -wjm', 'xiaoyu_v3.3.0.4_guanwang_3.exe -wjm',
-                           'xiaoyu_v3.3.0.4_guanwang_4.exe -wjm', 'xiaoyu_v3.3.0.4_guanwang_5.exe -wjm',
-                           'xiaoyu_v3.3.0.6_guanwang_1.exe -wjm', 'xiaoyu_v3.3.0.6_guanwang_2.exe -wjm', 'xiaoyu_v3.3.0.6_guanwang_3.exe -wjm',
-                           'xiaoyu_v3.3.0.6_guanwang_4.exe -wjm', 'xiaoyu_v3.3.0.6_guanwang_5.exe -wjm',
-                           # 'xiaoyu_v3.3.0.7_guanwang_1.exe -wjm', 'xiaoyu_v3.3.0.7_guanwang_2.exe -wjm', 'xiaoyu_v3.3.0.7_guanwang_3.exe -wjm',
-                           # 'xiaoyu_v3.3.0.7_guanwang_4.exe -wjm', 'xiaoyu_v3.3.0.7_guanwang_5.exe -wjm'
+                           'xiaoyu_v3.3.0.2_guanwang_4.exe -wjm', 'xiaoyu_v3.3.0.2_guanwang_5.exe -wjm'
                            ],  # 3306,3307金山不测
                'mkuai': [
                    'KuaiZip_Setup_v3.2.3.8_guanwang_1.exe -wjm', 'KuaiZip_Setup_v3.2.3.8_guanwang_2.exe -wjm', 'KuaiZip_Setup_v3.2.3.8_guanwang_3.exe -wjm',
@@ -100,6 +92,7 @@ def version(project):
                          'LsZip_Setup_v1.1.0.2_guanwang_4.exe -wjm', 'LsZip_Setup_v1.1.0.2_guanwang_5.exe -wjm',
                          'LsZip_Setup_v1.1.0.4_guanwang_1.exe -wjm', 'LsZip_Setup_v1.1.0.4_guanwang_2.exe -wjm', 'LsZip_Setup_v1.1.0.4_guanwang_3.exe -wjm',
                          'LsZip_Setup_v1.1.0.4_guanwang_4.exe -wjm', 'LsZip_Setup_v1.1.0.4_guanwang_5.exe -wjm',
+
                          # 'XFPdf_Setup_v1.0.3.7_guanwang_1.exe -wjm', 'XFPdf_Setup_v1.0.3.7_guanwang_2.exe -wjm', 'XFPdf_Setup_v1.0.3.7_guanwang_3.exe -wjm',
                          # 'XFPdf_Setup_v1.0.3.7_guanwang_4.exe -wjm', 'XFPdf_Setup_v1.0.3.7_guanwang_5.exe -wjm',
                          # 'XFPdf_Setup_v1.0.3.8_guanwang_1.exe -wjm', 'XFPdf_Setup_v1.0.3.8_guanwang_2.exe -wjm', 'XFPdf_Setup_v1.0.3.8_guanwang_3.exe -wjm',
@@ -109,6 +102,15 @@ def version(project):
                          ],
                'gjl': ['preview_Setup_1.0.2.9_guanwang_1.exe -wjm', 'preview_Setup_1.0.2.9_guanwang_2.exe -wjm', 'preview_Setup_1.0.2.9_guanwang_3.exe -wjm',
                        'preview_Setup_1.0.2.9_guanwang_4.exe -wjm', 'preview_Setup_1.0.2.9_guanwang_5.exe -wjm',
+
+                       'xlpreview_Setup_v1.0.0.7_guanwang_1.exe -wjm', 'xlpreview_Setup_v1.0.0.7_guanwang_2.exe -wjm',
+                       'xlpreview_Setup_v1.0.0.7_guanwang_3.exe -wjm', 'xlpreview_Setup_v1.0.0.7_guanwang_4.exe -wjm',
+                       'xlpreview_Setup_v1.0.0.7_guanwang_5.exe -wjm',
+
+                       'xiaoyu_v3.2.1.7_guanwang_1.exe -wjm', 'xiaoyu_v3.2.1.7_guanwang_2.exe -wjm', 'xiaoyu_v3.2.1.7_guanwang_3.exe -wjm',
+                       'xiaoyu_v3.2.1.7_guanwang_4.exe -wjm', 'xiaoyu_v3.2.1.7_guanwang_5.exe -wjm',
+                       'xiaoyu_v3.3.0.2_guanwang_1.exe -wjm', 'xiaoyu_v3.3.0.2_guanwang_2.exe -wjm', 'xiaoyu_v3.3.0.2_guanwang_3.exe -wjm',
+                       'xiaoyu_v3.3.0.2_guanwang_4.exe -wjm', 'xiaoyu_v3.3.0.2_guanwang_5.exe -wjm',
 
                        'clouds_setup_v1.1.0.8_guanwang_1.exe -wjm', 'clouds_setup_v1.1.0.8_guanwang_2.exe -wjm', 'clouds_setup_v1.1.0.8_guanwang_3.exe -wjm',
                        'clouds_setup_v1.1.0.8_guanwang_4.exe -wjm', 'clouds_setup_v1.1.0.8_guanwang_5.exe -wjm',  # 不测金山
@@ -138,7 +140,7 @@ def version(project):
 if __name__ == '__main__':
     version(project='no_vc_project')
 
-    # project_list = ['mkuai', 'mabc', 'mxiaoyu', 'mllq', 'mguangsu', 'mxiaohei', 'qjpdf', 'lszip', 'gjl']
+    # project_list = ['mguangsu', 'lszip', 'mkuai', 'mxiaohei', 'mabc', 'mllq', 'gjl', 'qjpdf']
     # for i in range(len(project_list)):
     #     project = project_list[i]
     #     vc = version(project)

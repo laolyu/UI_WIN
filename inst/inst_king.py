@@ -123,7 +123,7 @@ def cmd_send(project, path, vc_list):
                 p.communicate(timeout=90)
             except subprocess.TimeoutExpired as e:
                 logger.info(e, 'retry', '***********')
-                subprocess.call(['taskkill', '/F', '/T', '/PID', str(p.pid)])
+                subprocess.call(['taskkill', '/F', '/T', '/PID', str(p.pid)], shell=True)
                 continue
             break
         t = time.strftime("%H:%M:%S")
@@ -150,7 +150,7 @@ if __name__ == '__main__':
     logger.add("gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip", retention="10 days")
     logger.info('thread %s is running...' % threading.current_thread().name)
     path_0 = r'C:\zm\package\\'
-    projects = ['mguangsu', 'lszip', 'mkuai', 'mxiaohei', 'mllq', 'gjl', 'qjpdf', 'mxiaoyu', 'mabc']
+    projects = ['mguangsu', 'lszip', 'mkuai', 'mxiaohei', 'mabc', 'mllq', 'gjl', 'qjpdf']
     UI()
     for i in range(len(projects)):
         project = projects[i]
