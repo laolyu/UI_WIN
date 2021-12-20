@@ -5,9 +5,9 @@ import subprocess
 import threading
 # from mouse import click, wait
 from lackey import *
-import time
 import sys
 from loguru import logger
+from time import sleep
 
 Settings.InfoLogs = False
 sys.path.append(r'C:\liangdamou\script\gjl')  # 先加入绝对路径，否则会报错，注意__file__表示的是当前执行文件的路径
@@ -104,7 +104,7 @@ def cmd_send(project, path, vc_list):
     for x in range(len(vc_list)):
         cmd = vc_list[x]
         m = random.randint(20, 60)
-        time.sleep(m)
+        sleep(m)
         for i in range(0, 3):
             p = subprocess.Popen(cmd, cwd=path, shell=True)
             try:
@@ -138,13 +138,14 @@ if __name__ == '__main__':
     logger.add("gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip", retention="10 days")
     logger.info('thread %s is running...' % threading.current_thread().name)
     path_0 = r'C:\liangdamou\package\\'
-    projects = ['mguangsu', 'lszip', 'mkuai', 'mxiaohei', 'mabc', 'mllq', 'gjl', 'qjpdf']
     UI()
-    for i in range(len(projects)):
-        project = projects[i]
+    version = version()
+    projects = list(version.keys())
+    for i in list(projects):
+        project = i
         path = path_0 + project
-        vc_list = version(project)
+        vc_list = version[i]
         t = threading.Thread(target=cmd_send, args=(project, path, vc_list), name='LoopThread')
         t.start()
-        time.sleep(i * 10)
+        sleep(30)
     logger.info('thread %s is ended...' % threading.current_thread().name)

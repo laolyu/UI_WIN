@@ -25,14 +25,24 @@ def proc_exist(process_name):
             pass
 
 
+def close_TV():
+    logger.info('***close TV******')
+    # type(Key.F11)
+    if exists("TV.png", 10):
+        logger.info('***click TV close******')
+        click(Pattern("TV.png").targetOffset(180, 65))
+
+
 def vm_int():
     logger.info('***restart vm******')
+    # type(Key.F11)
     proc_exist('vmware-vmx')
     proc_exist('vmware')
 
 
 def vm(x, y):
     logger.info('***start vm******')
+    type(Key.F11)
     for i in range(10):
         if exists("huany.png", 10):
             logger.info('found 还原')
@@ -59,6 +69,7 @@ def vm(x, y):
         click(Pattern("yes.png"))
         wait(0.2)
     else:
+        type(Key.F11)
         logger.info('not found')
     sleep(30)
     logger.info('sleep end')
@@ -66,6 +77,8 @@ def vm(x, y):
 
 if __name__ == '__main__':
     logger.add("gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip", retention="10 days")
+    sleep(10)
+    close_TV()
     vm_int()
     subprocess.Popen('start vmware', shell=True)
     vm(-500, 30)
