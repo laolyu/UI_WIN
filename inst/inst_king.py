@@ -108,7 +108,7 @@ def cmd_send(project, path, vc_list):
 
     for x in range(len(vc_list)):
         cmd = vc_list[x]
-        logger.info(f'{project}, {x + 1}, cmd')
+        logger.info(f'{project}, {x + 1}, {cmd}')
         m = random.randint(20, 60)
         sleep(m)
         for i in range(0, 3):
