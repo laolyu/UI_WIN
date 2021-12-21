@@ -60,8 +60,9 @@ def version():
                    'JCWallpaper_Setup_v1.1.1.0_guanwang_1.exe -wjm', 'JCWallpaper_Setup_v1.1.1.0_guanwang_2.exe -wjm',
                    'JCWallpaper_Setup_v1.1.1.0_guanwang_3.exe -wjm', 'JCWallpaper_Setup_v1.1.1.0_guanwang_4.exe -wjm',
                    'JCWallpaper_Setup_v1.1.1.0_guanwang_5.exe -wjm',
-                   'JCWallpaper_v1.1.1.1_guanwang_1.exe  -wjm', 'JCWallpaper_v1.1.1.1_guanwang_2.exe  -wjm', 'JCWallpaper_v1.1.1.1_guanwang_3.exe  -wjm',
-                   'JCWallpaper_v1.1.1.1_guanwang_4.exe  -wjm', 'JCWallpaper_v1.1.1.1_guanwang_5.exe  -wjm'
+                   'JCWallpaper_Setup_v1.1.1.1_guanwang_1.exe -wjm', 'JCWallpaper_Setup_v1.1.1.1_guanwang_2.exe -wjm',
+                   'JCWallpaper_Setup_v1.1.1.1_guanwang_3.exe -wjm', 'JCWallpaper_Setup_v1.1.1.1_guanwang_4.exe -wjm',
+                   'JCWallpaper_Setup_v1.1.1.1_guanwang_5.exe -wjm'
                ],
                'mllq': [
                    '7654Browser_v3.1.1.2_guanwang_1.exe -wjm', '7654Browser_v3.1.1.2_guanwang_2.exe -wjm', '7654Browser_v3.1.1.2_guanwang_3.exe -wjm',
