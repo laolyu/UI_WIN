@@ -10,7 +10,7 @@ from loguru import logger
 
 Settings.InfoLogs = False
 
-sys.path.append(r'C:\liangdamou\script\gjl')
+sys.path.append(r'C:\AI\script\gjl')
 from config import *
 
 
@@ -66,11 +66,34 @@ def bingdu():
     wait(0.1)
 
 
+def explorer():
+    logger.info('*******explorer stopped*********')
+    type(Key.F11)
+    wait(0.1)
+    click(Pattern("explorer.png").targetOffset(0, 100))
+    wait(0.1)
+
+
+def windows():
+    try:
+        subprocess.call('explorer', shell=True)
+    except Exception as e:
+        logger.info(e)
+    try:
+        subprocess.call('powershell.exe Stop-Process -name explorer', shell=True)
+    except Exception as e:
+        logger.info(e)
+
+
 def UI():
     t = threading.Timer(20, UI)
     t.setDaemon(True)
     t.start()
     try:
+        if exists("explorer.png", 2):
+            explorer()
+        if not exists("windows.png", 2):
+            windows()
         if exists("install.png", 1):
             install()
         if exists("fil.png", 1):
@@ -90,7 +113,7 @@ def UI():
 
 def result():
     try:
-        subprocess.check_call(r'"C:\Program Files\360\360safe\safemon\360LogCenter.exe" /id=2000',shell=True)
+        subprocess.check_call(r'"C:\Program Files\360\360safe\safemon\360LogCenter.exe" /id=2000', shell=True)
         type(Key.F11)
     except Exception as e:
         logger.info(e)
@@ -98,7 +121,7 @@ def result():
 
 def inst(package):
     try:
-        subprocess.check_call(r'net use \\172.18.15.3 "2020"  /user:"administrator"',shell=True)
+        subprocess.check_call(r'net use \\172.18.15.3 "2020"  /user:"administrator"', shell=True)
         subprocess.check_call(r'net time \\172.18.15.3 /set /y')
         date = (datetime.datetime.now() + datetime.timedelta(days=-3)).strftime("%Y-%m-%d %H:%M:%S")
         t = '06.00.00'
@@ -113,7 +136,7 @@ def inst(package):
             p.communicate(timeout=180)
         except subprocess.TimeoutExpired as e:
             logger.info(e)
-            subprocess.call(['taskkill', '/F', '/T', '/PID', str(p.pid)],shell=True)
+            subprocess.call(['taskkill', '/F', '/T', '/PID', str(p.pid)], shell=True)
             continue
         break
     time.sleep(10)
@@ -121,8 +144,8 @@ def inst(package):
 
 def setTime2M():
     try:
-        subprocess.check_call(r'net use \\172.18.15.3 "2020"  /user:"administrator"',shell=True)
-        subprocess.check_call(r'net time \\172.18.15.3 /set /y',shell=True)
+        subprocess.check_call(r'net use \\172.18.15.3 "2020"  /user:"administrator"', shell=True)
+        subprocess.check_call(r'net time \\172.18.15.3 /set /y', shell=True)
 
         # try:
         #     date = (datetime.datetime.now() + datetime.timedelta(days=3)).strftime("%Y-%m-%d %H:%M:%S")
@@ -187,7 +210,7 @@ def b4hand(project, package, updc, p_list):
     for i in range(len(setTime)):
         try:
             logger.info('*****city.bat********')
-            subprocess.check_call("C:\liangdamou\script\city.bat", shell=True)
+            subprocess.check_call("C:\AI\script\city.bat", shell=True)
         except Exception as e:
             pass
 
@@ -214,7 +237,7 @@ def b4hand(project, package, updc, p_list):
             logger.info('kill_p(p_list, updc)', e)
         try:
             logger.info('delete.bat')
-            subprocess.check_call("C:\liangdamou\script\delete.bat", shell=True)
+            subprocess.check_call("C:\AI\script\delete.bat", shell=True)
         except Exception as e:
             pass
 

@@ -9,7 +9,7 @@ import subprocess
 import threading
 from loguru import logger
 
-sys.path.append(r'C:\liangdamou\script\gjl')
+sys.path.append(r'C:\AI\script\gjl')
 from config import *
 
 
@@ -37,11 +37,34 @@ def yes():
     wait(0.2)
 
 
+def explorer():
+    logger.info('*******explorer stopped*********')
+    type(Key.F11)
+    wait(0.1)
+    click(Pattern("explorer.png").targetOffset(0, 100))
+    wait(0.1)
+
+
+def windows():
+    try:
+        subprocess.call('explorer', shell=True)
+    except Exception as e:
+        logger.info(e)
+    try:
+        subprocess.call('powershell.exe Stop-Process -name explorer', shell=True)
+    except Exception as e:
+        logger.info(e)
+
+
 def UI():
     t = threading.Timer(30, UI)
     t.setDaemon(True)
     t.start()
     try:
+        if exists("explorer.png", 2):
+            explorer()
+        if not exists("windows.png", 2):
+            windows()
         if exists("yunxu.png", 1):
             yunxu()
             if exists("yunxu.png", 1):
@@ -56,7 +79,7 @@ def UI():
             pass
             # logger.info 'no safe messages'
     except Exception as e:
-        logger.info('UI-error:', e)
+        logger.info(e)
 
 
 def inst(package):
@@ -150,7 +173,7 @@ def b4hand(project, package, updc, p_list):
     for i in range(len(setTime)):
         try:
             logger.info('*****city.bat********')
-            subprocess.check_call("C:\liangdamou\script\city.bat", shell=True)
+            subprocess.check_call("C:\AI\script\city.bat", shell=True)
         except Exception as e:
             pass
 
@@ -176,7 +199,7 @@ def b4hand(project, package, updc, p_list):
             logger.info('kill_p(p_list, updc)', e)
         try:
             logger.info('delete.bat')
-            subprocess.check_call("C:\liangdamou\script\delete.bat", shell=True)
+            subprocess.check_call("C:\AI\script\delete.bat", shell=True)
         except Exception as e:
             pass
 

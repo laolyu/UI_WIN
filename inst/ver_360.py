@@ -34,6 +34,9 @@ def version():
           'PhotoViewer_Setup_v3.3.0.6_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.0.6_guanwang_2.exe -wjm',
           'PhotoViewer_Setup_v3.3.0.6_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.3.0.6_guanwang_4.exe -wjm',
           'PhotoViewer_Setup_v3.3.0.6_guanwang_5.exe -wjm',
+          'PhotoViewer_Setup_v3.3.0.9_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.0.9_guanwang_2.exe -wjm',
+          'PhotoViewer_Setup_v3.3.0.9_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.3.0.9_guanwang_4.exe -wjm',
+          'PhotoViewer_Setup_v3.3.0.9_guanwang_5.exe -wjm',
 
           'JCWallpaper_v1.0.1.0_guanwang_1.exe  -wjm', 'JCWallpaper_v1.0.1.0_guanwang_2.exe  -wjm', 'JCWallpaper_v1.0.1.0_guanwang_3.exe  -wjm',
           'JCWallpaper_v1.0.1.0_guanwang_4.exe  -wjm', 'JCWallpaper_v1.0.1.0_guanwang_5.exe  -wjm',
@@ -96,7 +99,9 @@ def version():
           # 'XFPdf_Setup_v1.0.3.8_guanwang_1.exe -wjm', 'XFPdf_Setup_v1.0.3.8_guanwang_2.exe -wjm', 'XFPdf_Setup_v1.0.3.8_guanwang_3.exe -wjm',
           # 'XFPdf_Setup_v1.0.3.8_guanwang_4.exe -wjm', 'XFPdf_Setup_v1.0.3.8_guanwang_5.exe -wjm',
           # 'XFPdf_Setup_v1.0.4.0_guanwang_1.exe -wjm', 'XFPdf_Setup_v1.0.4.0_guanwang_2.exe -wjm', 'XFPdf_Setup_v1.0.4.0_guanwang_3.exe -wjm',
-          # 'XFPdf_Setup_v1.0.4.0_guanwang_4.exe -wjm', 'XFPdf_Setup_v1.0.4.0_guanwang_5.exe -wjm',  # 360旋风pdf不测
+          # 'XFPdf_Setup_v1.0.4.0_guanwang_4.exe -wjm', 'XFPdf_Setup_v1.0.4.0_guanwang_5.exe -wjm',
+          'XFPdf_Setup_v1.0.4.1_guanwang_1.exe -wjm', 'XFPdf_Setup_v1.0.4.1_guanwang_2.exe -wjm', 'XFPdf_Setup_v1.0.4.1_guanwang_3.exe -wjm',
+          'XFPdf_Setup_v1.0.4.1_guanwang_4.exe -wjm', 'XFPdf_Setup_v1.0.4.1_guanwang_5.exe -wjm',
 
           'preview_Setup_1.0.2.9_guanwang_1.exe -wjm', 'preview_Setup_1.0.2.9_guanwang_2.exe -wjm', 'preview_Setup_1.0.2.9_guanwang_3.exe -wjm',
           'preview_Setup_1.0.2.9_guanwang_4.exe -wjm', 'preview_Setup_1.0.2.9_guanwang_5.exe -wjm',

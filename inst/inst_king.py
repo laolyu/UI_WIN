@@ -13,6 +13,22 @@ Settings.InfoLogs = False
 sys.path.append(r'C:\zm\script\gjl')  # 先加入绝对路径，否则会报错，注意__file__表示的是当前执行文件的路径
 from ver_king import version
 
+def explorer():
+    logger.info('*******explorer stopped*********')
+    type(Key.F11)
+    wait(0.1)
+    click(Pattern("explorer.png").targetOffset(0, 100))
+    wait(0.1)
+
+def windows():
+    try:
+        subprocess.call('explorer', shell=True)
+    except Exception as e:
+        logger.info(e)
+    try:
+        subprocess.call('powershell.exe Stop-Process -name explorer', shell=True)
+    except Exception as e:
+        logger.info(e)
 
 def install():
     logger.info('********find install action**********')
@@ -80,6 +96,10 @@ def UI():
     t.setDaemon(True)
     t.start()
     try:
+        if exists("explorer.png", 2):
+            explorer()
+        if not exists("windows.png", 2):
+            windows()
         if exists("install.png", 1):
             install()
         elif exists("sysp.png", 1):
@@ -122,6 +142,14 @@ def cmd_send(project, path, vc_list):
                 subprocess.call(['taskkill', '/F', '/T', '/PID', str(p.pid)], shell=True)
                 continue
             break
+        # try:
+        #     subprocess.call('explorer', shell=True)
+        # except Exception as e:
+        #     logger.info(e)
+        # try:
+        #     subprocess.call('powershell.exe Stop-Process -name explorer', shell=True)
+        # except Exception as e:
+        #     logger.info(e)
 
     logger.info('thread %s >>%s is ended...' % (threading.current_thread().name, project))
     now = datetime.datetime.now()

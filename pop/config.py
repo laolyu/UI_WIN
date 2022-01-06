@@ -1,26 +1,28 @@
 # coding:utf-8
 
-path_1 = 'C:/liangdamou/package/'
+path_1 = 'C:/AI/package/'
 path_roaming = 'C:/Users/Administrator/AppData/Roaming/'
 path_local = 'C:/Users/Administrator/AppData/Local/'
 
-p_xiaoyu = ['avjnjmiuninst', 'bgdcvn', 'bqpb', 'bqtp', 'bqyptp', 'fregnhfwew', 'instrument', 'jafreqfrq', 'melancholy', 'mkiuhn', 'qwaszx', 'sfrhhgt2345Uninst',
-            'spoiler', 'srzy2345setting', 'sysssnew', 'wfreqhfure', 'xymn', 'xypbuninst', 'xytipsxhVV12', 'xytipsxytt', 'xytpopoth', 'yb32345setting']
+p_xiaoyu = ['avjnjmiuninst', 'bgdcvn', 'bqpb', 'bqtp', 'bqyptp', 'fregnhfwew', 'instrument', 'jafreqfrq', 'melancholy', 'qwaszx', 'sfrhhgt2345Uninst',
+            'spoiler', 'srzy2345setting', 'sysssnew', 'wfreqhfure', 'xymn', 'xypbuninst', 'xytipsxhVV12', 'xytipsxytt', 'xytpopoth', 'yXjUcuninst',
+            'yb32345setting']
 p_kuaizip = ['Eg_NNIfiu', 'Kuaipb', 'Selenarctos', 'VLscDaseKX', 'YVyVcPZzs', 'alkanePanda', 'kuaiyaminixktt', 'kuaiyatipsrytx', 'kuaiyatpopxktt',
-             'kuaiyatpopxxrl', 'kuaiyatuop', 'kwGOkLeLvH', 'kzyptp', 'lakesi', 'leaps', 'parmiuninst', 'parpbuninst', 'partnuninst', 'polarbear', 'qbylwl',
-             'restless', 'wbdyl']
+             'kuaiyatpopxxrl', 'kuaiyatuop', 'kuauninst', 'kwGOkLeLvH', 'kzyptp', 'lakesi', 'leaps', 'majorsn', 'parmiuninst', 'parpbuninst', 'partnuninst',
+             'polarbear', 'qbylwl', 'restless', 'wbdyl']
 p_kantu = ['ABCminixktt', 'ABCtpoprytx', 'ABCtpopxktt', 'Cuttings', 'Danuvius', 'Shawnmend', 'Xiralimy', 'armois', 'gnwgd2345Uninst', 'gtwfrgt2345Uninst.exe',
-           'ktpb', 'ktpbuninst', 'ktsdmiuninst', 'lavenderhi', 'okquery', 'sceuhfure', 'sfrhwg12345setting', 'tbadjswsr', 'topether']
-p_heinote = ['62345setting', 'Jsbyptp', 'bhajiy', 'djeafrhumiuninst', 'dvwertbtf', 'ejtspfs2345setting', 'fhreywfysa', 'heipan', 'hfbrwfrg2345Uninst',
-             'mkiayhb', 'nbxvchidi', 'njaiah', 'pbxhone', 'qywtgj', 'siuywteinbg', 'stone', 'xhpbuninst', 'xiaoheiminixhtt', 'xiaoheitipsrytx',
+           'kThrbehuninst', 'ktpb', 'ktpbuninst', 'ktsdmiuninst', 'lavenderhi', 'okquery', 'sceuhfure', 'sfrhwg12345setting', 'tbadjswsr', 'topether']
+p_heinote = ['62345setting', 'Jsbyptp', 'XHfgtrwuninst', 'bhajiy', 'djeafrhumiuninst', 'dvwertbtf', 'ejtspfs2345setting', 'fhreywfysa', 'heipan',
+             'hfbrwfrg2345Uninst', 'mkiayhb', 'nbxvchidi', 'njaiah', 'pbxhone', 'siuywteinbg', 'stone', 'xhpbuninst', 'xiaoheiminixhtt', 'xiaoheitipsrytx',
              'xiaoheitipsxhtt', 'xiaoheitpopxhtt']
 p_finder = ['12345setting', '22345setting', 'BaWrnG', 'GSscreensaver', 'GStipsrytx', 'GStipsxktt', 'GStpoprytx', 'IEKmKY', 'SNss', 'Sisrwl', 'Ssmiuninst',
-            'TEnMhP', 'WtZTlg', 'asajksa', 'bdjsq', 'diploma', 'gstpopgstt', 'gsurl', 'srpanka', 'ssfloattip', 'sspbuninst', 'ssyptp', 'vvhTdX']
+            'TEnMhP', 'WtZTlg', 'asajksa', 'bdjsq', 'diploma', 'gstpopgstt', 'gsurl', 'redifuninst', 'srpanka', 'ssfloattip', 'sspbuninst', 'ssyptp', 'vvhTdX']
 p_browser = ['7654llqtips', 'thrill', 'fracturesl', 'reunion', '7654weather', '7654renwulan', 'kk', 'changes', '7654llqtuopan', 'llqfloattip', 'aiouniya',
              'llqyptips', '7654llqurl', 'borealis', '7654pb']
 p_lszip = ['12345ShellPro', 'IhdbzaAq', 'JzLtnuninst', 'KEtiuninst', 'Lshenzip', 'Lstpopzip', 'Lstrayzip', 'XxndaD', 'a2345NetFlow', 'cSskSwZ', 'cbxOKVlhA',
            'dhxmiuninst', 'lshighzip', 'vYZjaDIRY', 'yGdcOyvz', 'yxJLQvVM']
-p_xinnote = ['ajnbtipsUninst', 'bhagywi', 'cjblue', 'fdaggrmiuninst', 'jskugi', 'lngydemiuninst', 'nhefbredf2345Uninst', 'sfjegtmiuninst', 'sfjhafurg', 'usfrbzq2345setting', 'xinnotemini', 'xinnotetips', 'xintray']
+p_xinnote = ['ajnbtipsUninst', 'bhagywi', 'cjblue', 'fdaggrmiuninst', 'jskugi', 'lngydemiuninst', 'nhefbredf2345Uninst', 'sfjegtmiuninst', 'sfjhafurg',
+             'usfrbzq2345setting', 'xinnotemini', 'xinnotetips', 'xintray']
 p_qjpdf = ['23455SafeLock', 'Jskjdi', 'Qjqtiuninst', 'Qjqtnuninst', 'ZFCEa', 'dqsPl', 'mBErTV', 'mxLK', 'mxqjPO', 'peimg', 'sWXluJ', 'sdwfv', 'update']
 p_smartlook = ['uDLGUe', 'rsgaBg', 'dailyfresh', 'hardware', 'rsvaBg', 'kDLGUe', 'dessertcookies', 'G2y6S', 'personalcare', 'NyVBT', 'LznGsZ', 'rlwid',
                'AjFitD', 'extider', 'ZiQSGY', 'seasonalfresh', 'ghierh']
