@@ -14,7 +14,7 @@ from config import *
 
 
 def install():
-    logger.info('********find install action**********', end=',')
+    logger.info('********find install action**********')
     type(Key.F11)
     wait(0.2)
     click(Pattern("install.png").targetOffset(147, -55))
@@ -24,7 +24,7 @@ def install():
 
 
 def sysp():
-    logger.info('****System protection//virus*******', end=',')
+    logger.info('****System protection//virus*******')
     type(Key.F11)
     wait(0.2)
     click(Pattern("sysp.png").targetOffset(180, 80))
@@ -32,7 +32,7 @@ def sysp():
 
 
 def quanxian():
-    logger.info(':*******find quanxian action..*******', end=',')
+    logger.info(':*******find quanxian action..*******')
     type(Key.F11)
     wait(0.2)
     click(Pattern("quanxian.png").targetOffset(104, 0))
@@ -42,7 +42,7 @@ def quanxian():
 
 
 def guanlian():
-    logger.info(':****find guanlian action..*********', end=',')
+    logger.info(':****find guanlian action..*********')
     type(Key.F11)
     wait(0.2)
     click(Pattern("install.png").targetOffset(70, -55))
@@ -50,7 +50,7 @@ def guanlian():
 
 
 def allow():
-    logger.info(':*******allow>>*************', end=',')
+    logger.info(':*******allow>>*************')
     type(Key.F11)
     wait(0.2)
     click("allow.png")
@@ -58,7 +58,7 @@ def allow():
 
 
 def qinngc():
-    logger.info(':*************Virus removal at once***************', end=',')
+    logger.info(':*************Virus removal at once***************')
     type(Key.F11)
     wait(0.2)
     click("qingchu.png")
@@ -66,7 +66,7 @@ def qinngc():
 
 
 def bkq():
-    logger.info(':donnot turn on', end=',')
+    logger.info(':donnot turn on')
     type(Key.F11)
     wait(0.2)
     click("bukaiqi.png")
@@ -92,14 +92,10 @@ def explorer():
             logger.info(e)
 
 def UI():
-    t = threading.Timer(30, UI)
+    t = threading.Timer(120, UI)
     t.setDaemon(True)
     t.start()
     try:
-        if exists("explorer.png", 2):
-            explorer()
-        if not exists("windows.png", 2):
-            windows()
         if exists("install.png", 1):
             install()
         elif exists("sysp.png", 1):
@@ -220,9 +216,9 @@ def pb():
 
 
 def b4hand(project, package, updc, p_list):
-    explorer()
     UI()
     inst(package)
+    explorer()
     setTime = [setTime2M]
     for i in range(len(setTime)):
         try:

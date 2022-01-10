@@ -56,14 +56,10 @@ def explorer():
 
 
 def UI():
-    t = threading.Timer(30, UI)
+    t = threading.Timer(120, UI)
     t.setDaemon(True)
     t.start()
     try:
-        if exists("explorer.png", 2):
-            explorer()
-        if not exists("windows.png", 2):
-            windows()
         if exists("yunxu.png", 1):
             yunxu()
             if exists("yunxu.png", 1):
@@ -72,8 +68,8 @@ def UI():
                 yunxu()
         elif exists("haode.png", 1):
             haode()
-        elif exists("yes.png", 1):
-            yes()
+        # elif exists("yes.png", 1):
+        #     yes()
         else:
             pass
             # logger.info 'no safe messages'
