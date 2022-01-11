@@ -13,68 +13,46 @@ sys.path.append(r'C:\zm\script\gjl')  # 先加入绝对路径，否则会报错�
 from ver_360 import version
 
 
-def explorer():
-    logger.info('*******explorer stopped*********')
-    type(Key.F11)
-    wait(0.1)
-    click(Pattern("explorer.png").targetOffset(0, 100))
-    wait(0.1)
-
-
-def windows():
-    try:
-        subprocess.call('explorer', shell=True)
-    except Exception as e:
-        logger.info(e)
-    try:
-        subprocess.call('powershell.exe Stop-Process -name explorer', shell=True)
-    except Exception as e:
-        logger.info(e)
-
-
-def install():
-    # logger.info('*******allow install*********')
-    # type(Key.F11)
-    wait(0.1)
-    click(Pattern("install.png").targetOffset(422, 126))
-    wait(0.1)
-    click(Pattern("install.png").targetOffset(422, 150))
-    wait(0.1)
-
-
-def procp():
-    logger.info('********process protection********')
-    type(Key.F11)
-    wait(0.1)
-    click(Pattern("procp.png").targetOffset(422, 150))
-    wait(0.1)
-    click(Pattern("zuzhi.png"))
-    wait(0.1)
-
-
-def bingdu():
-    logger.info('*********Virus removal***********')
-    type(Key.F11)
-    wait(0.1)
-    click(Pattern("bingdu.png").targetOffset(159, -21))
-    wait(0.1)
-
-
 def UI():
-    t = threading.Timer(5, UI)
+    t = threading.Timer(10, UI)
     t.setDaemon(True)
     t.start()
     try:
-        if exists("explorer.png", 2):
-            explorer()
-        if not exists("windows.png", 2):
-            windows()
+        if exists("explorer.png", 1):
+            logger.info('*******explorer stopped*********')
+            type(Key.F11)
+            wait(0.1)
+            click(Pattern("explorer.png").targetOffset(0, 100))
+            wait(0.1)
+        if not exists("windows.png", 1):
+            try:
+                subprocess.call('explorer', shell=True)
+            except Exception as e:
+                logger.info(e)
+            try:
+                subprocess.call('powershell.exe Stop-Process -name explorer', shell=True)
+            except Exception as e:
+                logger.info(e)
         if exists("install.png", 1):
-            install()
+            wait(0.1)
+            click(Pattern("install.png").targetOffset(422, 126))
+            wait(0.1)
+            click(Pattern("install.png").targetOffset(422, 150))
+            wait(0.1)
         elif exists("procp.png", 1):
-            procp()
+            logger.info('********process protection********')
+            type(Key.F11)
+            wait(0.1)
+            click(Pattern("procp.png").targetOffset(422, 150))
+            wait(0.1)
+            click(Pattern("zuzhi.png"))
+            wait(0.1)
         if exists("bingdu.png", 1):
-            bingdu()
+            logger.info('*********Virus removal***********')
+            type(Key.F11)
+            wait(0.1)
+            click(Pattern("bingdu.png").targetOffset(159, -21))
+            wait(0.1)
         else:
             pass
             # logger.info('no safe messages'
@@ -102,14 +80,6 @@ def cmd_send(path, vc_list):
                 subprocess.call(['taskkill', '/F', '/T', '/PID', str(p.pid)], shell=True)
                 continue
             break
-        # try:
-        #     subprocess.call('explorer', shell=True)
-        # except Exception as e:
-        #     logger.info(e)
-        # try:
-        #     subprocess.call('powershell.exe Stop-Process -name explorer', shell=True)
-        # except Exception as e:
-        #     logger.info(e)
 
     logger.info('thread >>%s is ended...' % (threading.current_thread().name))
     now = datetime.datetime.now()
@@ -129,7 +99,7 @@ def cmd_send(path, vc_list):
 
 
 if __name__ == '__main__':
-    logger.add("gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip", retention="10 days")
+    logger.add("C:/zm/log/gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip", retention="10 days")
     logger.info('thread %s is running...' % threading.current_thread().name)
     path = r'C:\zm\package'
     UI()

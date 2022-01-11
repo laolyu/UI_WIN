@@ -14,22 +14,6 @@ sys.path.append(r'C:\zm\script\gjl')  # 先加入绝对路径，否则会报错�
 from ver_qq import version
 
 
-def explorer():
-    logger.info('*******explorer stopped*********')
-    type(Key.F11)
-    wait(0.1)
-    click(Pattern("explorer.png").targetOffset(0, 100))
-    wait(0.1)
-
-def windows():
-    try:
-        subprocess.call('explorer', shell=True)
-    except Exception as e:
-        logger.info(e)
-    try:
-        subprocess.call('powershell.exe Stop-Process -name explorer', shell=True)
-    except Exception as e:
-        logger.info(e)
 def bingdu():
     logger.info(':***拦截木马****Virus removal*******')
     type(Key.F11)
@@ -70,23 +54,30 @@ def yes():
     wait(0.2)
 
 
-# def set_close():
-#     logger.info('>>set-close')
-#     type(Key.F11)
-#     wait(1)
-#     click(Pattern("set_close.png").targetOffset(12, 0))
-#     wait(1)
+def explorer():
+    if exists("explorer.png", 1):
+        logger.info('*******explorer stopped*********')
+        type(Key.F11)
+        wait(0.1)
+        click(Pattern("explorer.png").targetOffset(0, 100))
+        wait(0.1)
+    if not exists("windows.png", 2):
+        try:
+            subprocess.call('explorer', shell=True)
+        except Exception as e:
+            logger.info(e)
+        try:
+            subprocess.call('powershell.exe Stop-Process -name explorer', shell=True)
+        except Exception as e:
+            logger.info(e)
 
 
 def UI():
-    t = threading.Timer(50, UI)
+    t = threading.Timer(60, UI)
     t.setDaemon(True)
     t.start()
     try:
-        if exists("explorer.png", 2):
-            explorer()
-        if not exists("windows.png", 2):
-            windows()
+        explorer()
         if exists("bingdu.png", 1):
             bingdu()
         elif exists("shishifh.png", 1):
@@ -108,20 +99,19 @@ def UI():
         logger.info(e)
 
 
-def cmd_send(project, path, vc_list):
-    logger.info('thread %s >>%s is running...' % (threading.current_thread().name, project))
+def cmd_send(path, vc_list):
+    logger.info('thread ->>%s is running...' % (threading.current_thread().name))
     now = datetime.datetime.now()
     s1 = now.strftime('%Y-%m-%d %H:%M:%S')
 
     for x in range(len(vc_list)):
         cmd = vc_list[x]
-        logger.info(f'{project}, {x + 1}, {cmd}')
-        m = random.randint(20, 60)
-        sleep(m)
+        # sleep(2)
         for i in range(0, 3):
+            logger.info(f' {x + 1}, {cmd}')
             p = subprocess.Popen(cmd, cwd=path, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             try:
-                out, err = p.communicate(timeout=90)
+                out, err = p.communicate(timeout=100)
                 err_info = err.decode('gbk')
                 logger.info(err_info)
             except subprocess.TimeoutExpired as e:
@@ -130,34 +120,28 @@ def cmd_send(project, path, vc_list):
                 continue
             break
 
-    logger.info('thread %s >>%s is ended...' % (threading.current_thread().name, project))
+    logger.info('thread >>%s is ended...' % (threading.current_thread().name))
     now = datetime.datetime.now()
     e1 = now.strftime('%Y-%m-%d %H:%M:%S')
-    logger.info(f"%s,start time: %s" % (project, s1))
-    logger.info("%s,end time: %s：" % (project, e1))
+    logger.info(f"start time: {s1}")
+    logger.info(f"end time: {e1}")
 
     start = datetime.datetime.strptime(s1, '%Y-%m-%d %H:%M:%S')
     end = datetime.datetime.strptime(e1, '%Y-%m-%d %H:%M:%S')
     total = end - start
     if (total.seconds) > 60:
         m = float(total.seconds) / 60
-        logger.info("%s,total(min)：%s" % (project, m))
+        logger.info("total(min)：%s" % m)
     else:
         m = total.seconds
-        logger.info("%s total(s)：%s" % (project, m))
+        logger.info("total(s)：%s" % m)
 
 
 if __name__ == '__main__':
-    logger.add("gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip", retention="10 days")
+    logger.add("C:/zm/log/gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip", retention="10 days")
     logger.info('thread %s is running...' % threading.current_thread().name)
-    path_0 = r'C:\zm\package\\'
+    path = r'C:\zm\package'
     UI()
-    version = version()
-    projects = list(version.keys())
-    for project in list(projects):
-        path = path_0 + project
-        vc_list = version[project]
-        t = threading.Thread(target=cmd_send, args=(project, path, vc_list), name='LoopThread')
-        t.start()
-        sleep(30)
+    v = random.sample(version(), len(version()))
+    cmd_send(path, v)
     logger.info('thread %s is ended...' % threading.current_thread().name)

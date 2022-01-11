@@ -1,16 +1,15 @@
 # -*- coding: UTF-8 -*-
 import psutil
-from lackey import *
-
-Settings.InfoLogs = False
 import datetime
 import time
 import subprocess
 import threading
+from lackey import *
 from loguru import logger
-
-sys.path.append(r'C:\AI\script\gjl')
 from config import *
+
+Settings.InfoLogs = False
+sys.path.append(r'C:\AI\script\gjl')
 
 
 def haode():
@@ -148,7 +147,6 @@ def kill_p(p_list, updc):
 
 
 def pb():
-    pb_list = ['bqpb', 'xypbuninst', 'Kuaipb', 'parpbuninst', 'ktpb', 'ktpbuninst', 'pbxhone', 'xhpbuninst', 'GSscreensaver', 'sspbuninst', '7654pb']
     try:
         subprocess.check_call('@reg add "HKEY_CURRENT_USER\Software\ScreenSaver" /v "ScreenSaveTimeOut" /t REG_DWORD /d "15" /f>nul', shell=True)
     except Exception as e:
@@ -163,7 +161,6 @@ def pb():
 
 def b4hand(project, package, updc, p_list):
     explorer()
-    UI()
     inst(package)
     setTime = [setTime2M]
     for i in range(len(setTime)):
@@ -201,7 +198,8 @@ def b4hand(project, package, updc, p_list):
 
 
 if __name__ == '__main__':
-    logger.add("gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip", retention="10 days")
+    logger.add("C:/AI/log/gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip", retention="10 days")
+    UI()
     projects = [xiaoyu, kuaizip, kantu, heinote, finder, browser, lszip, xinnote, qjpdf, cloudbar, haotu, xxbz, smartlook, xfpdf, jcbz, sesame]
     for i in range(len(projects)):
         project = projects[i]

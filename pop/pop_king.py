@@ -216,9 +216,8 @@ def pb():
 
 
 def b4hand(project, package, updc, p_list):
-    UI()
-    inst(package)
     explorer()
+    inst(package)
     setTime = [setTime2M]
     for i in range(len(setTime)):
         try:
@@ -256,6 +255,7 @@ def b4hand(project, package, updc, p_list):
 
 if __name__ == '__main__':
     logger.add("gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip", retention="10 days")
+    UI()
     projects = [xiaoyu, kuaizip, kantu, heinote, finder, browser, lszip, xinnote, qjpdf, haotu, xxbz, sesame, smartlook, xfpdf, jcbz, cloudbar]
     for i in range(len(projects)):
         project = projects[i]
