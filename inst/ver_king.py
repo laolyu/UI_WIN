@@ -48,9 +48,10 @@ def version():
           # 'PhotoViewer_Setup_v3.3.0.9_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.0.9_guanwang_2.exe -wjm',
           # 'PhotoViewer_Setup_v3.3.0.9_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.3.0.9_guanwang_4.exe -wjm',
           # 'PhotoViewer_Setup_v3.3.0.9_guanwang_5.exe -wjm',
-          'PhotoViewer_Setup_v3.3.1.0_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.1.0_guanwang_2.exe -wjm',
-          'PhotoViewer_Setup_v3.3.1.0_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.3.1.0_guanwang_4.exe -wjm',
-          'PhotoViewer_Setup_v3.3.1.0_guanwang_5.exe -wjm',
+          # 'PhotoViewer_Setup_v3.3.1.0_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.1.0_guanwang_2.exe -wjm',
+          'PhotoViewer_Setup_v3.3.1.1_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.1.1_guanwang_2.exe -wjm',
+          'PhotoViewer_Setup_v3.3.1.1_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.3.1.1_guanwang_4.exe -wjm',
+          'PhotoViewer_Setup_v3.3.1.1_guanwang_5.exe -wjm',
 
           'JCWallpaper_v1.0.1.0_guanwang_1.exe  -wjm', 'JCWallpaper_v1.0.1.0_guanwang_2.exe  -wjm', 'JCWallpaper_v1.0.1.0_guanwang_3.exe  -wjm',
           'JCWallpaper_v1.0.1.0_guanwang_4.exe  -wjm', 'JCWallpaper_v1.0.1.0_guanwang_5.exe  -wjm',
