@@ -44,15 +44,15 @@ def explorer():
         click(Pattern("explorer.png").targetOffset(0, 100))
         wait(0.1)
     if not exists("windows.png", 2):
-        try:
-            subprocess.call('explorer', shell=True)
-        except Exception as e:
-            logger.info(e)
+        logger.info('*******not found explorer*********')
         try:
             subprocess.call('powershell.exe Stop-Process -name explorer', shell=True)
         except Exception as e:
             logger.info(e)
-
+        try:
+            subprocess.call('explorer', shell=True)
+        except Exception as e:
+            logger.info(e)
 
 def UI():
     t = threading.Timer(120, UI)
@@ -160,7 +160,6 @@ def pb():
 
 
 def b4hand(project, package, updc, p_list):
-    explorer()
     inst(package)
     setTime = [setTime2M]
     for i in range(len(setTime)):
@@ -183,6 +182,7 @@ def b4hand(project, package, updc, p_list):
         except Exception as e:
             logger.info(f'*2**{updc}.exe****', e)
         finally:
+            explorer()
             time.sleep(180)
         if project in [xiaoyu, kuaizip, kantu, heinote, finder, browser]:
             pb()

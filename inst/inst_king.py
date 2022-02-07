@@ -21,7 +21,7 @@ def explorer():
         wait(0.1)
         click(Pattern("explorer.png").targetOffset(0, 100))
         wait(0.1)
-    if not exists("windows.png", 2):
+    if not exists("windows.png", 1):
         try:
             subprocess.call('explorer', shell=True)
         except Exception as e:

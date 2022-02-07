@@ -38,16 +38,25 @@ def vm_int():
     # type(Key.F11)
     proc_exist('vmware-vmx')
     proc_exist('vmware')
+    subprocess.Popen('start vmware', shell=True)
+    for i in range(10):
+        if exists("guanli.png", 2):
+            logger.info('启动完成')
+            break
+        else:
+            logger.info('启动未完成!!')
+            sleep(10)
 
 
 def vm(x, y):
-    logger.info('***start vm******')
+    logger.info(f'***start vm{x, y}******')
     type(Key.F11)
     for i in range(10):
-        if exists("huany.png", 10):
-            logger.info('found 还原')
+        if exists("huany.png", 2):
+            logger.info('正在还原')
             sleep(10)
         else:
+            logger.info('还原已完成')
             break
     if exists("guanli.png", 10):
         logger.info('***click x******')
@@ -68,11 +77,13 @@ def vm(x, y):
         logger.info('***click 是******')
         click(Pattern("yes.png"))
         wait(0.2)
-    else:
-        type(Key.F11)
-        logger.info('not found')
-    sleep(30)
-    logger.info('sleep end')
+    for i in range(10):
+        if exists('windows.png', 2):
+            logger.info('已完成恢复')
+            break
+        else:
+            logger.info('未完成恢复')
+            sleep(10)
 
 
 if __name__ == '__main__':
@@ -80,7 +91,6 @@ if __name__ == '__main__':
     sleep(10)
     close_TV()
     vm_int()
-    subprocess.Popen('start vmware', shell=True)
     vm(-500, 30)
     vm(-400, 30)
     vm(-300, 30)

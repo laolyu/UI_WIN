@@ -216,7 +216,6 @@ def pb():
 
 
 def b4hand(project, package, updc, p_list):
-    explorer()
     inst(package)
     setTime = [setTime2M]
     for i in range(len(setTime)):
@@ -239,6 +238,7 @@ def b4hand(project, package, updc, p_list):
         except Exception as e:
             logger.info(f'*2**{updc}.exe****', e)
         finally:
+            explorer()
             time.sleep(180)
         if project in [xiaoyu, kuaizip, kantu, heinote, finder, browser]:
             pb()
