@@ -29,6 +29,8 @@ def version():
           'KuaiZip_Setup_v3.3.1.2_guanwang_4.exe -wjm', 'KuaiZip_Setup_v3.3.1.2_guanwang_5.exe -wjm',
           'KuaiZip_Setup_v3.3.1.3_guanwang_1.exe -wjm', 'KuaiZip_Setup_v3.3.1.3_guanwang_2.exe -wjm', 'KuaiZip_Setup_v3.3.1.3_guanwang_3.exe -wjm',
           'KuaiZip_Setup_v3.3.1.3_guanwang_4.exe -wjm', 'KuaiZip_Setup_v3.3.1.3_guanwang_5.exe -wjm',
+          'KuaiZip_Setup_v3.3.1.4_guanwang_1.exe -wjm', 'KuaiZip_Setup_v3.3.1.4_guanwang_2.exe -wjm', 'KuaiZip_Setup_v3.3.1.4_guanwang_3.exe -wjm',
+          'KuaiZip_Setup_v3.3.1.4_guanwang_4.exe -wjm', 'KuaiZip_Setup_v3.3.1.4_guanwang_5.exe -wjm',
 
           # 'PhotoViewer_Setup_v3.2.2.8_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.2.2.8_guanwang_2.exe -wjm',
           # 'PhotoViewer_Setup_v3.2.2.8_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.2.2.8_guanwang_4.exe -wjm',
