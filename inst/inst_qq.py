@@ -83,7 +83,7 @@ def UI():
         elif exists("shishifh.png", 1):
             shishifh()
         elif exists("gaowei.png", 1):
-            shishifh()
+            gaowei()
         elif exists("yes.png", 1):
             yes()
         # elif exists("close.png", 10):

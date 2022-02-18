@@ -7,6 +7,8 @@ def version():
           'xiaoyu_v3.3.0.2_guanwang_4.exe -wjm', 'xiaoyu_v3.3.0.2_guanwang_5.exe -wjm',
           'xiaoyu_v3.3.0.9_guanwang_1.exe -wjm', 'xiaoyu_v3.3.0.9_guanwang_2.exe -wjm', 'xiaoyu_v3.3.0.9_guanwang_3.exe -wjm',
           'xiaoyu_v3.3.0.9_guanwang_4.exe -wjm', 'xiaoyu_v3.3.0.9_guanwang_5.exe -wjm',
+          'xiaoyu_v3.3.1.0_guanwang_1.exe -wjm', 'xiaoyu_v3.3.1.0_guanwang_2.exe -wjm', 'xiaoyu_v3.3.1.0_guanwang_3.exe -wjm',
+          'xiaoyu_v3.3.1.0_guanwang_4.exe -wjm', 'xiaoyu_v3.3.1.0_guanwang_5.exe -wjm',
 
           'QingJiePdf_Setup_v1.0.1.4_guanwang_1.exe  -wjm', 'QingJiePdf_Setup_v1.0.1.4_guanwang_2.exe  -wjm',
           'QingJiePdf_Setup_v1.0.1.4_guanwang_3.exe  -wjm', 'QingJiePdf_Setup_v1.0.1.4_guanwang_4.exe  -wjm',
@@ -21,12 +23,6 @@ def version():
           'QingJiePdf_Setup_v1.1.0.3_guanwang_3.exe  -wjm', 'QingJiePdf_Setup_v1.1.0.3_guanwang_4.exe  -wjm',
           'QingJiePdf_Setup_v1.1.0.3_guanwang_5.exe  -wjm',  # 1102 1103金山不测
 
-          # 'PhotoViewer_Setup_v3.2.2.8_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.2.2.8_guanwang_2.exe -wjm',
-          # 'PhotoViewer_Setup_v3.2.2.8_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.2.2.8_guanwang_4.exe -wjm',
-          # 'PhotoViewer_Setup_v3.2.2.8_guanwang_5.exe -wjm',
-          # 'PhotoViewer_Setup_v3.3.0.2_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.0.2_guanwang_2.exe -wjm',
-          # 'PhotoViewer_Setup_v3.3.0.2_guanwang_3.exe -wjm',
-          # 'PhotoViewer_Setup_v3.3.0.2_guanwang_4.exe -wjm', 'PhotoViewer_Setup_v3.3.0.2_guanwang_5.exe -wjm',
           'PhotoViewer_Setup_v3.3.0.3_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.0.3_guanwang_2.exe -wjm',
           'PhotoViewer_Setup_v3.3.0.3_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.3.0.3_guanwang_4.exe -wjm',
           'PhotoViewer_Setup_v3.3.0.3_guanwang_5.exe -wjm',
@@ -36,12 +32,9 @@ def version():
           'PhotoViewer_Setup_v3.3.0.6_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.0.6_guanwang_2.exe -wjm',
           'PhotoViewer_Setup_v3.3.0.6_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.3.0.6_guanwang_4.exe -wjm',
           'PhotoViewer_Setup_v3.3.0.6_guanwang_5.exe -wjm',
-          # 'PhotoViewer_Setup_v3.3.0.9_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.0.9_guanwang_2.exe -wjm',
-          # 'PhotoViewer_Setup_v3.3.0.9_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.3.0.9_guanwang_4.exe -wjm',
-          # 'PhotoViewer_Setup_v3.3.0.9_guanwang_5.exe -wjm',
-          # 'PhotoViewer_Setup_v3.3.1.1_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.1.1_guanwang_2.exe -wjm',
-          # 'PhotoViewer_Setup_v3.3.1.1_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.3.1.1_guanwang_4.exe -wjm',
-          # 'PhotoViewer_Setup_v3.3.1.1_guanwang_5.exe -wjm',
+          'PhotoViewer_Setup_v3.3.1.2_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.1.2_guanwang_2.exe -wjm',
+          'PhotoViewer_Setup_v3.3.1.2_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.3.1.2_guanwang_4.exe -wjm',
+          'PhotoViewer_Setup_v3.3.1.2_guanwang_5.exe -wjm',
 
           'JCWallpaper_v1.0.1.0_guanwang_1.exe  -wjm', 'JCWallpaper_v1.0.1.0_guanwang_2.exe  -wjm', 'JCWallpaper_v1.0.1.0_guanwang_3.exe  -wjm',
           'JCWallpaper_v1.0.1.0_guanwang_4.exe  -wjm', 'JCWallpaper_v1.0.1.0_guanwang_5.exe  -wjm',
@@ -102,12 +95,6 @@ def version():
           'LsZip_Setup_v1.1.0.4_guanwang_1.exe -wjm', 'LsZip_Setup_v1.1.0.4_guanwang_2.exe -wjm', 'LsZip_Setup_v1.1.0.4_guanwang_3.exe -wjm',
           'LsZip_Setup_v1.1.0.4_guanwang_4.exe -wjm', 'LsZip_Setup_v1.1.0.4_guanwang_5.exe -wjm',
 
-          # 'XFPdf_Setup_v1.0.3.7_guanwang_1.exe -wjm', 'XFPdf_Setup_v1.0.3.7_guanwang_2.exe -wjm', 'XFPdf_Setup_v1.0.3.7_guanwang_3.exe -wjm',
-          # 'XFPdf_Setup_v1.0.3.7_guanwang_4.exe -wjm', 'XFPdf_Setup_v1.0.3.7_guanwang_5.exe -wjm',
-          # 'XFPdf_Setup_v1.0.3.8_guanwang_1.exe -wjm', 'XFPdf_Setup_v1.0.3.8_guanwang_2.exe -wjm', 'XFPdf_Setup_v1.0.3.8_guanwang_3.exe -wjm',
-          # 'XFPdf_Setup_v1.0.3.8_guanwang_4.exe -wjm', 'XFPdf_Setup_v1.0.3.8_guanwang_5.exe -wjm',
-          # 'XFPdf_Setup_v1.0.4.0_guanwang_1.exe -wjm', 'XFPdf_Setup_v1.0.4.0_guanwang_2.exe -wjm', 'XFPdf_Setup_v1.0.4.0_guanwang_3.exe -wjm',
-          # 'XFPdf_Setup_v1.0.4.0_guanwang_4.exe -wjm', 'XFPdf_Setup_v1.0.4.0_guanwang_5.exe -wjm',
           'XFPdf_Setup_v1.0.4.1_guanwang_1.exe -wjm', 'XFPdf_Setup_v1.0.4.1_guanwang_2.exe -wjm', 'XFPdf_Setup_v1.0.4.1_guanwang_3.exe -wjm',
           'XFPdf_Setup_v1.0.4.1_guanwang_4.exe -wjm', 'XFPdf_Setup_v1.0.4.1_guanwang_5.exe -wjm',
 
