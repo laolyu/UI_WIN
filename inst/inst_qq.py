@@ -15,7 +15,7 @@ from ver_qq import version
 
 
 def bingdu():
-    logger.info(':***拦截木马****Virus removal*******')
+    logger.info(':***拦截木马******')
     type(Key.F11)
     wait(0.2)
     click(Pattern("bingdu.png").targetOffset(60, 395))
@@ -23,15 +23,23 @@ def bingdu():
 
 
 def shishifh():
-    logger.info(':***实时防护报毒****Virus removal*******')
+    logger.info(':***实时防护报毒******')
     type(Key.F11)
     wait(0.2)
-    click(Pattern("shishifh.png").targetOffset(400, 275))
+    click(Pattern("shishifh.png").targetOffset(170, 270))
+    wait(0.2)
+
+
+def qianzai():
+    logger.info(':++++潜在风险++++')
+    type(Key.F11)
+    wait(0.2)
+    click(Pattern("qianzai.png").targetOffset(170, 270))
     wait(0.2)
 
 
 def gaowei():
-    logger.info(':***高危状态****Virus removal*******')
+    logger.info(':***高危状态*****')
     type(Key.F11)
     wait(0.2)
     click(Pattern("gaowei.png").targetOffset(148, 48))
@@ -73,17 +81,19 @@ def explorer():
 
 
 def UI():
-    t = threading.Timer(60, UI)
+    t = threading.Timer(20, UI)
     t.setDaemon(True)
     t.start()
     try:
         explorer()
-        if exists("bingdu.png", 1):
-            bingdu()
+        if exists("qianzai.png", 1):
+            qianzai()
         elif exists("shishifh.png", 1):
             shishifh()
         elif exists("gaowei.png", 1):
             gaowei()
+        elif exists("bingdu.png", 1):
+            bingdu()
         elif exists("yes.png", 1):
             yes()
         # elif exists("close.png", 10):

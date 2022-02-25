@@ -72,12 +72,13 @@ def explorer():
         type(Key.F11)
         wait(0.1)
         click(Pattern("explorer.png").targetOffset(0, 100))
-        wait(0.1)
+        time.sleep(5)
     if not exists("windows.png", 2):
         try:
             subprocess.call('explorer', shell=True)
         except Exception as e:
             logger.info(e)
+        time.sleep(5)
         try:
             subprocess.call('powershell.exe Stop-Process -name explorer', shell=True)
         except Exception as e:
