@@ -63,7 +63,7 @@ def quanxian():
 def guanlian():
     logger.info(':****find guanlian action..*********')
     type(Key.F11)
-    wait(0.2)
+    wait("install.png")
     click(Pattern("install.png").targetOffset(70, -55))
     wait(0.2)
 

@@ -52,19 +52,20 @@ def vm_int():
     proc_exist('vmware')
     subprocess.Popen('start vmware', shell=True)
     for i in range(20):
-        if exists("guanli.png", 2):
+        if exists("guanli.png", 1):
             logger.info('启动完成')
             break
         else:
             logger.info('启动未完成!!')
             sleep(10)
+    type(Key.F11)
 
 
 def vm(x, y):
     logger.info(f'***start vm{x, y}******')
     type(Key.F11)
     for i in range(10):
-        if exists("huany.png", 2):
+        if exists("huany.png", 1):
             logger.info('正在还原')
             sleep(10)
         else:
@@ -72,24 +73,21 @@ def vm(x, y):
             break
     if exists("guanli.png", 10):
         logger.info('***click x******')
+        sleep(5)
         click(Pattern("guanli.png").targetOffset(x, y))
-        wait(0.2)
-    if exists("guanli.png", 10):
         logger.info('***click 管理******')
+        wait(1)
         click(Pattern("guanli.png"))
-        wait(0.2)
+
     if exists("dqwz.png", 10):
         logger.info('***click 快照*****')
         click(Pattern("dqwz.png").targetOffset(-60, 0))
-        wait(0.2)
     if exists("zhuand.png", 10):
         logger.info('***click 转到******')
         click(Pattern("zhuand.png"))
-        wait(0.2)
     if exists("yes.png", 10):
         logger.info('***click 是******')
         click(Pattern("yes.png"))
-        wait(0.2)
     for i in range(20):
         if exists('windows.png', 1):
             logger.info('已完成恢复')
@@ -105,6 +103,7 @@ def vm(x, y):
 
 
 if __name__ == '__main__':
+    type(Key.F10, Key.CTRL)
     logger.add("gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip", retention="10 days")
     sleep(10)
     try:
@@ -115,3 +114,4 @@ if __name__ == '__main__':
         vm(-300, 30)
     except Exception as e:
         logger.info(e)
+    type(Key.F10, Key.CTRL)

@@ -44,7 +44,7 @@ def UI():
             type(Key.F11)
             wait(0.1)
             click(Pattern("procp.png").targetOffset(422, 150))
-            wait(0.1)
+            wait("zuzhi.png")
             click(Pattern("zuzhi.png"))
             wait(0.1)
         if exists("bingdu.png", 1):
