@@ -44,7 +44,7 @@ def version():
           # 'JCWallpaper_Setup_v1.1.1.0_guanwang_3.exe -wjm', 'JCWallpaper_Setup_v1.1.1.0_guanwang_4.exe -wjm',
           # 'JCWallpaper_Setup_v1.1.1.0_guanwang_5.exe -wjm',
           'JCWallpaper_Setup_v1.1.1.1_guanwang_1.exe -wjm', 'JCWallpaper_Setup_v1.1.1.1_guanwang_2.exe -wjm',
-          'JCWallpaper_Setup_v1.1.1.1_guanwang_3.exe -wjm', 'JCWallpaper_Setup_v1.1.1.1_guanwang_4.exe -wjm',
+          'JCWallpaper_Setup_v1.1.1.1_guanwang_3.exe -wjm', #'JCWallpaper_Setup_v1.1.1.1_guanwang_4.exe -wjm',
           'JCWallpaper_Setup_v1.1.1.1_guanwang_5.exe -wjm',
 
           '7654Browser_v3.1.1.2_guanwang_1.exe -wjm', '7654Browser_v3.1.1.2_guanwang_2.exe -wjm', '7654Browser_v3.1.1.2_guanwang_3.exe -wjm',
@@ -78,9 +78,9 @@ def version():
 
           # 'Finder_Setup_3.2.2.6_guanwang_1.exe -wjm', 'Finder_Setup_3.2.2.6_guanwang_2.exe -wjm', 'Finder_Setup_3.2.2.6_guanwang_3.exe -wjm',
           # 'Finder_Setup_3.2.2.6_guanwang_4.exe -wjm', 'Finder_Setup_3.2.2.6_guanwang_5.exe -wjm',
-          'Finder_Setup_3.3.0.1_guanwang_1.exe -wjm',
-          'Finder_Setup_3.3.0.1_guanwang_2.exe -wjm', 'Finder_Setup_3.3.0.1_guanwang_3.exe -wjm', 'Finder_Setup_3.3.0.1_guanwang_4.exe -wjm',
-          'Finder_Setup_3.3.0.1_guanwang_5.exe -wjm',
+          # 'Finder_Setup_3.3.0.1_guanwang_1.exe -wjm',
+          # 'Finder_Setup_3.3.0.1_guanwang_2.exe -wjm', 'Finder_Setup_3.3.0.1_guanwang_3.exe -wjm', 'Finder_Setup_3.3.0.1_guanwang_4.exe -wjm',
+          # 'Finder_Setup_3.3.0.1_guanwang_5.exe -wjm',
           'Finder_Setup_3.3.0.5_guanwang_1.exe -wjm', 'Finder_Setup_3.3.0.5_guanwang_2.exe -wjm', 'Finder_Setup_3.3.0.5_guanwang_3.exe -wjm',
           'Finder_Setup_3.3.0.5_guanwang_4.exe -wjm', 'Finder_Setup_3.3.0.5_guanwang_5.exe -wjm',
 
@@ -98,8 +98,8 @@ def version():
           'XFPdf_Setup_v1.0.4.1_guanwang_1.exe -wjm', 'XFPdf_Setup_v1.0.4.1_guanwang_2.exe -wjm', 'XFPdf_Setup_v1.0.4.1_guanwang_3.exe -wjm',
           'XFPdf_Setup_v1.0.4.1_guanwang_4.exe -wjm', 'XFPdf_Setup_v1.0.4.1_guanwang_5.exe -wjm',
 
-          'preview_Setup_1.0.2.9_guanwang_1.exe -wjm', 'preview_Setup_1.0.2.9_guanwang_2.exe -wjm', 'preview_Setup_1.0.2.9_guanwang_3.exe -wjm',
-          'preview_Setup_1.0.2.9_guanwang_4.exe -wjm', 'preview_Setup_1.0.2.9_guanwang_5.exe -wjm',
+          # 'preview_Setup_1.0.2.9_guanwang_1.exe -wjm', 'preview_Setup_1.0.2.9_guanwang_2.exe -wjm', 'preview_Setup_1.0.2.9_guanwang_3.exe -wjm',
+          # 'preview_Setup_1.0.2.9_guanwang_4.exe -wjm', 'preview_Setup_1.0.2.9_guanwang_5.exe -wjm',
 
           'xlpreview_Setup_v1.0.0.7_guanwang_1.exe -wjm', 'xlpreview_Setup_v1.0.0.7_guanwang_2.exe -wjm',
           'xlpreview_Setup_v1.0.0.7_guanwang_3.exe -wjm', 'xlpreview_Setup_v1.0.0.7_guanwang_4.exe -wjm',
