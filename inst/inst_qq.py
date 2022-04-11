@@ -18,7 +18,7 @@ def bingdu():
     logger.info(':***拦截木马******')
     type(Key.F11)
     wait(0.2)
-    click(Pattern("bingdu.png").targetOffset(60, 395))
+    click(Pattern("bingdu.png").targetOffset(50, 335))
     wait(0.2)
 
 
@@ -42,7 +42,7 @@ def gaowei():
     logger.info(':***高危状态*****')
     type(Key.F11)
     wait(0.2)
-    click(Pattern("gaowei.png").targetOffset(148, 48))
+    click(Pattern("gaowei.png").targetOffset(140, -55))
     wait(0.2)
 
 
@@ -54,11 +54,26 @@ def gaowei():
 #     wait(0.2)
 
 
-def yes():
-    logger.info('-->>确定*****')
+def haode():
+    logger.info('++++已清理恶意木马+++')
     type(Key.F11)
     wait(0.2)
-    click("yes.png")
+    click("haode.png")
+    wait(0.2)
+
+def zuzhi():
+    logger.info('++++阻止安装+++')
+    type(Key.F11)
+    wait(0.2)
+    click("zuzhi.png")
+    wait(0.2)
+
+
+def queding():
+    logger.info('++++explorer 确定+++')
+    type(Key.F11)
+    wait(0.2)
+    click("queding.png")
     wait(0.2)
 
 
@@ -78,6 +93,11 @@ def explorer():
             subprocess.call('powershell.exe Stop-Process -name explorer', shell=True)
         except Exception as e:
             logger.info(e)
+    if exists("queding.png", 1):
+        logger.info('****确定******')
+        type(Key.F11)
+        wait(0.2)
+        click("queding.png")
 
 
 def UI():
@@ -86,20 +106,24 @@ def UI():
     t.start()
     try:
         explorer()
-        if exists("qianzai.png", 1):
-            qianzai()
+        if exists("haode.png", 1):
+            for i in range(5):
+                if exists("haode.png", 1):
+                    haode()
+                    sleep(1)
+                else:
+                    break
+
+        # if exists("bingdu.png", 1):
+        #     bingdu()
+        # if exists("qianzai.png", 1):
+        #     qianzai()
         elif exists("shishifh.png", 1):
             shishifh()
         elif exists("gaowei.png", 1):
             gaowei()
-        elif exists("bingdu.png", 1):
-            bingdu()
-        elif exists("yes.png", 1):
-            yes()
-        # elif exists("close.png", 10):
-        #     close()
-        # elif exists("set_close.png", 10):
-        #     set_close()
+        elif exists("zuzhi.png", 1):
+            shishifh()
         # elif exists("yiTingZhiGZ.png", 10):
         #     yiTingZhiGZ()
         else:
@@ -116,7 +140,7 @@ def cmd_send(path, vc_list):
 
     for x in range(len(vc_list)):
         cmd = vc_list[x]
-        # sleep(2)
+        sleep(10)
         for i in range(0, 3):
             logger.info(f' {x + 1}, {cmd}')
             p = subprocess.Popen(cmd, cwd=path, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -148,7 +172,8 @@ def cmd_send(path, vc_list):
 
 
 if __name__ == '__main__':
-    logger.add("C:/zm/log/gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip", retention="10 days")
+    logger.add("C:/zm/log/gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip",
+               retention="10 days")
     logger.info('thread %s is running...' % threading.current_thread().name)
     path = r'C:\zm\package'
     UI()
