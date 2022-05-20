@@ -135,8 +135,10 @@ def upgrade():
 
 def inst(package):
     try:
-        subprocess.check_call(r'net use \\172.18.15.3 "2020"  /user:"administrator"', shell=True)
-        subprocess.check_call(r'net time \\172.18.15.3 /set /y', shell=True)
+        # subprocess.check_call(r'net use \\172.18.15.3 "2020"  /user:"administrator"', shell=True)
+        # subprocess.check_call(r'net time \\172.18.15.3 /set /y', shell=True)
+        subprocess.check_call(r'net use \\172.18.15.55 "12344321"  /user:"t"', shell=True)
+        subprocess.check_call(r'net time \\172.18.15.55 /set /y', shell=True)
         date = (datetime.datetime.now() + datetime.timedelta(days=-3)).strftime("%Y-%m-%d %H:%M:%S")
         t = '06.00.00'
         subprocess.check_call(f'date {date} && time {t}', shell=True)
@@ -158,8 +160,10 @@ def inst(package):
 
 def setTime2M():
     try:
-        subprocess.check_call(r'net use \\172.18.15.3 "2020"  /user:"administrator"', shell=True)
-        subprocess.check_call(r'net time \\172.18.15.3 /set /y', shell=True)
+        # subprocess.check_call(r'net use \\172.18.15.3 "2020"  /user:"administrator"', shell=True)
+        # subprocess.check_call(r'net time \\172.18.15.3 /set /y', shell=True)
+        subprocess.check_call(r'net use \\172.18.15.55 "12344321"  /user:"t"', shell=True)
+        subprocess.check_call(r'net time \\172.18.15.55 /set /y', shell=True)
 
         # try:
         #     date = (datetime.datetime.now() + datetime.timedelta(days=3)).strftime("%Y-%m-%d %H:%M:%S")
