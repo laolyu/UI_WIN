@@ -14,6 +14,14 @@ sys.path.append(r'C:\zm\script\gjl')  # 先加入绝对路径，否则会报错�
 from ver_qq import version
 
 
+def close_shadu():
+    logger.info(':***关闭,闪电杀毒******')
+    type(Key.F11)
+    wait(0.2)
+    click(Pattern("close_shadu.png").targetOffset(80, 0))
+    wait(0.2)
+
+
 def bingdu():
     logger.info(':***拦截木马******')
     type(Key.F11)
@@ -46,12 +54,12 @@ def gaowei():
     wait(0.2)
 
 
-# def yunxu():
-#     logger.info('-->>allow')
-#     type(Key.F11)
-#     wait(0.2)
-#     click("yunxu.png")
-#     wait(0.2)
+def yunxu():
+    logger.info('-->>允许,程序修改<--')
+    type(Key.F11)
+    wait(0.2)
+    click("yunxu.png")
+    wait(0.2)
 
 
 def haode():
@@ -62,7 +70,7 @@ def haode():
     wait(0.2)
 
 def zuzhi():
-    logger.info('++++阻止安装+++')
+    logger.info('-->>阻止,程序修改<--')
     type(Key.F11)
     wait(0.2)
     click("zuzhi.png")
@@ -106,6 +114,8 @@ def UI():
     t.start()
     try:
         explorer()
+        if exists("close_shadu.png", 1):
+            close_shadu()
         if exists("haode.png", 1):
             for i in range(5):
                 if exists("haode.png", 1):
@@ -114,16 +124,16 @@ def UI():
                 else:
                     break
 
-        # if exists("bingdu.png", 1):
-        #     bingdu()
+        if exists("zuzhi.png", 1):
+            zuzhi()
         # if exists("qianzai.png", 1):
         #     qianzai()
         elif exists("shishifh.png", 1):
             shishifh()
         elif exists("gaowei.png", 1):
             gaowei()
-        elif exists("zuzhi.png", 1):
-            shishifh()
+        elif exists("yunxu.png", 1):
+            yunxu()
         # elif exists("yiTingZhiGZ.png", 10):
         #     yiTingZhiGZ()
         else:

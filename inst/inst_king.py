@@ -76,6 +76,14 @@ def allow():
     wait(0.2)
 
 
+def queding():
+    logger.info('++++确定++++')
+    type(Key.F11)
+    wait(0.2)
+    click("queding.png")
+    wait(0.2)
+
+
 def qinngc():
     logger.info(':*************Virus removal at once***************')
     type(Key.F11)
@@ -110,6 +118,8 @@ def UI():
         elif exists("guanlian.png", 1):
             guanlian()
         elif exists("allow.png", 1):
+            allow()
+        elif exists("queding.png", 1):
             allow()
         elif exists("bukaiqi.png", 1):
             bkq()
@@ -159,7 +169,8 @@ def cmd_send(path, vc_list):
 
 
 if __name__ == '__main__':
-    logger.add("C:/zm/log/gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip", retention="10 days")
+    logger.add("C:/zm/log/gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip",
+               retention="10 days")
     logger.info('thread %s is running...' % threading.current_thread().name)
     path = r'C:\zm\package'
     UI()

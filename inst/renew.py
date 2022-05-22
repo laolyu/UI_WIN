@@ -104,7 +104,7 @@ def vm(x, y):
 
 if __name__ == '__main__':
     type(Key.F10, Key.CTRL)
-    logger.add("gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip", retention="10 days")
+    logger.add("E:/woods/log/gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip", retention="10 days")
     sleep(10)
     try:
         close_TV()

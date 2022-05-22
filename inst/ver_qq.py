@@ -9,8 +9,8 @@ def version():
           'xiaoyu_v3.2.1.7_guanwang_4.exe -wjm', 'xiaoyu_v3.2.1.7_guanwang_5.exe -wjm',
           'xiaoyu_v3.3.0.2_guanwang_1.exe -wjm', 'xiaoyu_v3.3.0.2_guanwang_2.exe -wjm', 'xiaoyu_v3.3.0.2_guanwang_3.exe -wjm',
           'xiaoyu_v3.3.0.2_guanwang_4.exe -wjm', 'xiaoyu_v3.3.0.2_guanwang_5.exe -wjm',
-          'xiaoyu_v3.3.0.9_guanwang_1.exe -wjm', 'xiaoyu_v3.3.0.9_guanwang_2.exe -wjm', 'xiaoyu_v3.3.0.9_guanwang_3.exe -wjm',
-          'xiaoyu_v3.3.0.9_guanwang_4.exe -wjm', 'xiaoyu_v3.3.0.9_guanwang_5.exe -wjm',
+          # 'xiaoyu_v3.3.0.9_guanwang_1.exe -wjm', 'xiaoyu_v3.3.0.9_guanwang_2.exe -wjm', 'xiaoyu_v3.3.0.9_guanwang_3.exe -wjm',
+          # 'xiaoyu_v3.3.0.9_guanwang_4.exe -wjm', 'xiaoyu_v3.3.0.9_guanwang_5.exe -wjm',
           'xiaoyu_v3.3.1.0_guanwang_1.exe -wjm', 'xiaoyu_v3.3.1.0_guanwang_2.exe -wjm', 'xiaoyu_v3.3.1.0_guanwang_3.exe -wjm',
           'xiaoyu_v3.3.1.0_guanwang_4.exe -wjm', 'xiaoyu_v3.3.1.0_guanwang_5.exe -wjm',
 
@@ -30,8 +30,8 @@ def version():
 
           'KuaiZip_Setup_v3.2.3.8_guanwang_1.exe -wjm', 'KuaiZip_Setup_v3.2.3.8_guanwang_2.exe -wjm', 'KuaiZip_Setup_v3.2.3.8_guanwang_3.exe -wjm',
           'KuaiZip_Setup_v3.2.3.8_guanwang_4.exe -wjm', 'KuaiZip_Setup_v3.2.3.8_guanwang_5.exe -wjm',
-          'KuaiZip_Setup_v3.2.3.9_guanwang_1.exe -wjm', 'KuaiZip_Setup_v3.2.3.9_guanwang_2.exe -wjm', 'KuaiZip_Setup_v3.2.3.9_guanwang_3.exe -wjm',
-          'KuaiZip_Setup_v3.2.3.9_guanwang_4.exe -wjm', 'KuaiZip_Setup_v3.2.3.9_guanwang_5.exe -wjm',
+          # 'KuaiZip_Setup_v3.2.3.9_guanwang_1.exe -wjm', 'KuaiZip_Setup_v3.2.3.9_guanwang_2.exe -wjm', 'KuaiZip_Setup_v3.2.3.9_guanwang_3.exe -wjm',
+          # 'KuaiZip_Setup_v3.2.3.9_guanwang_4.exe -wjm', 'KuaiZip_Setup_v3.2.3.9_guanwang_5.exe -wjm',
           'KuaiZip_Setup_v3.3.0.3_guanwang_1.exe -wjm', 'KuaiZip_Setup_v3.3.0.3_guanwang_2.exe -wjm', 'KuaiZip_Setup_v3.3.0.3_guanwang_3.exe -wjm',
           'KuaiZip_Setup_v3.3.0.3_guanwang_4.exe -wjm', 'KuaiZip_Setup_v3.3.0.3_guanwang_5.exe -wjm',
           'KuaiZip_Setup_v3.3.0.5_guanwang_1.exe -wjm', 'KuaiZip_Setup_v3.3.0.5_guanwang_2.exe -wjm', 'KuaiZip_Setup_v3.3.0.5_guanwang_3.exe -wjm',
@@ -72,14 +72,14 @@ def version():
           '7654Browser_v3.1.1.2_guanwang_1.exe -wjm', '7654Browser_v3.1.1.2_guanwang_2.exe -wjm', '7654Browser_v3.1.1.2_guanwang_3.exe -wjm',
           '7654Browser_v3.1.1.2_guanwang_4.exe -wjm', '7654Browser_v3.1.1.2_guanwang_5.exe -wjm',  # 金山不测
 
-          'haotu_v2.0.3.8_guanwang_1.exe -wjm', 'haotu_v2.0.3.8_guanwang_2.exe -wjm', 'haotu_v2.0.3.8_guanwang_3.exe -wjm',
-          'haotu_v2.0.3.8_guanwang_4.exe -wjm', 'haotu_v2.0.3.8_guanwang_5.exe -wjm',
-          'haotu_v2.1.0.3_guanwang_1.exe -wjm', 'haotu_v2.1.0.3_guanwang_2.exe -wjm', 'haotu_v2.1.0.3_guanwang_3.exe -wjm',
-          'haotu_v2.1.0.3_guanwang_4.exe -wjm', 'haotu_v2.1.0.3_guanwang_5.exe -wjm',
+          # 'haotu_v2.0.3.8_guanwang_1.exe -wjm', 'haotu_v2.0.3.8_guanwang_2.exe -wjm', 'haotu_v2.0.3.8_guanwang_3.exe -wjm',
+          # 'haotu_v2.0.3.8_guanwang_4.exe -wjm', 'haotu_v2.0.3.8_guanwang_5.exe -wjm',
+          # 'haotu_v2.1.0.3_guanwang_1.exe -wjm', 'haotu_v2.1.0.3_guanwang_2.exe -wjm', 'haotu_v2.1.0.3_guanwang_3.exe -wjm',
+          # 'haotu_v2.1.0.3_guanwang_4.exe -wjm', 'haotu_v2.1.0.3_guanwang_5.exe -wjm',
           'haotu_v2.1.0.4_guanwang_1.exe -wjm', 'haotu_v2.1.0.4_guanwang_2.exe -wjm', 'haotu_v2.1.0.4_guanwang_3.exe -wjm',
           'haotu_v2.1.0.4_guanwang_4.exe -wjm', 'haotu_v2.1.0.4_guanwang_5.exe -wjm',
-          'haotu_v2.1.0.5_guanwang_1.exe -wjm', 'haotu_v2.1.0.5_guanwang_2.exe -wjm', 'haotu_v2.1.0.5_guanwang_3.exe -wjm',
-          'haotu_v2.1.0.5_guanwang_4.exe -wjm', 'haotu_v2.1.0.5_guanwang_5.exe -wjm',  # 2105,360不测
+          # 'haotu_v2.1.0.5_guanwang_1.exe -wjm', 'haotu_v2.1.0.5_guanwang_2.exe -wjm', 'haotu_v2.1.0.5_guanwang_3.exe -wjm',
+          # 'haotu_v2.1.0.5_guanwang_4.exe -wjm', 'haotu_v2.1.0.5_guanwang_5.exe -wjm',  # 2105,360不测
           'haotu_v2.1.0.6_guanwang_1.exe -wjm', 'haotu_v2.1.0.6_guanwang_2.exe -wjm', 'haotu_v2.1.0.6_guanwang_3.exe -wjm',
           'haotu_v2.1.0.6_guanwang_4.exe -wjm', 'haotu_v2.1.0.6_guanwang_5.exe -wjm',
 
@@ -90,14 +90,14 @@ def version():
           'LsZip_Setup_v1.1.0.4_guanwang_1.exe -wjm', 'LsZip_Setup_v1.1.0.4_guanwang_2.exe -wjm', 'LsZip_Setup_v1.1.0.4_guanwang_3.exe -wjm',
           'LsZip_Setup_v1.1.0.4_guanwang_4.exe -wjm', 'LsZip_Setup_v1.1.0.4_guanwang_5.exe -wjm',
 
-          'XFPdf_Setup_v1.0.3.7_guanwang_1.exe -wjm', 'XFPdf_Setup_v1.0.3.7_guanwang_2.exe -wjm', 'XFPdf_Setup_v1.0.3.7_guanwang_3.exe -wjm',
-          'XFPdf_Setup_v1.0.3.7_guanwang_4.exe -wjm', 'XFPdf_Setup_v1.0.3.7_guanwang_5.exe -wjm',
+          # 'XFPdf_Setup_v1.0.3.7_guanwang_1.exe -wjm', 'XFPdf_Setup_v1.0.3.7_guanwang_2.exe -wjm', 'XFPdf_Setup_v1.0.3.7_guanwang_3.exe -wjm',
+          # 'XFPdf_Setup_v1.0.3.7_guanwang_4.exe -wjm', 'XFPdf_Setup_v1.0.3.7_guanwang_5.exe -wjm',
           'XFPdf_Setup_v1.0.3.8_guanwang_1.exe -wjm', 'XFPdf_Setup_v1.0.3.8_guanwang_2.exe -wjm', 'XFPdf_Setup_v1.0.3.8_guanwang_3.exe -wjm',
           'XFPdf_Setup_v1.0.3.8_guanwang_4.exe -wjm', 'XFPdf_Setup_v1.0.3.8_guanwang_5.exe -wjm',
-          'XFPdf_Setup_v1.0.4.0_guanwang_1.exe -wjm', 'XFPdf_Setup_v1.0.4.0_guanwang_2.exe -wjm', 'XFPdf_Setup_v1.0.4.0_guanwang_3.exe -wjm',
-          'XFPdf_Setup_v1.0.4.0_guanwang_4.exe -wjm', 'XFPdf_Setup_v1.0.4.0_guanwang_5.exe -wjm',
-          # 'XFPdf_Setup_v1.0.4.1_guanwang_1.exe -wjm', 'XFPdf_Setup_v1.0.4.1_guanwang_2.exe -wjm', 'XFPdf_Setup_v1.0.4.1_guanwang_3.exe -wjm',
-          # 'XFPdf_Setup_v1.0.4.1_guanwang_4.exe -wjm', 'XFPdf_Setup_v1.0.4.1_guanwang_5.exe -wjm',
+          # 'XFPdf_Setup_v1.0.4.0_guanwang_1.exe -wjm', 'XFPdf_Setup_v1.0.4.0_guanwang_2.exe -wjm', 'XFPdf_Setup_v1.0.4.0_guanwang_3.exe -wjm',
+          # 'XFPdf_Setup_v1.0.4.0_guanwang_4.exe -wjm', 'XFPdf_Setup_v1.0.4.0_guanwang_5.exe -wjm',
+          'XFPdf_Setup_v1.0.4.1_guanwang_1.exe -wjm', 'XFPdf_Setup_v1.0.4.1_guanwang_2.exe -wjm', 'XFPdf_Setup_v1.0.4.1_guanwang_3.exe -wjm',
+          'XFPdf_Setup_v1.0.4.1_guanwang_4.exe -wjm', 'XFPdf_Setup_v1.0.4.1_guanwang_5.exe -wjm',
 
           'Heinote_v3.2.2.5_guanwang_1.exe -wjm', 'Heinote_v3.2.2.5_guanwang_2.exe -wjm', 'Heinote_v3.2.2.5_guanwang_3.exe -wjm',
           'Heinote_v3.2.2.5_guanwang_4.exe -wjm', 'Heinote_v3.2.2.5_guanwang_5.exe -wjm',

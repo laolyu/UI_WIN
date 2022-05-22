@@ -70,7 +70,7 @@ browser = {
 }
 
 lszip = {
-    'package': path_1 + 'LsZip_Setup_v1.1.0.4_lv_1.exe -wjm',
+    'package': path_1 + 'LsZip_Setup_v1.1.0.4_lv_1.exe -wjm',#换1102
     'updc': path_roaming + '雷神压缩/ThorUpdateChecker',
     'p_list': p_lszip
 }
@@ -89,13 +89,13 @@ xinnote = {
 }
 qjpdf = {
     # 'package': path_1 + 'QingJiePdf_Setup_v1.0.1.5_lv_1.exe -wjm',#金山用此版本
-    'package': path_1 + 'QingJiePdf_Setup_v1.1.0.3_lv_1.exe -wjm',
+    'package': path_1 + 'QingJiePdf_Setup_v1.0.1.5_lv_1.exe -wjm',
     'updc': path_roaming + 'qingjiepdf/qjUpdateChecker',
     'p_list': p_qjpdf
 }
 
 cloudbar = {
-    'package': path_1 + 'clouds_setup_v1.1.0.2_lv_1.exe -wjm',
+    'package': path_1 + 'clouds_setup_v1.1.0.2_lv_1.exe -wjm',#需要换1108
     'updc': path_local + 'CloudsToolbar/updc',
     'p_list': p_cloudbar
 }
@@ -106,11 +106,11 @@ xfpdf = {
     'p_list': p_xfpdf
 }
 
-smartlook = {
-    'package': path_1 + 'preview_Setup_1.0.2.9_lv_1.exe -wjm',
-    'updc': path_roaming + 'SmartLook/preview',
-    'p_list': p_smartlook
-}
+# smartlook = {
+#     'package': path_1 + 'preview_Setup_1.0.2.9_lv_1.exe -wjm',
+#     'updc': path_roaming + 'SmartLook/preview',
+#     'p_list': p_smartlook
+# }
 
 haotu = {
     'package': path_1 + 'haotu_v2.1.0.6_lv_1.exe -wjm',
