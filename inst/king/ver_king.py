@@ -4,7 +4,8 @@ def version():
     vc = ['xiaoyu_v3.2.1.7_guanwang_1.exe -wjm', 'xiaoyu_v3.2.1.7_guanwang_2.exe -wjm', 'xiaoyu_v3.2.1.7_guanwang_3.exe -wjm',
           'xiaoyu_v3.2.1.7_guanwang_4.exe -wjm', 'xiaoyu_v3.2.1.7_guanwang_5.exe -wjm',
           'xiaoyu_v3.3.0.2_guanwang_1.exe -wjm', 'xiaoyu_v3.3.0.2_guanwang_2.exe -wjm', 'xiaoyu_v3.3.0.2_guanwang_3.exe -wjm',
-          'xiaoyu_v3.3.0.2_guanwang_4.exe -wjm', 'xiaoyu_v3.3.0.2_guanwang_5.exe -wjm',
+          #'xiaoyu_v3.3.0.2_guanwang_4.exe -wjm',
+          'xiaoyu_v3.3.0.2_guanwang_5.exe -wjm',
           'xiaoyu_v3.3.1.0_guanwang_1.exe -wjm', 'xiaoyu_v3.3.1.0_guanwang_2.exe -wjm', 'xiaoyu_v3.3.1.0_guanwang_3.exe -wjm',
           'xiaoyu_v3.3.1.0_guanwang_4.exe -wjm', 'xiaoyu_v3.3.1.0_guanwang_5.exe -wjm',
 

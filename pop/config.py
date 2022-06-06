@@ -15,24 +15,25 @@ p_heinote = ['62345setting', 'Jsbyptp', 'XHfgtrwuninst', 'bhajiy', 'djeafrhumiun
              'hfbrwfrg2345Uninst', 'mkiayhb', 'nbxvchidi', 'njaiah', 'pbxhone', 'siuywteinbg', 'stone', 'xhpbuninst', 'xiaoheiminixhtt', 'xiaoheitipsrytx',
              'xiaoheitipsxhtt', 'xiaoheitpopxhtt']
 p_finder = ['12345setting', '22345setting', 'BaWrnG', 'GSscreensaver', 'GStipsrytx', 'GStipsxktt', 'GStpoprytx', 'IEKmKY', 'SNss', 'Sisrwl', 'Ssmiuninst',
-            'TEnMhP', 'WtZTlg', 'asajksa', 'bdjsq', 'diploma', 'gstpopgstt', 'gsurl', 'redifuninst', 'srpanka', 'ssfloattip', 'sspbuninst', 'ssyptp', 'vvhTdX']
+            'TEnMhP', 'WtZTlg', 'asajksa', 'bdjsq', 'diploma', 'gstpopgstt', 'gsurl', 'redifuninst', 'srpanka', 'ssfloattip', 'ssmnuninst', 'sspbuninst',
+            'ssyptp', 'vvhTdX']
 p_browser = ['7654llqtips', 'thrill', 'fracturesl', 'reunion', '7654weather', '7654renwulan', 'kk', 'changes', '7654llqtuopan', 'llqfloattip', 'aiouniya',
              'llqyptips', '7654llqurl', 'borealis', '7654pb']
 p_lszip = ['12345ShellPro', 'Fnhuninst', 'JzLtnuninst', 'KEtiuninst', 'Lshenzip', 'Lstpopzip', 'Lstrayzip', 'XxndaD', 'a2345NetFlow', 'cSskSwZ', 'cbxOKVlhA',
            'hndmiuninst', 'lshighzip', 'vYZjaDIRY', 'yGdcOyvz', 'yxJLQvVM']
 p_xinnote = ['ajnbtipsUninst', 'bhagywi', 'cjblue', 'fdaggrmiuninst', 'jskugi', 'lngydemiuninst', 'nhefbredf2345Uninst', 'sfjegtmiuninst', 'sfjhafurg',
              'usfrbzq2345setting', 'xinnotemini', 'xinnotetips', 'xintray']
-p_qjpdf = ['23455SafeLock', 'Jskjdi', 'Nsewuninst', 'Spiuninst', 'ZFCEa', 'dqsPl', 'mBErTV', 'mxLK', 'mxqjPO', 'peimg', 'sWXluJ', 'update', 'xmuninst']
+p_qjpdf = ['Jskjdi', 'Nsewuninst', 'Spiuninst', 'ZFCEa', 'dqsPl', 'mBErTV', 'mxLK', 'mxqjPO', 'peimg', 'qjmnuninst', 'sWXluJ', 'update', 'xmuninst']
 p_smartlook = ['uDLGUe', 'rsgaBg', 'dailyfresh', 'hardware', 'rsvaBg', 'kDLGUe', 'dessertcookies', 'G2y6S', 'personalcare', 'NyVBT', 'LznGsZ', 'rlwid',
                'AjFitD', 'extider', 'ZiQSGY', 'seasonalfresh', 'ghierh']
-p_cloudbar = ['bartiuninst', 'bartnuninst', 'bartouninst', 'clomiuninst', 'episode', 'minor', 'superb']
-p_haotu = ['E240.TMP', 'Hpluninst', 'Hyzus', 'Lolzzcxx', 'Thkuninst', 'Update', 'Weather', 'amkfiopg', 'baizhe', 'gajfgk', 'htkktp', 'htkktpoprytx', 'jgklfdgu',
-           'mkouninst', 'wewouninst', 'xwView', 'zztpopkk']
+p_cloudbar = ['bartiuninst', 'bartnuninst', 'bartouninst', 'clomiuninst', 'episode', 'jinmiuninst', 'minor', 'superb']
+p_haotu = ['E240.TMP', 'Hpluninst', 'Htmnuninst', 'Hyzus', 'Lolzzcxx', 'Thkuninst', 'Update', 'Weather', 'amkfiopg', 'baizhe', 'gajfgk', 'htkktp',
+           'htkktpoprytx', 'jgklfdgu', 'khpuninst.exe', 'mkouninst', 'wewouninst', 'xwView', 'zztpopkk']
 p_xxbz = ['Calendar', 'Calftp', 'NVIDIRNM', 'Pasture', 'beard', 'bztp', 'calmuninst', 'participate', 'routine', 'sunjuly', 'xxbztpopxx']
 p_xfpdf = ['xftpopxftt', 'LUxNQvY', 'nbhgbd', 'xfminixftt', 'Gijmkxuf', 'xftipspdf', 'tvPPlZ', 'FGxWFah', 'xftrayflash', 'WzsklOG', 'xfwJmu7Y', 'ghDSQgF',
            'mMNOcV', 'oJiyZjS', 'XFtnewsxftt']
-p_jcbz = ['42345Uninst', '52345Uninst', 'Jcbzmini', 'Jcbztips', 'Jcbztray', 'anthem', 'celery', 'cjblue', 'flexible', 'gatmuninst', 'natmiuninst',
-          'nattiuninst', 'nattnuninst', 'nattouninst', 'respond']
+p_jcbz = ['42345Uninst', '52345Uninst', 'Jcbzmini', 'Jcbztips', 'Jcbztray', 'anthem', 'baiuninst', 'celery', 'cjblue', 'flexible', 'natmiuninst', 'nattiuninst',
+          'nattnuninst', 'nattouninst', 'respond']
 p_sesame = ['dessertcookies', 'hardware', 'makeover', 'srfminiwwt', 'srftipsWV23', 'srftpopwwm']
 
 pb_list = ['bqpb', 'xypbuninst', 'Kuaipb', 'parpbuninst', 'ktpb', 'ktpbuninst', 'pbxhone', 'xhpbuninst', 'GSscreensaver', 'sspbuninst', '7654pb']

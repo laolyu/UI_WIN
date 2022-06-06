@@ -8,12 +8,12 @@ from time import sleep
 from loguru import logger
 
 Settings.InfoLogs = False
-sys.path.append(r'C:\woods\script')  # 先加入绝对路径，否则会报错，注意__file__表示的是当前执行文件的路径
+sys.path.append(r'E:\woods\script')  # 先加入绝对路径，否则会报错，注意__file__表示的是当前执行文件的路径
 
 
 def sent_mail(file, subject, message):
     receiver = "b4hand@139.com"
-    yag = yagmail.SMTP("b4hand@qq.com", 'okpykwvdqeczhage', 'smtp.qq.com')
+    yag = yagmail.SMTP("b4hand@qq.com", 'unevwgtyfhnqiffg', 'smtp.qq.com')
     yag.send(
         to=receiver,
         subject=subject,
