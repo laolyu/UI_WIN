@@ -12,7 +12,6 @@ from loguru import logger
 sys.path.append(r'C:\AI\script\gjl')
 from config import *
 
-
 def install():
     logger.info('********find install action**********')
     type(Key.F11)
@@ -135,10 +134,8 @@ def upgrade():
 
 def inst(package):
     try:
-        # subprocess.check_call(r'net use \\172.18.15.3 "2020"  /user:"administrator"', shell=True)
-        # subprocess.check_call(r'net time \\172.18.15.3 /set /y', shell=True)
-        subprocess.check_call(r'net use \\172.18.15.55 "12344321"  /user:"t"', shell=True)
-        subprocess.check_call(r'net time \\172.18.15.55 /set /y', shell=True)
+        subprocess.check_call(r'net use \\172.18.15.3 "2020"  /user:"administrator"', shell=True)
+        subprocess.check_call(r'net time \\172.18.15.3 /set /y', shell=True)
         date = (datetime.datetime.now() + datetime.timedelta(days=-3)).strftime("%Y-%m-%d %H:%M:%S")
         t = '06.00.00'
         subprocess.check_call(f'date {date} && time {t}', shell=True)
@@ -160,10 +157,8 @@ def inst(package):
 
 def setTime2M():
     try:
-        # subprocess.check_call(r'net use \\172.18.15.3 "2020"  /user:"administrator"', shell=True)
-        # subprocess.check_call(r'net time \\172.18.15.3 /set /y', shell=True)
-        subprocess.check_call(r'net use \\172.18.15.55 "12344321"  /user:"t"', shell=True)
-        subprocess.check_call(r'net time \\172.18.15.55 /set /y', shell=True)
+        subprocess.check_call(r'net use \\172.18.15.3 "2020"  /user:"administrator"', shell=True)
+        subprocess.check_call(r'net time \\172.18.15.3 /set /y', shell=True)
 
         # try:
         #     date = (datetime.datetime.now() + datetime.timedelta(days=3)).strftime("%Y-%m-%d %H:%M:%S")
@@ -260,9 +255,9 @@ def b4hand(project, package, updc, p_list):
 
 
 if __name__ == '__main__':
-    logger.add("gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip", retention="10 days")
+    logger.add("C:/AI/log/gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip", retention="10 days")
     UI()
-    projects = [xiaoyu, kuaizip, kantu, heinote, finder, browser, lszip, xinnote, qjpdf, haotu, xxbz, sesame, smartlook, xfpdf, jcbz, cloudbar]
+    projects = [xiaoyu, kuaizip, kantu, heinote, finder, browser, lszip, xinnote, qjpdf, haotu, xxbz, sesame, xfpdf, jcbz, cloudbar]
     for i in range(len(projects)):
         project = projects[i]
         package = project['package']
