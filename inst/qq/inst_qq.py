@@ -14,85 +14,41 @@ sys.path.append(r'C:\zm\script\gjl')  # 先加入绝对路径，否则会报错�
 from ver_qq import version
 
 
-def close_shadu():
-    logger.info(':***关闭,闪电杀毒******')
-    type(Key.F11)
-    wait(0.2)
-    click(Pattern("close_shadu.png").targetOffset(80, 0))
-    wait(0.2)
-
-
-def bingdu():
-    logger.info(':***拦截木马******')
-    type(Key.F11)
-    wait(0.2)
-    click(Pattern("bingdu.png").targetOffset(50, 335))
-    wait(0.2)
-
-
-def shishifh():
-    logger.info(':***实时防护报毒******')
-    type(Key.F11)
-    wait(0.2)
-    click(Pattern("shishifh.png").targetOffset(170, 270))
-    wait(0.2)
-
-
-def qianzai():
-    logger.info(':++++潜在风险++++')
-    type(Key.F11)
-    wait(0.2)
-    click(Pattern("qianzai.png").targetOffset(170, 270))
-    wait(0.2)
-
-
-def gaowei():
-    logger.info(':***高危状态*****')
-    type(Key.F11)
-    wait(0.2)
-    click(Pattern("gaowei.png").targetOffset(140, -55))
-    wait(0.2)
-
-
-def yunxu():
-    logger.info('-->>允许,程序修改<--')
-    type(Key.F11)
-    wait(0.2)
-    click("yunxu.png")
-    wait(0.2)
-
-
-def haode():
-    logger.info('++++已清理恶意木马+++')
-    type(Key.F11)
-    wait(0.2)
-    click("haode.png")
-    wait(0.2)
-
-def zuzhi():
-    logger.info('-->>阻止,程序修改<--')
-    type(Key.F11)
-    wait(0.2)
-    click("zuzhi.png")
-    wait(0.2)
-
-
-def queding():
-    logger.info('++++explorer 确定+++')
-    type(Key.F11)
-    wait(0.2)
-    click("queding.png")
-    wait(0.2)
-
-
-def explorer():
-    if exists("explorer.png", 1):
-        logger.info('*******explorer stopped*********')
+def close_shadu(jpg="close_shadu.jpg"):
+    if exists(jpg, 1):
+        # find(jpg).highlight(1)
         type(Key.F11)
+        wait(0.2)
+        click(Pattern(jpg).targetOffset(80, 0))
+        logger.info(':***关闭,闪电杀毒******')
+        if exists('qued.jpg', 1):
+            # find(jpg).highlight(1)
+            # type(Key.F11)
+            wait(0.2)
+            click(Pattern(jpg).targetOffset(30, 30))
+            logger.info(':***确定,关闭杀毒******')
+
+
+def blue(jpg):
+    if exists(jpg, 1):
+        # find(jpg).highlight(1)
+        type(Key.F11)
+        wait(0.2)
+        click(jpg)
+        logger.info('++click-blue++')
+
+
+def explorer(jpg='explorer.jpg'):
+    if exists(jpg, 1):
+        # find(jpg).highlight(1)
+        type(Key.F11)
+        logger.info('*******explorer stopped*********')
         wait(0.1)
-        click(Pattern("explorer.png").targetOffset(0, 100))
+        click(Pattern(jpg).targetOffset(0, 100))
         wait(0.1)
-    if not exists("windows.png", 1):
+    if not exists('player.jpg', 4):
+        type(Key.F11)
+        logger.info('++explorer&playernot found++')
         try:
             subprocess.call('explorer', shell=True)
         except Exception as e:
@@ -101,41 +57,19 @@ def explorer():
             subprocess.call('powershell.exe Stop-Process -name explorer', shell=True)
         except Exception as e:
             logger.info(e)
-    if exists("queding.png", 1):
-        logger.info('****确定******')
-        type(Key.F11)
-        wait(0.2)
-        click("queding.png")
 
 
 def UI():
-    t = threading.Timer(20, UI)
+    t = threading.Timer(50, UI)
     t.setDaemon(True)
     t.start()
     try:
         explorer()
-        if exists("close_shadu.png", 1):
+        blue('yunxu.jpg')
+        blue('zuzhi.jpg')
+        blue('haode.jpg')
+        if exists("close_shadu.jpg", 1):
             close_shadu()
-        if exists("haode.png", 1):
-            for i in range(5):
-                if exists("haode.png", 1):
-                    haode()
-                    sleep(1)
-                else:
-                    break
-
-        if exists("zuzhi.png", 1):
-            zuzhi()
-        # if exists("qianzai.png", 1):
-        #     qianzai()
-        elif exists("shishifh.png", 1):
-            shishifh()
-        elif exists("gaowei.png", 1):
-            gaowei()
-        elif exists("yunxu.png", 1):
-            yunxu()
-        # elif exists("yiTingZhiGZ.png", 10):
-        #     yiTingZhiGZ()
         else:
             pass
             # logger.info 'no safe messages'
@@ -182,8 +116,7 @@ def cmd_send(path, vc_list):
 
 
 if __name__ == '__main__':
-    logger.add("C:/zm/log/gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip",
-               retention="10 days")
+    logger.add("C:/zm/log/gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip", retention="10 days")
     logger.info('thread %s is running...' % threading.current_thread().name)
     path = r'C:\zm\package'
     UI()

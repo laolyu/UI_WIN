@@ -3,7 +3,7 @@ import datetime
 import random
 import subprocess
 import threading
-from mouse import click, wait
+import lackey
 from lackey import *
 import sys
 from loguru import logger
@@ -14,118 +14,104 @@ sys.path.append(r'C:\zm\script\gjl')  # 先加入绝对路径，否则会报错�
 from ver_king import version
 
 
-def explorer():
-    if exists("explorer.png", 1):
-        logger.info('*******explorer stopped*********')
+def explorer(jpg='explorer.jpg'):
+    if exists(jpg, 1):
+        # find(jpg).highlight(1)
+        wait(0.5)
         type(Key.F11)
+        logger.info('*******explorer stopped*********')
         wait(0.1)
-        click(Pattern("explorer.png").targetOffset(0, 100))
+        click(Pattern(jpg).targetOffset(0, 100))
         wait(0.1)
-    if not exists("windows.png", 1):
+    if not exists('player.jpg', 4):
+        type(Key.F11)
+        logger.info('++explorer&playernot found++')
+        try:
+            subprocess.Popen('powershell.exe Stop-Process -name explorer', shell=True)
+        except Exception as e:
+            logger.info(e)
         try:
             subprocess.call('explorer', shell=True)
         except Exception as e:
             logger.info(e)
+
+
+def sysp(jpg='sysp.jpg'):
+    if exists(jpg, 1):
+        new_reg = find(jpg).right(400)
+        # new_reg.highlight(1)
+        wait(0.5)
+        type(Key.F11)
         try:
-            subprocess.call('powershell.exe Stop-Process -name explorer', shell=True)
+            new_reg.findText('Task'.encode('utf-8').decode('utf-8'))
+            logger.info('++系统保护:可疑计划++')
+            wait(0.2)
+            click(Pattern(jpg).targetOffset(420, 130))
+            wait(0.2)
+            click(Pattern(jpg).targetOffset(420, 150))
+        except lackey.Exceptions.FindFailed as e:
+            logger.info(f'++{e}-->>系统保护:发现病毒++')
+            wait(0.2)
+            click(Pattern(jpg).targetOffset(150, 80))
         except Exception as e:
             logger.info(e)
 
 
-def install():
-    logger.info('********find install action**********')
-    type(Key.F11)
-    wait(0.2)
-    click(Pattern("install.png").targetOffset(147, -55))
-    wait(0.2)
-    click(Pattern("install.png").targetOffset(162, -25))
-    wait(0.2)
+def remind(jpg):
+    if exists(jpg, 1):
+        type(Key.F11)
+        wait(0.5)
+        if jpg == 'quanxian.jpg':
+            x = 104
+        else:
+            x = 114
+        click(Pattern(jpg).targetOffset(x, 0))
+        wait(0.2)
+        click(Pattern(jpg).targetOffset(x, 35))
+        wait(0.2)
+        logger.info('++不再提醒++')
 
 
-def sysp():
-    logger.info('*******System protection*******')
-    type(Key.F11)
-    wait(0.2)
-    click(Pattern("sysp.png").targetOffset(180, 90))
-    wait(0.2)
-
-
-def quanxian():
-    logger.info(':*******find quanxian action..*******')
-    type(Key.F11)
-    wait(0.2)
-    click(Pattern("quanxian.png").targetOffset(104, 0))
-    wait(0.2)
-    click(Pattern("quanxian.png").targetOffset(104, 40))
-    wait(0.2)
-
-
-def guanlian():
-    logger.info(':****find guanlian action..*********')
-    type(Key.F11)
-    wait("install.png")
-    click(Pattern("install.png").targetOffset(70, -55))
-    wait(0.2)
-
-
-def allow():
-    logger.info(':*******allow>>*************')
-    type(Key.F11)
-    wait(0.2)
-    click("allow.png")
-    wait(0.2)
-
-
-def queding():
-    logger.info('++++确定++++')
-    type(Key.F11)
-    wait(0.2)
-    click("queding.png")
-    wait(0.2)
-
-
-def qinngc():
-    logger.info(':*************Virus removal at once***************')
-    type(Key.F11)
-    wait(0.2)
-    click("qingchu.png")
-    wait(0.2)
-
-
-def bkq():
-    logger.info(':donnot turn on')
-    type(Key.F11)
-    wait(0.2)
-    click("bukaiqi.png")
-    wait(0.2)
-    sleep(10)
+def update(up='up.jpg', up2='up2.jpg', reboot='reboot.jpg', rb='rb.jpg'):
+    try:
+        cmd = '"C:\program files (x86)\kingsoft\kingsoft antivirus\kislive.exe" -vip -level:0'
+        subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    except Exception as e:
+        logger.info(e)
+    try:
+        if exists(up2, 10):
+            # find(up2).highlight(1)
+            logger.info('++检查更新++')
+            wait(0.5)
+            click(Pattern(up2).targetOffset(0, 140))
+            logger.info('++立即升级++')
+            sleep(2)
+            if exists(rb, 180):
+                # find(rb).highlight(1)
+                # wait(0.5)
+                type(Key.F11)
+                wait(0.5)
+                click(Pattern(rb).targetOffset(90, 250))
+                logger.info('++重启1++')
+                wait(0.5)
+                click(Pattern(rb).targetOffset(90, 250))
+                logger.info('++重启2++')
+                wait(0.5)
+                click(Pattern(rb).targetOffset(0, 250))
+                logger.info('++无需更新++')
+    except Exception as e:
+        logger.info(e)
 
 
 def UI():
-    t = threading.Timer(60, UI)
+    t = threading.Timer(40, UI)
     t.setDaemon(True)
     t.start()
     try:
+        sysp()
         explorer()
-        if exists("install.png", 1):
-            install()
-        elif exists("sysp.png", 1):
-            sysp()
-        elif exists("quanxian.png", 1):
-            quanxian()
-        elif exists("qingchu.png", 1):
-            qinngc()
-        elif exists("guanlian.png", 1):
-            guanlian()
-        elif exists("allow.png", 1):
-            allow()
-        elif exists("queding.png", 1):
-            allow()
-        elif exists("bukaiqi.png", 1):
-            bkq()
-        else:
-            pass
-            # logger.info 'no safe messages'
+        remind('quanxian.jpg')
+        remind('youjian.jpg')
     except Exception as e:
         logger.info(e)
 
@@ -169,10 +155,10 @@ def cmd_send(path, vc_list):
 
 
 if __name__ == '__main__':
-    logger.add("C:/zm/log/gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip",
-               retention="10 days")
+    logger.add("C:/zm/log/gjl_log_{time}.log", rotation="500MB", encoding="utf-8", enqueue=True, compression="zip", retention="10 days")
     logger.info('thread %s is running...' % threading.current_thread().name)
     path = r'C:\zm\package'
+    update()
     UI()
     v = random.sample(version(), len(version()))
     cmd_send(path, v)

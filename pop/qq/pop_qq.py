@@ -12,43 +12,39 @@ Settings.InfoLogs = False
 sys.path.append(r'C:\AI\script\gjl')
 
 
-def haode():
-    logger.info(':**************Virus removal***************', end=',')
-    type(Key.F11)
-    wait(0.2)
-    click("haode.png")
-    wait(0.2)
-
-
-def yunxu():
-    logger.info('-->>allow*************', end=',')
-    type(Key.F11)
-    wait(0.2)
-    click("yunxu.png")
-    wait(0.2)
-
-
-def yes():
-    logger.info('-->>确定*****', end=',')
-    type(Key.F11)
-    wait(0.2)
-    click("yes.png")
-    wait(0.2)
-
-
-def explorer():
-    if exists("explorer.png", 1):
-        logger.info('*******explorer stopped*********')
+def close_shadu(jpg="close_shadu.jpg"):
+    if exists(jpg, 1):
+        # find(jpg).highlight(1)
         type(Key.F11)
+        wait(0.2)
+        click(Pattern(jpg).targetOffset(80, 0))
+        logger.info(':***关闭,闪电杀毒******')
+
+
+def blue(jpg):
+    if exists(jpg, 1):
+        # find(jpg).highlight(1)
+        type(Key.F11)
+        wait(0.2)
+        click(jpg)
+        logger.info('++click-blue++')
+
+
+def explorer(jpg='explorer.jpg'):
+    if exists(jpg, 1):
+        # find(jpg).highlight(1)
+        type(Key.F11)
+        logger.info('*******explorer stopped*********')
         wait(0.1)
-        click(Pattern("explorer.png").targetOffset(0, 100))
-        time.sleep(5)
-    if not exists("windows.png", 2):
+        click(Pattern(jpg).targetOffset(0, 100))
+        wait(0.1)
+    if not exists('player.jpg', 4):
+        type(Key.F11)
+        logger.info('++explorer&playernot found++')
         try:
             subprocess.call('explorer', shell=True)
         except Exception as e:
             logger.info(e)
-        time.sleep(5)
         try:
             subprocess.call('powershell.exe Stop-Process -name explorer', shell=True)
         except Exception as e:
@@ -60,16 +56,11 @@ def UI():
     t.setDaemon(True)
     t.start()
     try:
-        if exists("yunxu.png", 1):
-            yunxu()
-            if exists("yunxu.png", 1):
-                yunxu()
-            if exists("yunxu.png", 1):
-                yunxu()
-        elif exists("haode.png", 1):
-            haode()
-        # elif exists("yes.png", 1):
-        #     yes()
+        blue('yunxu.jpg')
+        blue('zuzhi.jpg')
+        blue('haode.jpg')
+        if exists("close_shadu.jpg", 1):
+            close_shadu()
         else:
             pass
             # logger.info 'no safe messages'

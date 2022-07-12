@@ -5,11 +5,12 @@ path_roaming = 'C:/Users/Administrator/AppData/Roaming/'
 path_local = 'C:/Users/Administrator/AppData/Local/'
 
 p_xiaoyu = ['avjnjmiuninst', 'bgdcvn', 'bqpb', 'bqtp', 'bqyptp', 'instrument', 'jafreqfrq', 'melancholy', 'qwaszx', 'sfrhhgt2345Uninst', 'sjrpghuninst',
-            'spoiler', 'srzy2345setting', 'wfreqhfure', 'xymn', 'xypbuninst', 'xytipsxhVV12', 'xytipsxytt', 'xytpopoth', 'yXjUcuninst', 'yb32345setting']
+            'spoiler', 'srzy2345setting', 'wfreqhfure', 'xymini', 'xymn', 'xypbuninst', 'xytipsxhVV12', 'xytipsxytt', 'xytpopoth', 'yXjUcuninst',
+            'yb32345setting']
 p_kuaizip = ['Eg_NNIfiu', 'Kuaipb', 'Selenarctos', 'VLscDaseKX', 'YVyVcPZzs', 'blast', 'kuaiyaminixktt', 'kuaiyatipsrytx', 'kuaiyatpopxktt', 'kuaiyatpopxxrl',
              'kuaiyatuop', 'kuauninst', 'kwGOkLeLvH', 'kzyptp', 'lakesi', 'parmiuninst', 'parpbuninst', 'partnuninst', 'polarbear', 'qbylwl', 'restless',
              'wbdyl']
-p_kantu = ['ABCminixktt', 'ABCtpoprytx', 'ABCtpopxktt', 'Cuttings', 'Danuvius', 'Shawnmend', 'Xiralimy', 'armois', 'gnwgd2345Uninst', 'gtwfrgt2345Uninst.exe',
+p_kantu = ['ABCminixktt', 'ABCtpoprytx', 'ABCtpopxktt', 'Cuttings', 'Danuvius', 'Shawnmend', 'Xiralimy', 'armois', 'gnwgd2345Uninst', 'gtwfrgt2345Uninst',
            'kThrbehuninst', 'ktpb', 'ktpbuninst', 'ktsdmiuninst', 'lavenderhi', 'okquery', 'sceuhfure', 'sfrhwg12345setting', 'tbadjswsr', 'topether']
 p_heinote = ['62345setting', 'Jsbyptp', 'XHfgtrwuninst', 'bhajiy', 'djeafrhumiuninst', 'dvwertbtf', 'ejtspfs2345setting', 'fhreywfysa', 'heipan',
              'hfbrwfrg2345Uninst', 'mkiayhb', 'nbxvchidi', 'njaiah', 'pbxhone', 'siuywteinbg', 'stone', 'xhpbuninst', 'xiaoheiminixhtt', 'xiaoheitipsrytx',
@@ -71,7 +72,7 @@ browser = {
 }
 
 lszip = {
-    'package': path_1 + 'LsZip_Setup_v1.1.0.4_lv_1.exe -wjm',#换1102
+    'package': path_1 + 'LsZip_Setup_v1.1.0.4_lv_1.exe -wjm',  # 换1102
     'updc': path_roaming + '雷神压缩/ThorUpdateChecker',
     'p_list': p_lszip
 }
@@ -96,7 +97,7 @@ qjpdf = {
 }
 
 cloudbar = {
-    'package': path_1 + 'clouds_setup_v1.1.0.2_lv_1.exe -wjm',#需要换1108
+    'package': path_1 + 'clouds_setup_v1.1.0.2_lv_1.exe -wjm',  # 需要换1108
     'updc': path_local + 'CloudsToolbar/updc',
     'p_list': p_cloudbar
 }

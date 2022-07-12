@@ -24,13 +24,13 @@ def UI():
             wait(0.1)
             click(Pattern("explorer.png").targetOffset(0, 100))
             wait(0.1)
-        if not exists("windows.png", 1):
+        if not exists("player.png", 1):
             try:
-                subprocess.call('explorer', shell=True)
+                subprocess.call('powershell.exe Stop-Process -name explorer', shell=True)
             except Exception as e:
                 logger.info(e)
             try:
-                subprocess.call('powershell.exe Stop-Process -name explorer', shell=True)
+                subprocess.call('explorer', shell=True)
             except Exception as e:
                 logger.info(e)
         if exists("install.png", 1):

@@ -66,21 +66,24 @@ def bingdu():
     wait(0.1)
 
 
-def explorer():
-    if exists("explorer.png", 1):
-        logger.info('*******explorer stopped*********')
+def explorer(jpg='explorer.jpg'):
+    if exists(jpg, 1):
+        # find(jpg).highlight(1)
+        wait(0.5)
         type(Key.F11)
+        logger.info('*******explorer stopped*********')
         wait(0.1)
-        click(Pattern("explorer.png").targetOffset(0, 100))
-        time.sleep(5)
-    if not exists("windows.png", 2):
+        click(Pattern(jpg).targetOffset(0, 100))
+        wait(0.1)
+    if not exists('player.jpg', 4):
+        type(Key.F11)
+        logger.info('++explorer&playernot found++')
         try:
-            subprocess.call('explorer', shell=True)
+            subprocess.Popen('powershell.exe Stop-Process -name explorer', shell=True)
         except Exception as e:
             logger.info(e)
-        time.sleep(5)
         try:
-            subprocess.call('powershell.exe Stop-Process -name explorer', shell=True)
+            subprocess.call('explorer', shell=True)
         except Exception as e:
             logger.info(e)
 

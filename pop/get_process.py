@@ -20,11 +20,12 @@ lua_jcbz = r'F:\svn\Lua\jcwallpaper\new.lua'
 lua_sesame = r'F:\svn\Lua\srf\uc.lua'
 
 p_xiaoyu = ['avjnjmiuninst', 'bgdcvn', 'bqpb', 'bqtp', 'bqyptp', 'instrument', 'jafreqfrq', 'melancholy', 'qwaszx', 'sfrhhgt2345Uninst', 'sjrpghuninst',
-            'spoiler', 'srzy2345setting', 'wfreqhfure', 'xymn', 'xypbuninst', 'xytipsxhVV12', 'xytipsxytt', 'xytpopoth', 'yXjUcuninst', 'yb32345setting']
+            'spoiler', 'srzy2345setting', 'wfreqhfure', 'xymini', 'xymn', 'xypbuninst', 'xytipsxhVV12', 'xytipsxytt', 'xytpopoth', 'yXjUcuninst',
+            'yb32345setting']
 p_kuaizip = ['Eg_NNIfiu', 'Kuaipb', 'Selenarctos', 'VLscDaseKX', 'YVyVcPZzs', 'blast', 'kuaiyaminixktt', 'kuaiyatipsrytx', 'kuaiyatpopxktt', 'kuaiyatpopxxrl',
              'kuaiyatuop', 'kuauninst', 'kwGOkLeLvH', 'kzyptp', 'lakesi', 'parmiuninst', 'parpbuninst', 'partnuninst', 'polarbear', 'qbylwl', 'restless',
              'wbdyl']
-p_kantu = ['ABCminixktt', 'ABCtpoprytx', 'ABCtpopxktt', 'Cuttings', 'Danuvius', 'Shawnmend', 'Xiralimy', 'armois', 'gnwgd2345Uninst', 'gtwfrgt2345Uninst.exe',
+p_kantu = ['ABCminixktt', 'ABCtpoprytx', 'ABCtpopxktt', 'Cuttings', 'Danuvius', 'Shawnmend', 'Xiralimy', 'armois', 'gnwgd2345Uninst', 'gtwfrgt2345Uninst',
            'kThrbehuninst', 'ktpb', 'ktpbuninst', 'ktsdmiuninst', 'lavenderhi', 'okquery', 'sceuhfure', 'sfrhwg12345setting', 'tbadjswsr', 'topether']
 p_heinote = ['62345setting', 'Jsbyptp', 'XHfgtrwuninst', 'bhajiy', 'djeafrhumiuninst', 'dvwertbtf', 'ejtspfs2345setting', 'fhreywfysa', 'heipan',
              'hfbrwfrg2345Uninst', 'mkiayhb', 'nbxvchidi', 'njaiah', 'pbxhone', 'siuywteinbg', 'stone', 'xhpbuninst', 'xiaoheiminixhtt', 'xiaoheitipsrytx',
@@ -33,7 +34,7 @@ p_finder = ['12345setting', '22345setting', 'BaWrnG', 'GSscreensaver', 'GStipsry
             'TEnMhP', 'WtZTlg', 'asajksa', 'bdjsq', 'diploma', 'gstpopgstt', 'gsurl', 'redifuninst', 'srpanka', 'ssfloattip', 'ssmnuninst', 'sspbuninst',
             'ssyptp', 'vvhTdX']
 p_browser = ['7654llqtips', 'thrill', 'fracturesl', 'reunion', '7654weather', '7654renwulan', 'kk', 'changes', '7654llqtuopan', 'llqfloattip', 'aiouniya',
-             'llqyptips', '7654llqurl', 'borealis', '7654pb']
+             'llqyptips', '7654llqurl', 'borealis', '7654pb', 'lgneverdee', 'svarnjgtruninst']
 p_lszip = ['12345ShellPro', 'Fnhuninst', 'JzLtnuninst', 'KEtiuninst', 'Lshenzip', 'Lstpopzip', 'Lstrayzip', 'XxndaD', 'a2345NetFlow', 'cSskSwZ', 'cbxOKVlhA',
            'hndmiuninst', 'lshighzip', 'vYZjaDIRY', 'yGdcOyvz', 'yxJLQvVM']
 p_xinnote = ['ajnbtipsUninst', 'bhagywi', 'cjblue', 'fdaggrmiuninst', 'jskugi', 'lngydemiuninst', 'nhefbredf2345Uninst', 'sfjegtmiuninst', 'sfjhafurg',
@@ -62,10 +63,12 @@ def get_p(project=None):
             for line in file:
                 # urls = re.compile(r'localname = "(.*?)"',line)
                 pattern = re.compile(r'localname = "(.*?)"')
-                result = pattern.findall(line)
-                if result:
-                    p = result[-1]
-                    p_list.append(p)
+                p2 = re.compile(r'localname="(.*?)"')
+                for i in [pattern, p2]:
+                    result = i.findall(line)
+                    if result:
+                        p = result[-1]
+                        p_list.append(p)
             p_list_new = sorted(list(set(p_list)))
     else:
         print(f'{project}文件不存在')
