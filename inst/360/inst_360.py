@@ -18,13 +18,13 @@ def UI():
     t.setDaemon(True)
     t.start()
     try:
-        if exists("explorer.png", 1):
+        if exists("explorer.jpg", 1):
             logger.info('*******explorer stopped*********')
             type(Key.F11)
             wait(0.1)
-            click(Pattern("explorer.png").targetOffset(0, 100))
+            click(Pattern("explorer.jpg").targetOffset(0, 100))
             wait(0.1)
-        if not exists("player.png", 1):
+        if not exists("player.jpg", 1):
             try:
                 subprocess.call('powershell.exe Stop-Process -name explorer', shell=True)
             except Exception as e:
@@ -33,25 +33,25 @@ def UI():
                 subprocess.call('explorer', shell=True)
             except Exception as e:
                 logger.info(e)
-        if exists("install.png", 1):
+        if exists("install.jpg", 1):
             wait(0.1)
-            click(Pattern("install.png").targetOffset(422, 126))
+            click(Pattern("install.jpg").targetOffset(422, 126))
             wait(0.1)
-            click(Pattern("install.png").targetOffset(422, 150))
+            click(Pattern("install.jpg").targetOffset(422, 150))
             wait(0.1)
-        elif exists("procp.png", 1):
+        elif exists("procp.jpg", 1):
             logger.info('********process protection********')
             type(Key.F11)
             wait(0.1)
-            click(Pattern("procp.png").targetOffset(422, 150))
-            wait("zuzhi.png")
-            click(Pattern("zuzhi.png"))
+            click(Pattern("procp.jpg").targetOffset(422, 150))
+            wait("zuzhi.jpg")
+            click(Pattern("zuzhi.jpg"))
             wait(0.1)
-        if exists("bingdu.png", 1):
+        if exists("bingdu.jpg", 1):
             logger.info('*********Virus removal***********')
             type(Key.F11)
             wait(0.1)
-            click(Pattern("bingdu.png").targetOffset(159, -21))
+            click(Pattern("bingdu.jpg").targetOffset(159, -21))
             wait(0.1)
         else:
             pass

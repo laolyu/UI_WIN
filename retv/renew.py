@@ -1,13 +1,14 @@
 # coding:utf-8
 import subprocess
 import yagmail
+import socket
 from lackey import *
 import sys
 import psutil
 from time import sleep
 from loguru import logger
 
-Settings.InfoLogs = False
+# Settings.InfoLogs = False
 sys.path.append(r'E:\woods\script')  # 先加入绝对路径，否则会报错，注意__file__表示的是当前执行文件的路径
 
 
@@ -89,16 +90,27 @@ def vm(x, y):
         logger.info('***click 是******')
         click(Pattern("yes.png"))
     for i in range(20):
-        if exists('windows.png', 1):
+        if exists('player.jpg', 1):
             logger.info('已完成恢复')
             break
         else:
             logger.info('未完成恢复')
             sleep(10)
-    if not exists('windows.png', 1):
+
+
+def name():
+    if exists('player.jpg', 5):
+        logger.info('good job!')
+        return
+    else:
         type(Key.F11)
-        sleep(1)
-        sent_mail(file=None, subject='vm未完成恢复', message=str(x))
+        hostname = socket.gethostname()
+        if hostname == 'DESKTOP-9DRAQJ5':
+            name = 'pop'
+        else:
+            name = 'inst'
+
+        sent_mail(file=None, subject='vm未完成恢复', message=name)
         logger.info('send_mail,未完成恢复')
 
 
@@ -112,6 +124,7 @@ if __name__ == '__main__':
         vm(-500, 30)
         vm(-400, 30)
         vm(-300, 30)
+        name()
     except Exception as e:
         logger.info(e)
     type(Key.F10, Key.CTRL)

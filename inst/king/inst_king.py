@@ -43,14 +43,14 @@ def sysp(jpg='sysp.jpg'):
         wait(0.5)
         type(Key.F11)
         try:
-            new_reg.findText('Task'.encode('utf-8').decode('utf-8'))
-            logger.info('++系统保护:可疑计划++')
-            wait(0.2)
-            click(Pattern(jpg).targetOffset(420, 130))
-            wait(0.2)
-            click(Pattern(jpg).targetOffset(420, 150))
-        except lackey.Exceptions.FindFailed as e:
-            logger.info(f'++{e}-->>系统保护:发现病毒++')
+            #     new_reg.findText('Task'.encode('utf-8').decode('utf-8'))
+            #     logger.info('++系统保护:可疑计划++')
+            #     wait(0.2)
+            #     click(Pattern(jpg).targetOffset(420, 130))
+            #     wait(0.2)
+            #     click(Pattern(jpg).targetOffset(420, 150))
+            # except lackey.Exceptions.FindFailed as e:
+            logger.info(f'++-->>系统保护:发现病毒++')
             wait(0.2)
             click(Pattern(jpg).targetOffset(150, 80))
         except Exception as e:

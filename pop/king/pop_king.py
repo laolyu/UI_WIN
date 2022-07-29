@@ -42,14 +42,14 @@ def sysp(jpg='sysp.jpg'):
         wait(0.5)
         type(Key.F11)
         try:
-            new_reg.findText('Task'.encode('utf-8').decode('utf-8'))
-            logger.info('++系统保护:可疑计划++')
-            wait(0.2)
-            click(Pattern(jpg).targetOffset(420, 130))
-            wait(0.2)
-            click(Pattern(jpg).targetOffset(420, 150))
-        except lackey.Exceptions.FindFailed as e:
-            logger.info(f'++{e}-->>系统保护:发现病毒++')
+            #     new_reg.findText('Task'.encode('utf-8').decode('utf-8'))
+            #     logger.info('++系统保护:可疑计划++')
+            #     wait(0.2)
+            #     click(Pattern(jpg).targetOffset(420, 130))
+            #     wait(0.2)
+            #     click(Pattern(jpg).targetOffset(420, 150))
+            # except lackey.Exceptions.FindFailed as e:
+            logger.info(f'++-->>系统保护:发现病毒++')
             wait(0.2)
             click(Pattern(jpg).targetOffset(150, 80))
         except Exception as e:
@@ -177,6 +177,7 @@ def proc_exist(process_name):
 def kill_p(p_list, updc):
     updc_proc = updc.split('/')[-1]
     proc_exist(updc_proc)
+    proc_exist('iexplore')
 
     for i in range(len(p_list)):
         process_name = p_list[i]

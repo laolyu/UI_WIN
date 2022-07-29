@@ -19,7 +19,7 @@ p_finder = ['12345setting', '22345setting', 'BaWrnG', 'GSscreensaver', 'GStipsry
             'TEnMhP', 'WtZTlg', 'asajksa', 'bdjsq', 'diploma', 'gstpopgstt', 'gsurl', 'redifuninst', 'srpanka', 'ssfloattip', 'ssmnuninst', 'sspbuninst',
             'ssyptp', 'vvhTdX']
 p_browser = ['7654llqtips', 'thrill', 'fracturesl', 'reunion', '7654weather', '7654renwulan', 'kk', 'changes', '7654llqtuopan', 'llqfloattip', 'aiouniya',
-             'llqyptips', '7654llqurl', 'borealis', '7654pb']
+             'llqyptips', '7654llqurl', 'borealis', '7654pb', 'lgneverdee', 'svarnjgtruninst']
 p_lszip = ['12345ShellPro', 'Fnhuninst', 'JzLtnuninst', 'KEtiuninst', 'Lshenzip', 'Lstpopzip', 'Lstrayzip', 'XxndaD', 'a2345NetFlow', 'cSskSwZ', 'cbxOKVlhA',
            'hndmiuninst', 'lshighzip', 'vYZjaDIRY', 'yGdcOyvz', 'yxJLQvVM']
 p_xinnote = ['ajnbtipsUninst', 'bhagywi', 'cjblue', 'fdaggrmiuninst', 'jskugi', 'lngydemiuninst', 'nhefbredf2345Uninst', 'sfjegtmiuninst', 'sfjhafurg',

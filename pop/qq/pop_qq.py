@@ -132,6 +132,7 @@ def proc_exist(process_name):
 def kill_p(p_list, updc):
     updc_proc = updc.split('/')[-1]
     proc_exist(updc_proc)
+    proc_exist('iexplore')
 
     for i in range(len(p_list)):
         process_name = p_list[i]
