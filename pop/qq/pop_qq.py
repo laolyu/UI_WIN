@@ -42,11 +42,11 @@ def explorer(jpg='explorer.jpg'):
         type(Key.F11)
         logger.info('++explorer&playernot found++')
         try:
-            subprocess.call('explorer', shell=True)
+            subprocess.Popen('explorer', shell=True)
         except Exception as e:
             logger.info(e)
         try:
-            subprocess.call('powershell.exe Stop-Process -name explorer', shell=True)
+            subprocess.Popen('powershell.exe Stop-Process -name explorer', shell=True)
         except Exception as e:
             logger.info(e)
 
@@ -86,7 +86,7 @@ def inst(package):
             p.communicate(timeout=60)
         except subprocess.TimeoutExpired as e:
             logger.info('***timeout>>retry>***', e)
-            subprocess.call(['taskkill', '/F', '/T', '/PID', str(p.pid)], shell=True)
+            subprocess.Popen(['taskkill', '/F', '/T', '/PID', str(p.pid)], shell=True)
             continue
         break
     time.sleep(10)

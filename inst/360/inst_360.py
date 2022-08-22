@@ -26,11 +26,11 @@ def UI():
             wait(0.1)
         if not exists("player.jpg", 1):
             try:
-                subprocess.call('powershell.exe Stop-Process -name explorer', shell=True)
+                subprocess.Popen('powershell.exe Stop-Process -name explorer', shell=True)
             except Exception as e:
                 logger.info(e)
             try:
-                subprocess.call('explorer', shell=True)
+                subprocess.Popen('explorer', shell=True)
             except Exception as e:
                 logger.info(e)
         if exists("install.jpg", 1):
@@ -77,7 +77,7 @@ def cmd_send(path, vc_list):
                 logger.info(err_info)
             except subprocess.TimeoutExpired as e:
                 logger.info(e)
-                subprocess.call(['taskkill', '/F', '/T', '/PID', str(p.pid)], shell=True)
+                subprocess.Popen(['taskkill', '/F', '/T', '/PID', str(p.pid)], shell=True)
                 continue
             break
 

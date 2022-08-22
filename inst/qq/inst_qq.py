@@ -17,25 +17,23 @@ from ver_qq import version
 def close_shadu(jpg="close_shadu.jpg"):
     if exists(jpg, 1):
         # find(jpg).highlight(1)
-        type(Key.F11)
+        # type(Key.F11)
         wait(0.2)
         click(Pattern(jpg).targetOffset(80, 0))
         logger.info(':***关闭,闪电杀毒******')
         if exists('qued.jpg', 1):
-            # find(jpg).highlight(1)
-            # type(Key.F11)
-            wait(0.2)
-            click(Pattern(jpg).targetOffset(30, 30))
-            logger.info(':***确定,关闭杀毒******')
+            # find(jpg).highlight(2)
+            type(Key.F11)
+            click_it('qued.jpg')
 
 
-def blue(jpg):
+def click_it(jpg):
     if exists(jpg, 1):
         # find(jpg).highlight(1)
         type(Key.F11)
         wait(0.2)
         click(jpg)
-        logger.info('++click-blue++')
+        logger.info(f'++click-{jpg}++')
 
 
 def explorer(jpg='explorer.jpg'):
@@ -50,11 +48,11 @@ def explorer(jpg='explorer.jpg'):
         type(Key.F11)
         logger.info('++explorer&playernot found++')
         try:
-            subprocess.call('explorer', shell=True)
+            subprocess.Popen('explorer', shell=True)
         except Exception as e:
             logger.info(e)
         try:
-            subprocess.call('powershell.exe Stop-Process -name explorer', shell=True)
+            subprocess.Popen('powershell.exe Stop-Process -name explorer', shell=True)
         except Exception as e:
             logger.info(e)
 
@@ -65,9 +63,10 @@ def UI():
     t.start()
     try:
         explorer()
-        blue('yunxu.jpg')
-        blue('zuzhi.jpg')
-        blue('haode.jpg')
+        click_it('yunxu.jpg')
+        click_it('zuzhi.jpg')
+        click_it('haode.jpg')
+        click_it('crash.jpg')
         if exists("close_shadu.jpg", 1):
             close_shadu()
         else:
@@ -84,17 +83,17 @@ def cmd_send(path, vc_list):
 
     for x in range(len(vc_list)):
         cmd = vc_list[x]
-        sleep(10)
+        sleep(30)
         for i in range(0, 3):
             logger.info(f' {x + 1}, {cmd}')
             p = subprocess.Popen(cmd, cwd=path, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             try:
-                out, err = p.communicate(timeout=100)
+                out, err = p.communicate(timeout=180)
                 err_info = err.decode('gbk')
                 logger.info(err_info)
             except subprocess.TimeoutExpired as e:
                 logger.info(e)
-                subprocess.call(['taskkill', '/F', '/T', '/PID', str(p.pid)], shell=True)
+                subprocess.Popen(['taskkill', '/F', '/T', '/PID', str(p.pid)], shell=True)
                 continue
             break
 
