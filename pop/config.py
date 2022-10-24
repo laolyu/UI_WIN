@@ -91,19 +91,19 @@ xinnote = {
 }
 qjpdf = {
     # 'package': path_1 + 'QingJiePdf_Setup_v1.0.1.5_lv_1.exe -wjm',#金山用此版本
-    'package': path_1 + 'QingJiePdf_Setup_v1.0.1.5_lv_1.exe -wjm',
+    'package': path_1 + 'QingJiePdf_Setup_v1.1.0.3_lv_1.exe -wjm',
     'updc': path_roaming + 'qingjiepdf/qjUpdateChecker',
     'p_list': p_qjpdf
 }
 
 cloudbar = {
-    'package': path_1 + 'clouds_setup_v1.1.0.2_lv_1.exe -wjm',  # 需要换1108
+    'package': path_1 + 'clouds_setup_v1.1.0.8_lv_1.exe -wjm',  # 需要换1108
     'updc': path_local + 'CloudsToolbar/updc',
     'p_list': p_cloudbar
 }
 
 xfpdf = {
-    'package': path_1 + 'xfpdf_setup_v1.0.4.0_lv_1.exe -wjm',
+    'package': path_1 + 'xfpdf_setup_v1.0.3.8_lv_1.exe -wjm',
     'updc': path_roaming + 'WhirlwindPdf/Uc',
     'p_list': p_xfpdf
 }

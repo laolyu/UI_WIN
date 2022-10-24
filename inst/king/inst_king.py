@@ -57,6 +57,20 @@ def sysp(jpg='sysp.jpg'):
             logger.info(e)
 
 
+def ddr(jpg='ddr.jpg'):
+    if exists(jpg, 1):
+        try:
+            wait(0.2)
+            type(Key.F11)
+            logger.info(f'++-->>内存防护:发现病毒++')
+            wait(0.2)
+            click(Pattern(jpg).targetOffset(115, 165))  # 记住操作
+            wait(0.2)
+            click(Pattern(jpg).targetOffset(190, 115))  # 暂不处理
+        except Exception as e:
+            logger.info(e)
+
+
 def remind(jpg):
     if exists(jpg, 1):
         type(Key.F11)
@@ -104,11 +118,12 @@ def update(up='up.jpg', up2='up2.jpg', reboot='reboot.jpg', rb='rb.jpg'):
 
 
 def UI():
-    t = threading.Timer(40, UI)
+    t = threading.Timer(30, UI)
     t.setDaemon(True)
     t.start()
     try:
         sysp()
+        ddr()
         explorer()
         remind('quanxian.jpg')
         remind('youjian.jpg')
@@ -123,7 +138,7 @@ def cmd_send(path, vc_list):
 
     for x in range(len(vc_list)):
         cmd = vc_list[x]
-        # sleep(2)
+        sleep(20)
         for i in range(0, 3):
             logger.info(f' {x + 1}, {cmd}')
             p = subprocess.Popen(cmd, cwd=path, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)

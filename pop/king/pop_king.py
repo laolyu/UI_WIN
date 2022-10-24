@@ -56,6 +56,20 @@ def sysp(jpg='sysp.jpg'):
             logger.info(e)
 
 
+def ddr(jpg='ddr.jpg'):
+    if exists(jpg, 1):
+        try:
+            wait(0.2)
+            type(Key.F11)
+            logger.info(f'++-->>内存防护:发现病毒++')
+            wait(0.2)
+            click(Pattern(jpg).targetOffset(115, 165))  # 记住操作
+            wait(0.2)
+            click(Pattern(jpg).targetOffset(190, 115))  # 暂不处理
+        except Exception as e:
+            logger.info(e)
+
+
 def remind(jpg):
     if exists(jpg, 1):
         type(Key.F11)
@@ -77,6 +91,7 @@ def UI():
     t.start()
     try:
         sysp()
+        ddr()
         remind('quanxian.jpg')
         remind('youjian.jpg')
     except Exception as e:
