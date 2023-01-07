@@ -14,7 +14,7 @@ sys.path.append(r'E:\woods\script')  # 先加入绝对路径，否则会报错�
 
 def sent_mail(file, subject, message):
     receiver = '601473011@139.com'
-    yag = yagmail.SMTP("b4hand@qq.com", 'unevwgtyfhnqiffg', 'smtp.qq.com')
+    yag = yagmail.SMTP('601473011@139.com', '4d4aab3ee8d4120aaa00', 'smtp.139.com')
     yag.send(
         to=receiver,
         subject=subject,
