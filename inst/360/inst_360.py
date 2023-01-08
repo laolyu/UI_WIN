@@ -19,6 +19,8 @@ def UI():
     t.start()
     try:
         if exists("explorer.jpg", 1):
+            click(jpg)
+            wait(0.5)
             logger.info('*******explorer stopped*********')
             type(Key.F11)
             wait(0.1)
@@ -41,6 +43,8 @@ def UI():
             wait(0.1)
         elif exists("procp.jpg", 1):
             logger.info('********process protection********')
+            click(jpg)
+            wait(0.5)
             type(Key.F11)
             wait(0.1)
             click(Pattern("procp.jpg").targetOffset(422, 150))
@@ -49,6 +53,8 @@ def UI():
             wait(0.1)
         if exists("bingdu.jpg", 1):
             logger.info('*********Virus removal***********')
+            click(jpg)
+            wait(0.5)
             type(Key.F11)
             wait(0.1)
             click(Pattern("bingdu.jpg").targetOffset(159, -21))

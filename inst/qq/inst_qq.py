@@ -23,6 +23,8 @@ def close_shadu(jpg="close_shadu.jpg"):
         logger.info(':***关闭,闪电杀毒******')
         if exists('qued.jpg', 1):
             # find(jpg).highlight(2)
+            click(jpg)
+            wait(0.5)
             type(Key.F11)
             click_it('qued.jpg')
 
@@ -30,6 +32,8 @@ def close_shadu(jpg="close_shadu.jpg"):
 def click_it(jpg):
     if exists(jpg, 1):
         # find(jpg).highlight(1)
+        click(jpg)
+        wait(0.5)
         type(Key.F11)
         wait(0.2)
         click(jpg)
@@ -39,6 +43,8 @@ def click_it(jpg):
 def explorer(jpg='explorer.jpg'):
     if exists(jpg, 1):
         # find(jpg).highlight(1)
+        click(jpg)
+        wait(0.5)
         type(Key.F11)
         logger.info('*******explorer stopped*********')
         wait(0.1)

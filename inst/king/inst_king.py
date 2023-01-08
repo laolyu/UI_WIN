@@ -17,6 +17,7 @@ from ver_king import version
 def explorer(jpg='explorer.jpg'):
     if exists(jpg, 1):
         # find(jpg).highlight(1)
+        click(jpg)
         wait(0.5)
         type(Key.F11)
         logger.info('*******explorer stopped*********')
@@ -40,6 +41,7 @@ def sysp(jpg='sysp.jpg'):
     if exists(jpg, 1):
         new_reg = find(jpg).right(400)
         # new_reg.highlight(1)
+        click(jpg)
         wait(0.5)
         type(Key.F11)
         try:
@@ -60,11 +62,12 @@ def sysp(jpg='sysp.jpg'):
 def ddr(jpg='ddr.jpg'):
     if exists(jpg, 1):
         try:
+            click(jpg)
             wait(0.2)
             type(Key.F11)
             logger.info(f'++-->>内存防护:发现病毒++')
             wait(0.2)
-            click(Pattern(jpg).targetOffset(115, 165))  # 记住操作
+            click(Pattern(jpg).targetOffset(115, 130))  # 记住操作
             wait(0.2)
             click(Pattern(jpg).targetOffset(190, 115))  # 暂不处理
         except Exception as e:
@@ -73,6 +76,8 @@ def ddr(jpg='ddr.jpg'):
 
 def remind(jpg):
     if exists(jpg, 1):
+        click(jpg)
+        wait(0.5)
         type(Key.F11)
         wait(0.5)
         if jpg == 'quanxian.jpg':
@@ -102,7 +107,8 @@ def update(up='up.jpg', up2='up2.jpg', reboot='reboot.jpg', rb='rb.jpg'):
             sleep(2)
             if exists(rb, 180):
                 # find(rb).highlight(1)
-                # wait(0.5)
+                click(jpg)
+                wait(0.5)
                 type(Key.F11)
                 wait(0.5)
                 click(Pattern(rb).targetOffset(90, 250))
