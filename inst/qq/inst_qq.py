@@ -18,24 +18,18 @@ def close_shadu(jpg="close_shadu.jpg"):
     if exists(jpg, 1):
         # find(jpg).highlight(1)
         # type(Key.F11)
-        wait(0.2)
+        # wait(0.2)
         click(Pattern(jpg).targetOffset(80, 0))
+        wait(0.2)
         logger.info(':***关闭,闪电杀毒******')
-        if exists('qued.jpg', 1):
-            # find(jpg).highlight(2)
-            click(jpg)
-            wait(0.5)
-            type(Key.F11)
-            click_it('qued.jpg')
+        click_it('qued.jpg')
 
 
 def click_it(jpg):
     if exists(jpg, 1):
         # find(jpg).highlight(1)
-        click(jpg)
-        wait(0.5)
         type(Key.F11)
-        wait(0.2)
+        wait(0.5)
         click(jpg)
         logger.info(f'++click-{jpg}++')
 
@@ -73,11 +67,7 @@ def UI():
         click_it('zuzhi.jpg')
         click_it('haode.jpg')
         click_it('crash.jpg')
-        if exists("close_shadu.jpg", 1):
-            close_shadu()
-        else:
-            pass
-            # logger.info 'no safe messages'
+        close_shadu()
     except Exception as e:
         logger.info(e)
 

@@ -12,13 +12,24 @@ Settings.InfoLogs = False
 sys.path.append(r'C:\AI\script\gjl')
 
 
-def close_shadu(jpg="close_shadu.jpg"):
+def click_it(jpg):
     if exists(jpg, 1):
         # find(jpg).highlight(1)
         type(Key.F11)
-        wait(0.2)
+        wait(0.5)
+        click(jpg)
+        logger.info(f'++click-{jpg}++')
+
+
+def close_shadu(jpg="close_shadu.jpg"):
+    if exists(jpg, 1):
+        # find(jpg).highlight(1)
+        # type(Key.F11)
+        # wait(0.2)
         click(Pattern(jpg).targetOffset(80, 0))
+        wait(0.2)
         logger.info(':***关闭,闪电杀毒******')
+        click_it('qued.jpg')
 
 
 def blue(jpg):
@@ -59,11 +70,7 @@ def UI():
         blue('yunxu.jpg')
         blue('zuzhi.jpg')
         blue('haode.jpg')
-        if exists("close_shadu.jpg", 1):
-            close_shadu()
-        else:
-            pass
-            # logger.info 'no safe messages'
+        close_shadu()
     except Exception as e:
         logger.info(e)
 
