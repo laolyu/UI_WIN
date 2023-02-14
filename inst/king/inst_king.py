@@ -63,8 +63,10 @@ def ddr(jpg='ddr.jpg'):
             logger.info(f'++-->>内存防护:发现病毒++')
             wait(0.2)
             click(Pattern(jpg).targetOffset(115, 130))  # 记住操作
+            click(Pattern(jpg).targetOffset(115, 165))  # 记住操作
             wait(0.2)
             click(Pattern(jpg).targetOffset(190, 80))  # 暂不处理
+            click(Pattern(jpg).targetOffset(190, 115))  # 暂不处理
         except Exception as e:
             logger.info(e)
 

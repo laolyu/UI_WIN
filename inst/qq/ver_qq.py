@@ -7,11 +7,11 @@ import time
 def version():
     vc = ['xiaoyu_v3.2.1.7_guanwang_1.exe -wjm', 'xiaoyu_v3.2.1.7_guanwang_2.exe -wjm', 'xiaoyu_v3.2.1.7_guanwang_3.exe -wjm',
           'xiaoyu_v3.2.1.7_guanwang_4.exe -wjm', 'xiaoyu_v3.2.1.7_guanwang_5.exe -wjm',
-          'xiaoyu_v3.3.0.2_guanwang_1.exe -wjm', 'xiaoyu_v3.3.0.2_guanwang_3.exe -wjm',
+          'xiaoyu_v3.3.0.2_guanwang_1.exe -wjm', 'xiaoyu_v3.3.0.2_guanwang_3.exe -wjm',  # 20230214-报毒半年未解决
           # 'xiaoyu_v3.3.0.9_guanwang_1.exe -wjm', 'xiaoyu_v3.3.0.9_guanwang_2.exe -wjm', 'xiaoyu_v3.3.0.9_guanwang_3.exe -wjm',
           # 'xiaoyu_v3.3.0.9_guanwang_4.exe -wjm', 'xiaoyu_v3.3.0.9_guanwang_5.exe -wjm',
-          'xiaoyu_v3.3.1.0_guanwang_1.exe -wjm', 'xiaoyu_v3.3.1.0_guanwang_2.exe -wjm',
-          'xiaoyu_v3.3.1.0_guanwang_4.exe -wjm', 'xiaoyu_v3.3.1.0_guanwang_5.exe -wjm',
+          # 'xiaoyu_v3.3.1.0_guanwang_1.exe -wjm', 'xiaoyu_v3.3.1.0_guanwang_2.exe -wjm',
+          # 'xiaoyu_v3.3.1.0_guanwang_4.exe -wjm', 'xiaoyu_v3.3.1.0_guanwang_5.exe -wjm',#20230214-报毒半年未解决
 
           'QingJiePdf_Setup_v1.1.0.2_guanwang_1.exe  -wjm', 'QingJiePdf_Setup_v1.1.0.2_guanwang_2.exe  -wjm',
           'QingJiePdf_Setup_v1.1.0.2_guanwang_3.exe  -wjm', 'QingJiePdf_Setup_v1.1.0.2_guanwang_4.exe  -wjm',
@@ -21,20 +21,20 @@ def version():
           'QingJiePdf_Setup_v1.1.0.3_guanwang_5.exe  -wjm',  # 1102 1103金山不测
           # 3306,3307金山不测
 
-          'KuaiZip_Setup_v3.3.0.3_guanwang_1.exe -wjm', 'KuaiZip_Setup_v3.3.0.3_guanwang_2.exe -wjm', 'KuaiZip_Setup_v3.3.0.3_guanwang_3.exe -wjm',
-          'KuaiZip_Setup_v3.3.0.3_guanwang_4.exe -wjm', 'KuaiZip_Setup_v3.3.0.3_guanwang_5.exe -wjm',
+          # 'KuaiZip_Setup_v3.3.0.3_guanwang_1.exe -wjm', 'KuaiZip_Setup_v3.3.0.3_guanwang_2.exe -wjm', 'KuaiZip_Setup_v3.3.0.3_guanwang_3.exe -wjm',
+          # 'KuaiZip_Setup_v3.3.0.3_guanwang_4.exe -wjm', 'KuaiZip_Setup_v3.3.0.3_guanwang_5.exe -wjm', #20230214-报毒半年未解决
           'KuaiZip_Setup_v3.3.0.7_guanwang_1.exe -wjm', 'KuaiZip_Setup_v3.3.0.7_guanwang_2.exe -wjm', 'KuaiZip_Setup_v3.3.0.7_guanwang_3.exe -wjm',
           'KuaiZip_Setup_v3.3.0.7_guanwang_4.exe -wjm', 'KuaiZip_Setup_v3.3.0.7_guanwang_5.exe -wjm',
           'KuaiZip_Setup_v3.3.1.2_guanwang_1.exe -wjm', 'KuaiZip_Setup_v3.3.1.2_guanwang_2.exe -wjm', 'KuaiZip_Setup_v3.3.1.2_guanwang_3.exe -wjm',
           'KuaiZip_Setup_v3.3.1.2_guanwang_4.exe -wjm', 'KuaiZip_Setup_v3.3.1.2_guanwang_5.exe -wjm',
-          'KuaiZip_Setup_v3.3.1.4_guanwang_1.exe -wjm', 'KuaiZip_Setup_v3.3.1.4_guanwang_2.exe -wjm', 'KuaiZip_Setup_v3.3.1.4_guanwang_3.exe -wjm',
-          'KuaiZip_Setup_v3.3.1.4_guanwang_4.exe -wjm', 'KuaiZip_Setup_v3.3.1.4_guanwang_5.exe -wjm',
-          'KuaiZip_Setup_v3.3.1.8_guanwang_1.exe -wjm', 'KuaiZip_Setup_v3.3.1.8_guanwang_2.exe -wjm', 'KuaiZip_Setup_v3.3.1.8_guanwang_3.exe -wjm',
-          'KuaiZip_Setup_v3.3.1.8_guanwang_4.exe -wjm', 'KuaiZip_Setup_v3.3.1.8_guanwang_5.exe -wjm',
+          # 'KuaiZip_Setup_v3.3.1.4_guanwang_1.exe -wjm', 'KuaiZip_Setup_v3.3.1.4_guanwang_2.exe -wjm', 'KuaiZip_Setup_v3.3.1.4_guanwang_3.exe -wjm',
+          # 'KuaiZip_Setup_v3.3.1.4_guanwang_4.exe -wjm', 'KuaiZip_Setup_v3.3.1.4_guanwang_5.exe -wjm',#20230214-报毒半年未解决
+          # 'KuaiZip_Setup_v3.3.1.8_guanwang_1.exe -wjm', 'KuaiZip_Setup_v3.3.1.8_guanwang_2.exe -wjm', 'KuaiZip_Setup_v3.3.1.8_guanwang_3.exe -wjm',
+          # 'KuaiZip_Setup_v3.3.1.8_guanwang_4.exe -wjm', 'KuaiZip_Setup_v3.3.1.8_guanwang_5.exe -wjm',#20230214-报毒半年未解决
 
-          'PhotoViewer_Setup_v3.3.0.3_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.0.3_guanwang_2.exe -wjm',
-          'PhotoViewer_Setup_v3.3.0.3_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.3.0.3_guanwang_4.exe -wjm',
-          'PhotoViewer_Setup_v3.3.0.3_guanwang_5.exe -wjm',
+          # 'PhotoViewer_Setup_v3.3.0.3_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.0.3_guanwang_2.exe -wjm',
+          # 'PhotoViewer_Setup_v3.3.0.3_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.3.0.3_guanwang_4.exe -wjm',
+          # 'PhotoViewer_Setup_v3.3.0.3_guanwang_5.exe -wjm',#20230214-报毒半年未解决
           'PhotoViewer_Setup_v3.3.0.6_guanwang_1.exe -wjm', 'PhotoViewer_Setup_v3.3.0.6_guanwang_2.exe -wjm',
           'PhotoViewer_Setup_v3.3.0.6_guanwang_3.exe -wjm', 'PhotoViewer_Setup_v3.3.0.6_guanwang_4.exe -wjm',
           'PhotoViewer_Setup_v3.3.0.6_guanwang_5.exe -wjm',
@@ -74,10 +74,10 @@ def version():
           # 'Heinote_v3.3.0.1_guanwang_1.exe -wjm',
           # 'Heinote_v3.3.0.1_guanwang_2.exe -wjm', 'Heinote_v3.3.0.1_guanwang_3.exe -wjm', 'Heinote_v3.3.0.1_guanwang_4.exe -wjm',
           # 'Heinote_v3.3.0.1_guanwang_5.exe -wjm',
-          'Heinote_v3.3.0.2_guanwang_1.exe -wjm', 'Heinote_v3.3.0.2_guanwang_2.exe -wjm', 'Heinote_v3.3.0.2_guanwang_3.exe -wjm',
-          'Heinote_v3.3.0.2_guanwang_4.exe -wjm', 'Heinote_v3.3.0.2_guanwang_5.exe -wjm',
-          'Heinote_v3.3.0.6_guanwang_1.exe -wjm', 'Heinote_v3.3.0.6_guanwang_2.exe -wjm', 'Heinote_v3.3.0.6_guanwang_3.exe -wjm',
-          'Heinote_v3.3.0.6_guanwang_4.exe -wjm', 'Heinote_v3.3.0.6_guanwang_5.exe -wjm',
+          # 'Heinote_v3.3.0.2_guanwang_1.exe -wjm', 'Heinote_v3.3.0.2_guanwang_2.exe -wjm', 'Heinote_v3.3.0.2_guanwang_3.exe -wjm',
+          # 'Heinote_v3.3.0.2_guanwang_4.exe -wjm', 'Heinote_v3.3.0.2_guanwang_5.exe -wjm',
+          # 'Heinote_v3.3.0.6_guanwang_1.exe -wjm', 'Heinote_v3.3.0.6_guanwang_2.exe -wjm', 'Heinote_v3.3.0.6_guanwang_3.exe -wjm',
+          # 'Heinote_v3.3.0.6_guanwang_4.exe -wjm', 'Heinote_v3.3.0.6_guanwang_5.exe -wjm', #20230214-报毒半年未解决
 
           'xinnote_v2.1.0.4_guanwang_1.exe -wjm', 'xinnote_v2.1.0.4_guanwang_2.exe -wjm', 'xinnote_v2.1.0.4_guanwang_3.exe -wjm',
           'xinnote_v2.1.0.4_guanwang_4.exe -wjm', 'xinnote_v2.1.0.4_guanwang_5.exe -wjm',

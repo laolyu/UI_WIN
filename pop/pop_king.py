@@ -5,6 +5,7 @@ import time, os, sys
 from config import *
 
 sys.path.append(r'C:\AI\script\gjl')
+Settings.InfoLogs = False
 
 
 def UI():
@@ -13,16 +14,17 @@ def UI():
         if exists('sysp.jpg', 1):
             type(Key.F11)
             wait(0.5)
-            print('++-->>系统保护:发现病毒++')
+            print('-->>系统保护:发现病毒')
             wait(0.2)
             click(Pattern('sysp.jpg').targetOffset(150, 80))
         if exists('ddr.jpg', 1):
-            type(Key.F11)
-            print('++-->>内存防护:发现病毒++')
+            print('-->>内存防护:发现病毒')
             wait(0.2)
-            click(Pattern('ddr.jpg').targetOffset(115, 165))  # 记住操作
+            click(Pattern('ddr.jpg').targetOffset(115, 130))  # 记住操作
+            click(Pattern('ddr.jpg').targetOffset(115, 165))
             wait(0.2)
-            click(Pattern('ddr.jpg').targetOffset(190, 115))  # 暂不处理
+            click(Pattern('ddr.jpg').targetOffset(190, 80))  # 暂不处理
+            click(Pattern('ddr.jpg').targetOffset(190, 115))
     except Exception as e:
         print(e)
 

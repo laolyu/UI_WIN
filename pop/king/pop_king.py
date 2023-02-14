@@ -63,8 +63,10 @@ def ddr(jpg='ddr.jpg'):
             type(Key.F11)
             logger.info(f'++-->>内存防护:发现病毒++')
             wait(0.2)
+            click(Pattern(jpg).targetOffset(115, 130))  # 记住操作
             click(Pattern(jpg).targetOffset(115, 165))  # 记住操作
             wait(0.2)
+            click(Pattern(jpg).targetOffset(190, 80))  # 暂不处理
             click(Pattern(jpg).targetOffset(190, 115))  # 暂不处理
         except Exception as e:
             logger.info(e)
@@ -86,7 +88,7 @@ def remind(jpg):
 
 
 def UI():
-    t = threading.Timer(300, UI)
+    t = threading.Timer(30, UI)
     t.setDaemon(True)
     t.start()
     try:
